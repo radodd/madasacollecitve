@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/Navbar";
 import CaseStudy from "@/sections/CaseStudy";
 import Hero from "@/sections/Hero";
 // import LandingPage from "@/sections/LandingPage";
@@ -7,11 +7,11 @@ import Hero from "@/sections/Hero";
 export default function Home() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Hero />
-      {/* <CaseStudy /> */}
+      <CaseStudy />
       {/* <LandingPage/> */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
