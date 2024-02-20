@@ -18,7 +18,7 @@ const navbar = () => {
                 <Link href="/">Services</Link>
                 <Link href="/">How We Work</Link>
                 <Link href="/">Contact</Link> */}
-                <Link href="/" className='bg-[#6255F3] text-white py-4 px-6 border rounded-full'>Schedule a Call</Link>
+                <Link href="/" className='bg-btnColor text-white py-4 px-6 border rounded-full'>Schedule a Call</Link>
             </div>
         </div>
     )
