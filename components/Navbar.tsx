@@ -4,7 +4,10 @@ import React from 'react'
 
 const navbar = () => {
     return (
-        <div className='flex flex-row justify-between items-center px-[90px] h-[96px] bg-[#486B5C]'>
+        <div className='flex justify-between items-center px-[90px] py-6 gap-4 bg-drkGreen
+        max-tablet:flex-col 
+        max-tablet:justify-center 
+        max-tablet:items-center'>
             <div className=''>
                 <Image alt='Logo' src="/madasa_logo.svg" width={175} height={200}></Image>
                 <p className='text-white font-bold text-4xl'>Collective</p>
