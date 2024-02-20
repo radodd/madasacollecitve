@@ -1,0 +1,18 @@
+import Image from 'next/image'
+import React from 'react'
+
+const CaseStudy = () => {
+//   return (
+//     <div className='flex px-[70px] py-20 gap-16 bg-[#98B4A8]'>
+//     <Image alt='gen fulton image' src="/gen-fulton.png" width={654} height={409}></Image>
+//     <div className='flex flex-col py-10 px-12 gap-8 bg-white rounded-3xl shadow-b2xl'>
+//         <h1 className='font-bold text-[40px]'>Gen Fulton Consultancy</h1>
+//         <p className='text-[32px]'>Responsive Website</p>
+//         <p className='text-[20px]'>Gen Fulton is a psychotherapist & mental performance coach who was looking for help designing her website & a brand that encompassed her multiple businesses.</p>
+//         <button className='bg-[#6255F3] text-white rounded-full w-[164px] h-[54px]'>View Website</button>
+//     </div>
+// </div>
+//   )
+}
+
+export default CaseStudy
