@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,9 +24,44 @@ const config: Config = {
       },
       padding:{
         70:"70px"
-      }
+      },
+      colors: {
+        base: "#F6DFBF",
+        orange: "#D15640",
+        green: "#98B4A8",
+        drkGreen: "#486B5C",
+        btnColor: "#6255F3",
+      },
+      screens: {
+        wideplus: "2000px",
+        wide: "1440px",
+        medium: "1225px",
+        navscreen: "1090px",
+        small: "950px",
+        tablet: "835px",
+        extrasmall: "740px",
+        mobileplus: "470px",
+        mobile: "394px",
+      },
     },
   },
   plugins: [],
 };
-export default config;
+
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   content: [
+//     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+//     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+//     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+//   ],
+//   theme: {
+//     extend: {
+//       backgroundImage: {
+//         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+//         "gradient-conic":
+//           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+//       },
+//       screens: {
+//         mobile: "394px",
+//       },
