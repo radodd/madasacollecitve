@@ -22,7 +22,7 @@ const Footer = () => {
         className="text-right text-white
             max-tablet:text-left"
       >
-        <p>Madasa Collective HELLO</p>
+        <p>Madasa Collective HELLOo</p>
         <p>Made in CA</p>
         <p>contact@madasacollective.com</p>
       </div>
