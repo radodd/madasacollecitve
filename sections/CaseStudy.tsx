@@ -4,7 +4,7 @@ import React from "react";
 const CaseStudy = () => {
   return (
     <div
-      className="flex justify-center items-center px-[70px] py-20 gap-16 bg-green 
+      className="flex justify-center items-center px-[70px] py-20 gap-16 bg-secondary 
     max-wide:flex-col
     max-tablet:px-[40px]"
     >

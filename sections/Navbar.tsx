@@ -5,7 +5,7 @@ import React from "react";
 const navbar = () => {
   return (
     <div
-      className="flex justify-between items-center px-[90px] py-6 gap-4 bg-drkGreen
+      className="flex justify-between items-center px-[90px] py-6 gap-4 bg-tertiary
         max-tablet:flex-col 
         max-tablet:justify-center 
         max-tablet:items-center

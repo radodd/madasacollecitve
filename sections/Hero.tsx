@@ -1,18 +1,53 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { cards, whoWeAre } from "..";
+import { motion, useAnimation } from "framer-motion";
 
 const Hero = () => {
+  const controls = useAnimation();
+
+  const handleScroll = () => {
+    // Get the scroll position
+    const scrollY = window.scrollY || window.scrollY;
+
+    // Define the range for the animation to take place
+    const startRange = 0;
+    const endRange = 500; // Adjust this value based on when you want the transition to complete
+
+    // Calculate the opacity based on the scroll position
+    const opacity = Math.min(1, scrollY / endRange);
+
+    // Update the animation controls
+    controls.start({ opacity });
+  };
+
+  // Add a scroll event listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array means this effect runs once after the initial render
+
   return (
     <div className="flex flex-col items-center pt-[104px] gap-[104px] bg-base relative z-50 overflow-hidden">
       <div className="relative z-50 mt-24 mx-4">
-        <Image
+        {/* Use motion.div for the animated logo */}
+        <motion.div
           className="pb-3"
-          alt="Logo"
-          src="/hero_madasa.svg"
-          width={650}
-          height={300}
-        />
+          initial={{ opacity: 0 }}
+          animate={controls}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            className="pb-3"
+            alt="Logo"
+            src="/hero_madasa.svg"
+            width={650}
+            height={300}
+          />
+        </motion.div>
         <Image
           alt="madasa"
           src="/hero_collective.svg"
@@ -21,7 +56,7 @@ const Hero = () => {
         />
         {/* <p className='text-white font-bold text-9xl'>Collective</p> */}
       </div>
-      <div className="absolute z-40 bg-orange w-[1600px] h-[1449px] rounded-[100%/100%] -translate-y-20"></div>
+      <div className="absolute z-40 bg-primary w-[1600px] h-[1449px] rounded-[100%/100%] -translate-y-20"></div>
       <div className="text-white max-w-[1140px] mx-8 text-center relative z-50">
         <h1 className="text-2xl">{whoWeAre}</h1>
       </div>
@@ -48,62 +83,6 @@ const Hero = () => {
             <p>{item.text}</p>
           </div>
         ))}
-
-        {/* {footerConnections.map((item) => (
-              <div key={item.name} className="flex gap-2">
-                <img src={item.icon} alt={`${item.name} icon`} />
-                <Link
-                  href={item.href}
-                  target="_blank"
-                  className="curser-pointer hover:text-slate-300"
-                >
-                  {item.name}
-                </Link> */}
-        {/* <div className="flex flex-col  gap-6 items-center shadow-br2xl py-8 px-16 rounded-3xl bg-white">
-          <div className=" flex justify-center items-center">
-            <Image
-              alt="product design"
-              src="/product-design.png"
-              width={256}
-              height={256}
-            ></Image>
-          </div>
-          <h1 className="text-[32px] font-bold">Product Design</h1>
-          <p>
-            We meticulously structure the website layout to optimize user
-            experience.
-          </p>
-        </div>
-        <div className="flex flex-col  gap-6 items-center shadow-br2xl py-8 px-16 rounded-3xl bg-white">
-          <div className=" flex justify-center items-center">
-            <Image
-              alt="development design"
-              src="/development-design.png"
-              width={256}
-              height={256}
-            ></Image>
-          </div>
-          <h1 className="text-[32px] font-bold">Development</h1>
-          <p>
-            We meticulously structure the website layout to optimize user
-            experience.
-          </p>
-        </div>
-        <div className="flex flex-col  gap-6 items-center shadow-br2xl py-8 px-16 rounded-3xl bg-white">
-          <div className=" flex justify-center items-center">
-            <Image
-              alt="branding design"
-              src="/branding-design.png"
-              width={256}
-              height={256}
-            ></Image>
-          </div>
-          <h1 className="text-[32px] font-bold">Branding</h1>
-          <p>
-            We meticulously structure the website layout to optimize user
-            experience.
-          </p>
-        </div> */}
       </div>
     </div>
   );
