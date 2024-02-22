@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,7 +6,7 @@ import React from "react";
 const navbar = () => {
   return (
     <div
-      className="flex justify-between items-center px-[90px] py-6 gap-4 bg-tertiary
+      className="flex justify-between items-center px-[90px] py-6 gap-4 bg-[#4357AD]
         max-tablet:flex-col 
         max-tablet:justify-center 
         max-tablet:items-center
@@ -21,18 +22,19 @@ const navbar = () => {
         <p className="text-white font-bold text-4xl">Collective</p>
         {/* <p className='w-[176px] h-[64px] border border-black items-center justify-center flex text-3xl'>Logo</p> */}
       </div>
-      <div className="flex text-2xl gap-11 items-center">
+      <div className="flex text-2xl gap-16 items-center text-white">
         {/* <Link href="/">About us</Link>
                 <Link href="/">Services</Link>
                 <Link href="/">How We Work</Link>
                 <Link href="/">Contact</Link> */}
-        <Link
-          href="/https://calendly.com/ethanf-flores/30min?month=2024-02"
-          target="_blank"
-          className="bg-btnColor text-white py-4 px-6 border rounded-full"
-        >
-          Schedule a Call
-        </Link>
+        <Link href="/" target="_self">Our Team</Link>
+        <Link href="/" target="_self">Contact</Link>
+        <Button
+        title="Schedule a Call"
+        type="button"
+        target="_blank"
+        href="/https://calendly.com/ethanf-flores/30min?month=2024-02"
+        />
       </div>
     </div>
   );

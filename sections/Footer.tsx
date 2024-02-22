@@ -4,7 +4,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div
-      className="flex justify-between bg-tertiary px-[70px] py-8 w-full gap-4 
+      className="flex justify-between bg-[#4357AD] px-[70px] py-8 w-full gap-4 
         max-tablet:flex-col 
         max-tablet:justify-center 
         max-tablet:items-center"
@@ -20,9 +20,9 @@ const Footer = () => {
       </div>
       <div
         className="text-right text-white
-            max-tablet:text-left"
+            max-tablet:text-left flex flex-col gap-2"
       >
-        <p>Madasa Collective HELLOo</p>
+        <p>Madasa Collective</p>
         <p>Made in CA</p>
         <p>contact@madasacollective.com</p>
       </div>

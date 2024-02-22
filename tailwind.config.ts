@@ -30,7 +30,7 @@ module.exports = {
         primary: "#D15640",
         secondary: "#98B4A8",
         tertiary: "#486B5C",
-        btnColor: "#6255F3",
+        btnColor: "#A53860",
       },
       screens: {
         wideplus: "2000px",
