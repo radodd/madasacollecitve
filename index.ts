@@ -1,21 +1,21 @@
 export const whoWeAre = [
-  "We are a freelance team of designers and developers who work with clients to create digital experiences that are affordable, and exactly what the client wants.",
+  "Madasa Collective is a digital powerhouse of freelance designers and developers dedicated to making digital products that help your business thrive to its full potential.",
 ];
 
 export const cards = [
   {
-    icon: "/product-design.png",
-    title: "Product Design",
-    text: "We meticulously structure the website layout to optimize user experience",
-  },
-  {
-    icon: "/development-design.png",
-    title: "Development",
-    text: "We meticulously structure the website layout to optimize user experience",
-  },
-  {
     icon: "/branding-design.png",
     title: "Branding",
-    text: "We meticulously structure the website layout to optimize user experience",
+    text: "Your vision is transformed into a brand identity that reflects your style & values.",
+  },
+  {
+    icon: "/Coconut.svg",
+    title: "Product Design",
+    text: "Your needs are prioritized, while ensuring a user-centric design.",
+  },
+  {
+    icon: "/Papaya.svg",
+    title: "Development",
+    text: "Your digital product is optimized for your use and your company's success.",
   },
 ];

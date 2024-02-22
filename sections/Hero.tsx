@@ -31,7 +31,7 @@ const Hero = () => {
   }, []); // Empty dependency array means this effect runs once after the initial render
 
   return (
-    <div className="flex flex-col items-center pt-[104px] gap-[104px] bg-base relative z-50 overflow-hidden">
+    <div className="flex flex-col items-center pt-[104px] pb-40 gap-[104px] bg-white relative z-50 overflow-hidden">
       <div className="relative z-50 mt-24 mx-4">
         {/* Use motion.div for the animated logo */}
         <motion.div
@@ -56,7 +56,7 @@ const Hero = () => {
         />
         {/* <p className='text-white font-bold text-9xl'>Collective</p> */}
       </div>
-      <div className="absolute z-40 bg-primary w-[1600px] h-[1449px] rounded-[100%/100%] -translate-y-20"></div>
+      <div className="absolute z-40 bg-[#F07C49] w-[1600px] h-[1449px] rounded-[100%/100%] -translate-y-20"></div>
       <div className="text-white max-w-[1140px] mx-8 text-center relative z-50">
         <h1 className="text-2xl">{whoWeAre}</h1>
       </div>
@@ -79,7 +79,7 @@ const Hero = () => {
               width={256}
               height={256}
             />
-            <h1 className="text-[32px] font-bold">{item.title}</h1>
+            <h1 className="text-[32px] font-bold w-max">{item.title}</h1>
             <p>{item.text}</p>
           </div>
         ))}

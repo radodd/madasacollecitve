@@ -3,7 +3,7 @@ import React from "react";
 const Testimonial = () => {
   return (
     <div
-      className="bg-base p-20 flex justify-center items-center
+      className="bg-[#EB8F66] p-20 flex justify-center items-center
       max-tablet:p-9
     "
     >
