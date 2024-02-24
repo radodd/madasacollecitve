@@ -22,7 +22,7 @@ const Contact = () => {
       </div>
       <Image
         alt="schedule call"
-        src="/schedule-call.png"
+        src="/Videocall_Man.svg"
         width={395}
         height={100}
       />

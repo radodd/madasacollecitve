@@ -4,7 +4,7 @@ export const whoWeAre = [
 
 export const cards = [
   {
-    icon: "/branding-design.png",
+    icon: "/Branding.svg",
     title: "Branding",
     text: "Your vision is transformed into a brand identity that reflects your style & values.",
   },
