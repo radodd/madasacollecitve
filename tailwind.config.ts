@@ -25,11 +25,28 @@ module.exports = {
       padding: {
         70: "70px",
       },
+      fontSize: {
+        xm: ["16px", "normal"],
+        sm: ["20px", "normal"],
+        nav: ["24px", "normal"],
+        md: ["30px", "normal"],
+        lg: ["32px", "normal"],
+        xl: ["40px", "normal"],
+        hero: ["64px", "normal"],
+      },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        semibold: 600,
+        bold: 700,
+      },
       colors: {
-        base: "#F6DFBF",
-        primary: "#D15640",
-        secondary: "#98B4A8",
-        tertiary: "#486B5C",
+        base: "#FEEFDD",
+        primary: "E3712E",
+        secondary: "#4357AD",
+        tertiary: "#7EBDC2",
+        quaternary: "#D11141",
+        fifth: "#434A42",
         btnColor: "#A53860",
       },
       screens: {

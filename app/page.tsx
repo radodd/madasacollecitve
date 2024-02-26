@@ -1,9 +1,9 @@
-import Footer from "@/sections/Footer";
-import Navbar from "@/sections/Navbar";
-import CaseStudy from "@/sections/CaseStudy";
-import Contact from "@/sections/Contact";
-import Hero from "@/sections/Hero";
-import Testimonial from "@/sections/Testimonial";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import CaseStudy from "@/sections/landing-page/CaseStudy";
+import Contact from "@/sections/landing-page/Contact";
+import Hero from "@/sections/landing-page/Hero";
+import Testimonial from "@/sections/landing-page/Testimonial";
 
 export default function Home() {
   return (

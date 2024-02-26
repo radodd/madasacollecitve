@@ -24,3 +24,18 @@ body {
   background: white;
   color: black;
 }
+
+@layer utilities {
+  .btn-blue {
+    @apply bg-transparent border-[3px] border-secondary font-semibold text-secondary text-xm px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300;
+  }
+}
+
+.hamburger .hamburger-inner,
+.hamburger .hamburger-inner::before,
+.hamburger .hamburger-inner::after,
+.is-active .hamburger-inner,
+.is-active .hamburger-inner::before {
+  background-color: #d11141 !important;
+  color: #d11141 !important;
+}
