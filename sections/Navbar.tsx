@@ -13,6 +13,7 @@ const navbar = () => {
         max-tablet:px-[40px]"
     >
       <div className="">
+        <Link href="/"></Link>
         <Image
           alt="Logo"
           src="/madasa_logo.svg"
@@ -27,7 +28,7 @@ const navbar = () => {
                 <Link href="/">Services</Link>
                 <Link href="/">How We Work</Link>
                 <Link href="/">Contact</Link> */}
-        <Link href="/" target="_self">Our Team</Link>
+        <Link href="/our-team" target="_self">Our Team</Link>
         <Link href="/" target="_self">Contact</Link>
         <Button
         title="Schedule a Call"
