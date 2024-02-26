@@ -14,11 +14,7 @@ const Contact = () => {
           Let&apos;s make something incredible together
         </h1>
         <p className="text-2xl">Request a free discovery call.</p>
-        <Button
-        type="button"
-        title="Schedule a Call"
-        width={7}
-        />
+        <Button type="button" title="Schedule a Call" variant="btn-blue" />
       </div>
       <Image
         alt="schedule call"

@@ -28,10 +28,7 @@ const CaseStudy = () => {
           looking for help designing her website & a brand that encompassed her
           multiple businesses.
         </p>
-        <Button
-        type="button"
-        title="View Website"
-        />
+        <Button type="button" title="View Website" variant="btn-blue" />
       </div>
     </div>
   );
