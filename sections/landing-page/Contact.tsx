@@ -18,7 +18,7 @@ const Contact = () => {
       </div>
       <Image
         alt="schedule call"
-        src="/Videocall_Man.svg"
+        src="/Videocall_Man.svg "
         width={395}
         height={100}
       />

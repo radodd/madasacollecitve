@@ -19,6 +19,18 @@
   }
 }
 
+@media (min-width: 1440px) {
+  .sun-media {
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 1440px) {
+  .absolute {
+    object-fit: cover;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: white;

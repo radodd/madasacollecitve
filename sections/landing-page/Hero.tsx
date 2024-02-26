@@ -4,6 +4,8 @@ import { cards, whoWeAre } from "../..";
 import "hamburgers/dist/hamburgers.css";
 
 const Hero = () => {
+  const isTabletOrSmaller = "max-tablet";
+
   // const controls = useAnimation();
 
   // const handleScroll = () => {
@@ -30,24 +32,30 @@ const Hero = () => {
   // }, []); // Empty dependency array means this effect runs once after the initial render
 
   return (
-    <div className="flex flex-col items-center pb-40 gap-[104px] bg-base relative overflow-hidden">
+    <div className="sun-media relative flex flex-col items-center pb-[100px] bg-base overflow-hidden">
       <Image
         src="/Hero_Section_Circle.svg"
         alt="circle"
         height={1448}
         width={1600}
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        // layout="fill"
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
         className="absolute"
       />
-      <div className="z-10 mt-[128px]">
+      <div className="z-10 mt-[128px] mx-4">
         {/* Use motion.div for the animated logo */}
 
         <Image
           alt="Madasa Logo"
           src="/hero_madasa.svg"
           width={836}
-          height={136.613}
-          className="pb-[29.79px] "
+          height={136.6}
+          className="pb-[29.79px] 
+          max-mobile:w-[261px]
+          "
         />
 
         <Image
@@ -55,13 +63,15 @@ const Hero = () => {
           src="/hero_collective.svg"
           width={836}
           height={97.5}
-          className="mb-[33.9px]"
+          className="pb-16 
+          max-mobile:w-[261px] 
+          "
         />
         {/* <p className='text-white font-bold text-9xl'>Collective</p> */}
       </div>
       {/* <div className="absolute z-40 bg-[#F07C49] w-[1600px] h-[1449px] rounded-[100%/100%] -translate-y-20"></div> */}
 
-      <h1 className="z-10 text-lg text-white max-w-[1140px] mx-8 text-center">
+      <h1 className="z-10 text-lg text-white max-w-[1140px] mx-8 pb-36 text-center">
         {whoWeAre}
       </h1>
 
@@ -70,13 +80,13 @@ const Hero = () => {
         <button className='py-4 px-8 bg-black text-white border-black border rounded-full'>Contact Us</button>
     </div> */}
       <div
-        className="flex flex-row gap-28 px-[70px] mb-56 relative z-50 
+        className="flex flex-row gap-[111px] px-[70px] z-10
       max-wide:flex-col"
       >
         {cards.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col gap-6 items-center shadow-br2xl py-8 px-16 max-w-[384px] rounded-3xl bg-white"
+            className="flex flex-col gap-6 items-center shadow-br2xl py-8 px-16 max-w-[384px] min-w-[384px] rounded-3xl bg-white"
           >
             <Image
               src={item.icon}
@@ -84,8 +94,8 @@ const Hero = () => {
               width={256}
               height={256}
             />
-            <h1 className="text-[32px] font-bold w-max">{item.title}</h1>
-            <p>{item.text}</p>
+            <h1 className="text-lg font-bold text-left">{item.title}</h1>
+            <p className="text-sm text-left">{item.text}</p>
           </div>
         ))}
       </div>
