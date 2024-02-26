@@ -9,7 +9,9 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <section className="pb-20 bg-base">
+        <Hero />
+      </section>
       <CaseStudy />
       <Testimonial />
       <Contact />
