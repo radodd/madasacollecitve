@@ -71,7 +71,11 @@ const Hero = () => {
       </div>
       {/* <div className="absolute z-40 bg-[#F07C49] w-[1600px] h-[1449px] rounded-[100%/100%] -translate-y-20"></div> */}
 
-      <h1 className="z-10 text-lg text-white max-w-[1140px] mx-8 pb-36 text-center">
+      <h1
+        className="z-10 text-lg text-white max-w-[1140px] mx-8 pb-36 text-center
+      max-tablet:text-nav
+      max-tablet:pb-16"
+      >
         {whoWeAre}
       </h1>
 
@@ -81,12 +85,18 @@ const Hero = () => {
     </div> */}
       <div
         className="flex flex-row gap-[111px] px-[70px] z-10
-      max-wide:flex-col"
+      max-wide:flex-col
+      max-tablet:px-8
+      max-tablet:gap-8
+      "
       >
         {cards.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col gap-6 items-center shadow-br2xl py-8 px-16 max-w-[384px] min-w-[384px] rounded-3xl bg-white"
+            className="flex flex-col gap-6 items-center shadow-br2xl py-8 px-16 max-w-[384px] min-w-[384px] rounded-3xl bg-white
+            max-tablet:max-w-[320px]
+            max-tablet:min-w-[320px]
+            max-tablet:px-10"
           >
             <Image
               src={item.icon}
@@ -94,8 +104,18 @@ const Hero = () => {
               width={256}
               height={256}
             />
-            <h1 className="text-lg font-bold text-left">{item.title}</h1>
-            <p className="text-sm text-left">{item.text}</p>
+            <h1
+              className="text-lg font-bold text-left
+            max-tablet:text-nav"
+            >
+              {item.title}
+            </h1>
+            <p
+              className="text-sm text-left
+            max-tablet:text-xm"
+            >
+              {item.text}
+            </p>
           </div>
         ))}
       </div>
