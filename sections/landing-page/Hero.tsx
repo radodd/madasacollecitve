@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
 import { cards, whoWeAre } from "../..";
-import { motion, useAnimation } from "framer-motion";
 import "hamburgers/dist/hamburgers.css";
 
 const Hero = () => {
