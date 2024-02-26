@@ -1,3 +1,18 @@
+export const navLinks = [
+  {
+    title: "Our Team",
+    href: "/our-team",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+  {
+    title: "Schedule a Call",
+    href: "//https://calendly.com/ethanf-flores/30min?month=2024-02",
+  },
+];
+
 export const whoWeAre = [
   "Madasa Collective is a digital powerhouse of freelance designers and developers dedicated to making digital products that help your business thrive to its full potential.",
 ];
