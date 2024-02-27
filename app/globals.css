@@ -51,6 +51,48 @@ body {
 .hamburger .hamburger-inner::after,
 .is-active .hamburger-inner,
 .is-active .hamburger-inner::before {
-  background-color: #d11141 !important;
-  color: #d11141 !important;
+  background-color: #a33e71 !important;
+  color: #a33e71 !important;
+}
+
+.card {
+  height: 493px;
+  width: 384px;
+  align-items: center;
+  position: relative;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.front {
+  background: linear-gradient(white, white);
+  z-index: 2;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: linear-gradient(white, white);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.container {
+  perspective: 1000px;
 }
