@@ -45,7 +45,7 @@ module.exports = {
         primary: "#E3712E",
         secondary: "#4357AD",
         tertiary: "#7EBDC2",
-        quaternary: "#D11141",
+        quaternary: "#A33E71",
         fifth: "#434A42",
         btnColor: "#A53860",
       },
