@@ -5,12 +5,25 @@ import React from "react";
 const Contact = () => {
   return (
     <div
-      className="flex justify-between px-70 py-20 w-full items-center bg-white gap-6
+      className="relative flex justify-between px-70 py-20 w-full items-center bg-base gap-6
     max-tablet:flex-col
     max-tablet:px-10"
     >
-      <div className="flex flex-col gap-8">
-        <h1 className="text-[40px]">
+      <Image
+        src="/contact_circle.svg"
+        alt="contact circle"
+        height={1448}
+        width={1600}
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0, // Adjust top positioning
+          left: 0, // Adjust left positioning
+        }}
+      />
+      <div className="flex flex-col gap-8 z-10">
+        <h1 className="text-5xl">
           Let&apos;s make something incredible together
         </h1>
         <p className="text-2xl">Request a free discovery call.</p>
