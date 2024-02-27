@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const navLinks = [
   {
     title: "Our Team",
@@ -32,5 +34,39 @@ export const cards = [
     icon: "/Papaya.svg",
     title: "Development",
     text: "Your digital product is optimized for your use and your company's success.",
+  },
+];
+
+export const designers = [
+  {
+    name: "Sarina Zepeda",
+    title: "Product Designer",
+    secondTitle: "Founder",
+    pic: "/Sarina-Zepeda-head-shot.svg",
+  },
+  {
+    name: "Miguel Castillo",
+    title: "Senior Product Designer",
+    secondTitle: "Graphic Designer",
+    pic: "/Miguel-castillo-head-shot.svg",
+  },
+];
+
+export const developers = [
+  {
+    name: "Ethan Flores",
+    title: "Software Developer",
+    secondTitle: "Founder",
+    pic: "/ethan-flores-head-shot.svg",
+  },
+  {
+    name: "Jose Roman",
+    title: "Senior Software Developer",
+    pic: "/jose-roman-head-shot.svg",
+  },
+  {
+    name: "Daniel Castillo",
+    title: "Software Developer",
+    pic: "/daniel-castillo-head-shot.png",
   },
 ];
