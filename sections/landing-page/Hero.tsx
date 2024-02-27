@@ -93,7 +93,7 @@ const Hero = () => {
         {cards.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col gap-6 items-center shadow-br2xl py-8 px-16 max-w-[384px] min-w-[384px] rounded-3xl bg-white
+            className="flex flex-col gap-6 items-center shadow-bl2xl py-8 px-16 max-w-[384px] min-w-[384px] rounded-3xl bg-white
             max-tablet:max-w-[320px]
             max-tablet:min-w-[320px]
             max-tablet:px-10"
