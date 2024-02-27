@@ -14,7 +14,7 @@ export const navLinks = [
 ];
 
 export const whoWeAre = [
-  "Madasa Collective is a digital powerhouse of freelance designers and developers dedicated to making digital products that help your business thrive to its full potential.",
+  "We are a digital powerhouse of freelance designers and developers who create digital products that launch businesses to their full potential.",
 ];
 
 export const cards = [
