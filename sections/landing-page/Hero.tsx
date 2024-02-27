@@ -45,14 +45,14 @@ const Hero = () => {
         }}
         className="absolute"
       />
-      <div className="z-10 mt-[128px] mx-4">
+      <div className="z-10 mt-[128px] mx-4 max-tablet:mt-[80px]">
         {/* Use motion.div for the animated logo */}
 
         <Image
           alt="Madasa Logo"
           src="/hero_madasa.svg"
           width={836}
-          height={136.6}
+          height={136}
           className="pb-[29.79px] 
           max-mobile:w-[261px]
           "
@@ -72,7 +72,7 @@ const Hero = () => {
       {/* <div className="absolute z-40 bg-[#F07C49] w-[1600px] h-[1449px] rounded-[100%/100%] -translate-y-20"></div> */}
 
       <h1
-        className="z-10 text-lg text-white max-w-[1140px] mx-8 pb-36 text-center
+        className="z-10 text-4xl text-white max-w-[1140px] mx-8 pb-36 text-center
       max-tablet:text-nav
       max-tablet:pb-16"
       >
@@ -105,14 +105,14 @@ const Hero = () => {
               height={256}
             />
             <h1
-              className="text-lg font-bold text-left
-            max-tablet:text-nav"
+              className="text-4xl font-bold text-left
+            max-tablet:text-2xl"
             >
               {item.title}
             </h1>
             <p
-              className="text-sm text-left
-            max-tablet:text-xm"
+              className="text-xl text-left
+            max-tablet:text-md"
             >
               {item.text}
             </p>

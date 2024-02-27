@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <section className="pb-20 bg-base">
+      <section className="pb-20 bg-base max-tablet:pb-16">
         <Hero />
       </section>
       <CaseStudy />

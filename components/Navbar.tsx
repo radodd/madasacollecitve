@@ -21,7 +21,7 @@ const Navbar = () => {
             <a
               href={link.href}
               target={index !== navLinks.length - 1 ? "" : "_blank"}
-              className={`block text-xm font-normal text-fifth hover:font-bold ${
+              className={`block text-md font-normal text-fifth hover:font-bold ${
                 index === navLinks.length - 1 ? "font-semibold" : ""
               }`}
             >
@@ -42,15 +42,9 @@ const Navbar = () => {
     >
       <div className="py-6">
         <Link href="/"></Link>
-        <Image
-          alt="Logo"
-          src="/madasa_logo.svg"
-          width={151}
-          height={24}
-          className="sm:w-[151px]"
-        />
+        <Image alt="Logo" src="/short_logo.svg" width={54} height={54} />
       </div>
-      <div className="flex text-nav gap-16 items-center text-fifth max-small:hidden">
+      <div className="flex text-2xl gap-16 items-center text-fifth max-small:hidden">
         {navLinks.map((link, index) => (
           <Link
             key={index}

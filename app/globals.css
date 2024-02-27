@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -19,7 +19,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 @media (min-width: 1440px) {
   .sun-media {
@@ -39,7 +39,10 @@ body {
 
 @layer utilities {
   .btn-blue {
-    @apply bg-transparent border-[3px] border-secondary font-semibold text-secondary text-xm px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300;
+    @apply bg-transparent border-[3px] border-secondary font-semibold text-secondary text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300;
+  }
+  .btn-pink {
+    @apply bg-transparent border-[3px] border-quaternary font-semibold text-quaternary text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300;
   }
 }
 

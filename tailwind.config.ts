@@ -26,12 +26,12 @@ module.exports = {
         70: "70px",
       },
       fontSize: {
-        xm: ["16px", "normal"],
-        sm: ["20px", "normal"],
-        nav: ["24px", "normal"],
-        md: ["30px", "normal"],
-        lg: ["32px", "normal"],
-        xl: ["40px", "normal"],
+        md: ["16px", "normal"],
+        xl: ["20px", "normal"],
+        "2xl": ["24px", "normal"],
+        "3xl": ["30px", "normal"],
+        "4xl": ["32px", "normal"],
+        "5xl": ["40px", "normal"],
         hero: ["64px", "normal"],
       },
       fontWeight: {
@@ -42,7 +42,7 @@ module.exports = {
       },
       colors: {
         base: "#FEEFDD",
-        primary: "E3712E",
+        primary: "#E3712E",
         secondary: "#4357AD",
         tertiary: "#7EBDC2",
         quaternary: "#D11141",
