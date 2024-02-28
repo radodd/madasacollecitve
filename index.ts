@@ -7,7 +7,7 @@ export const navLinks = [
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/contact-us",
   },
   {
     title: "Schedule a Call",
