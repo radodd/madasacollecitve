@@ -10,21 +10,24 @@ const Developers = () => {
         {developers.map((developer) => (
           <div
             key={developer.name}
-            className="max-w-[430px] p-10 flex flex-col gap-6 shadow-bl2xl rounded-3xl bg-white"
+            className="card min-w-[430px] min-h-[618px] flex flex-col gap-6 shadow-bl2xl"
           >
-            <Image
-              src={developer.pic}
-              alt={developer.name}
-              width={350}
-              height={400}
-            />
-            <div className="flex flex-col gap-4">
-              <h1 className="text-4xl font-bold">{developer.name}</h1>
-              <div>
-                <p className="text-xl">{developer.title}</p>
-                <p className="text-xl">{developer.secondTitle}</p>
+            <div className="front flex flex-col gap-6">
+              <Image
+                src={developer.pic}
+                alt={developer.name}
+                width={350}
+                height={400}
+              />
+              <div className="flex flex-col gap-4">
+                <h1 className="text-4xl font-bold">{developer.name}</h1>
+                <div>
+                  <p className="text-xl">{developer.title}</p>
+                  <p className="text-xl">{developer.secondTitle}</p>
+                </div>
               </div>
             </div>
+            <div className="back">BACK</div>
           </div>
         ))}
       </div>
