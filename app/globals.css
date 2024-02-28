@@ -56,8 +56,6 @@ body {
 }
 
 .card {
-  height: 493px;
-  width: 384px;
   align-items: center;
   position: relative;
   transition: all 1s linear;
@@ -72,8 +70,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
-  border-radius: 10px;
+  border-radius: 25px;
   position: absolute;
 }
 
