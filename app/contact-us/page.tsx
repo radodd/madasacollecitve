@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ContactForm from "@/sections/contact/Form";
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <Navbar />
@@ -12,4 +12,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

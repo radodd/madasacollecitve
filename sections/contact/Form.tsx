@@ -24,7 +24,10 @@ export default function ContactForm() {
     //     once: true,
     //   }}
     // >
-    <div className="sun-media relative flex flex-col bg-base overflow-hidden">
+    <div
+      className="sun-media relative flex flex-col bg-base overflow-hidden
+    "
+    >
       <Image
         src="/Hero_Section_Circle.svg"
         alt="circle"
@@ -36,9 +39,9 @@ export default function ContactForm() {
         }}
         className="absolute translate-y-[200px]"
       />
-      <div className="z-10 flex flex-col justify-center items-center py-20 gap-1">
+      <div className="z-10 flex flex-col justify-center items-center py-20 gap-1 max-tablet:py-8">
         <h1 className="text-hero font-bold">Get in Touch</h1>
-        <p className="text-gray-700">
+        <p className="text-gray-700 text-center max-tablet:mx-6">
           Please contact me directly at{" "}
           <a className="underline" href="mailto:ethan.flores.js@gmail.com">
             Contact@MadasaCollective.com
@@ -48,7 +51,10 @@ export default function ContactForm() {
       </div>
 
       <form
-        className="z-10 grid grid-cols-2 justify-center gap-10 mx-[70px] max-w-[1512px]"
+        className="z-10 tablet:grid tablet:grid-cols-2 justify-center gap-10 mx-[70px] max-w-[1512px] 
+        max-tablet:gap-6 
+        max-tablet:flex 
+        max-tablet:flex-col"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -60,7 +66,7 @@ export default function ContactForm() {
         }}
       >
         <div className="flex flex-col">
-          <label className="text-2xl font-bold mb-2">Your name:</label>
+          <label className="text-2xl font-bold">Your name:</label>
           <input
             className="h-[57px] px-4 rounded-lg "
             name="name"
@@ -114,7 +120,7 @@ export default function ContactForm() {
             maxLength={5000}
           />
         </div>
-        <div className="flex justify-center items-center col-span-2 py-20">
+        <div className="flex justify-center items-center col-span-2 py-20 min-w-[209px] max-tablet:py-8">
           <Button type="submit" variant="btn-pink-fill" title="Submit" />
         </div>
       </form>

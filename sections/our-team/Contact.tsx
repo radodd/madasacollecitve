@@ -8,10 +8,10 @@ const Contact = () => {
       <div className="max-w-[746px] flex flex-col gap-10 text-white">
         <h1 className="text-5xl">Have a Project in mind?</h1>
         <p className="text-2xl">
-          Let's team up to create a tailored digital solution that aligns with
-          your needs and business goals.
+          Let&apos;s team up to create a tailored digital solution that aligns
+          with your needs and business goals.
         </p>
-        <Button title="Schdule a call" type="button" variant="btn-white" />
+        <Button title="Schdule a call" type="button" variant="btn-blue-white" />
       </div>
       <Image src="/Vector.svg" alt="vector" width={375} height={375} />
     </div>
