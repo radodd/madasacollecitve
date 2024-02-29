@@ -25,7 +25,7 @@ export default function ContactForm() {
     //   }}
     // >
     <div
-      className="sun-media relative flex flex-col bg-base overflow-hidden
+      className="sun-media relative flex flex-col justify-center bg-base overflow-hidden 
     "
     >
       <Image
@@ -51,7 +51,7 @@ export default function ContactForm() {
       </div>
 
       <form
-        className="z-10 tablet:grid tablet:grid-cols-2 justify-center gap-10 mx-[70px] max-w-[1512px] 
+        className="z-10 tablet:grid tablet:grid-cols-2 justify-center gap-10 mx-[70px] max-w-[704px]
         max-tablet:gap-6 
         max-tablet:flex 
         max-tablet:flex-col"

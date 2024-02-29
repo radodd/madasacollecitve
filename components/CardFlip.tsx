@@ -12,9 +12,10 @@ const CardFlip = () => {
       {cards.map((item) => (
         <div
           key={item.title}
-          className="card flex flex-col gap-6 shadow-br2xl px-16 min-w-[384px] min-h-[493px] 
+          className="card flex flex-col gap-6 shadow-b2xl px-16 min-w-[384px] min-h-[493px] 
        max-tablet:max-w-[320px]
        max-tablet:min-w-[320px]
+       max-tablet:min-h-[400px]
        max-tablet:px-10"
         >
           <div className="front flex flex-col gap-6">
