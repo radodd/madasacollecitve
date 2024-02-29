@@ -43,9 +43,9 @@ module.exports = {
       colors: {
         base: "#FEEFDD",
         primary: "#E3712E",
-        secondary: "#4357AD",
-        tertiary: "#7EBDC2",
-        quaternary: "#A33E71",
+        secondary: "#467AD4",
+        tertiary: "#56B7CB",
+        quaternary: "#DF4894",
         fifth: "#434A42",
         btnColor: "#A53860",
       },
