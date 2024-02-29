@@ -25,7 +25,7 @@ export default function ContactForm() {
     //   }}
     // >
     <div
-      className="sun-media relative flex flex-col justify-center bg-base overflow-hidden 
+      className="sun-media relative flex flex-col justify-center items-center bg-base overflow-hidden
     "
     >
       <Image
@@ -37,21 +37,21 @@ export default function ContactForm() {
           width: "100%",
           height: "100%",
         }}
-        className="absolute translate-y-[200px]"
+        className="absolute translate-y-[200px]
+        max-tablet:translate-y-[110px]"
       />
-      <div className="z-10 flex flex-col justify-center items-center py-20 gap-1 max-tablet:py-8">
-        <h1 className="text-hero font-bold">Get in Touch</h1>
-        <p className="text-gray-700 text-center max-tablet:mx-6">
-          Please contact me directly at{" "}
-          <a className="underline" href="mailto:ethan.flores.js@gmail.com">
-            Contact@MadasaCollective.com
-          </a>{" "}
-          or via this form.
-        </p>
+      <div
+        className="z-10 flex flex-col justify-center items-center pt-20 pb-24 gap-1 
+      max-tablet:pt-8
+      max-tablet:pb-12"
+      >
+        <h1 className="text-hero font-bold max-mobileplus:text-5xl">
+          Get in touch!
+        </h1>
       </div>
 
       <form
-        className="z-10 tablet:grid tablet:grid-cols-2 justify-center gap-10 mx-[70px] max-w-[704px]
+        className="z-10 extrasmall:grid extrasmall:grid-cols-2 justify-center gap-10 mx-[70px] max-w-[700px] 
         max-tablet:gap-6 
         max-tablet:flex 
         max-tablet:flex-col"
@@ -66,9 +66,9 @@ export default function ContactForm() {
         }}
       >
         <div className="flex flex-col">
-          <label className="text-2xl font-bold">Your name:</label>
+          <label className="text-md font-bold text-white">Your name:</label>
           <input
-            className="h-[57px] px-4 rounded-lg "
+            className="h-[57px] px-4 mt-3 rounded-lg "
             name="name"
             id="name"
             type="text"
@@ -78,9 +78,9 @@ export default function ContactForm() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-2xl font-bold ">Your company:</label>
+          <label className="text-md font-bold text-white">Your company:</label>
           <input
-            className="h-[57px] px-4 rounded-lg "
+            className="h-[57px] px-4 mt-3 rounded-lg "
             name="company"
             type="text"
             required
@@ -89,9 +89,9 @@ export default function ContactForm() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-2xl font-bold ">Your email:</label>
+          <label className="text-md font-bold text-white">Your email:</label>
           <input
-            className="h-[57px] px-4 rounded-lg "
+            className="h-[57px] px-4 mt-3 rounded-lg "
             name="senderEmail"
             type="email"
             required
@@ -100,9 +100,11 @@ export default function ContactForm() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-2xl font-bold ">Your phone number:</label>
+          <label className="text-md font-bold text-white">
+            Your phone number:
+          </label>
           <input
-            className="h-[57px] px-4 rounded-lg "
+            className="h-[57px] px-4 mt-3 rounded-lg "
             name="phoneNumber"
             type="number"
             required
@@ -111,17 +113,20 @@ export default function ContactForm() {
           />
         </div>
         <div className="flex flex-col col-span-2">
-          <label className="text-2xl font-bold">Message:</label>
+          <label className="text-md font-bold text-white">Message:</label>
           <textarea
-            className="h-[380px] my-3 rounded-lg p-4 "
+            className="h-[350px] mt-3 rounded-lg p-4 "
             name="message"
             placeholder="Start typing here..."
             required
             maxLength={5000}
           />
         </div>
-        <div className="flex justify-center items-center col-span-2 py-20 min-w-[209px] max-tablet:py-8">
-          <Button type="submit" variant="btn-pink-fill" title="Submit" />
+        <div
+          className="flex justify-center items-center col-span-2 pb-10 
+        max-tablet:pb-8"
+        >
+          <Button type="submit" variant="btn-blue-white" title="Submit" />
         </div>
       </form>
     </div>

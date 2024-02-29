@@ -11,12 +11,12 @@ export const navLinks = [
   },
   {
     title: "Schedule a Call",
-    href: "//https://calendly.com/ethanf-flores/30min?month=2024-02",
+    href: "https://calendly.com/ethanf-flores/30min?month=2024-02",
   },
 ];
 
 export const whoWeAre = [
-  "We are a digital powerhouse of freelance designers and developers who create digital products that launch businesses to their full potential.",
+  "We create digital products that launch businesses to their full potential.",
 ];
 
 export const cards = [
@@ -40,33 +40,52 @@ export const cards = [
 export const designers = [
   {
     name: "Sarina Zepeda",
-    title: "Product Designer",
-    secondTitle: "Founder",
+    role: "Product Designer",
+    title: "Founder",
     pic: "/Sarina-Zepeda-head-shot.svg",
+    icon: "/team/icon_serina.svg",
+    backTitle: "I like",
+    backText:
+      "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, painting",
   },
   {
     name: "Miguel Castillo",
-    title: "Senior Product Designer",
-    secondTitle: "Graphic Designer",
+    role: "Senior Product Designer",
+    title: "Graphic Designer",
     pic: "/Miguel-castillo-head-shot.svg",
+    icon: "/team/icon_miguel.svg",
+    backTitle: "I like",
+    backText:
+      "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, painting",
   },
 ];
 
 export const developers = [
   {
     name: "Ethan Flores",
-    title: "Software Developer",
-    secondTitle: "Founder",
+    role: "Software Developer",
+    title: "Founder",
     pic: "/ethan-flores-head-shot.svg",
+    icon: "/team/icon_ethan.svg",
+    backTitle: "I like",
+    backText:
+      "my cats, hot tropical sun, the beach, surfing, CrossFit, Soul South Korea, Okinawa, and Guam",
   },
   {
     name: "Jose Roman",
-    title: "Senior Software Developer",
+    role: "Senior Software Developer",
+    title: "",
     pic: "/jose-roman-head-shot.svg",
+    icon: "/team/icon_jose.svg",
+    backTitle: "I like",
+    backText: "my video games, my wife <3",
   },
   {
     name: "Daniel Castillo",
     title: "Software Developer",
     pic: "/daniel-castillo-head-shot.svg",
+    icon: "/team/icon_danny.svg",
+    backTitle: "I like",
+    backText: "my kids, cycling, movies, food, video games, Oaxaca, ",
   },
 ];

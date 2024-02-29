@@ -12,8 +12,13 @@ const page = () => {
       <Navbar />
       <Hero />
       <Designers />
-      <Developers />
-      <Contact />
+      <section className="">
+        <Developers />
+      </section>
+      <section className="">
+        <Contact />
+      </section>
+
       <Footer />
     </div>
   );
