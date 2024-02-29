@@ -4,7 +4,7 @@ import { cards } from "..";
 const CardFlip = () => {
   return (
     <div
-      className="container flex flex-row items-center gap-[111px] px-[70px] z-10
+      className="z-10 container flex flex-row items-center justify-center gap-[111px] px-[70px] 
     max-wide:flex-col
     max-tablet:px-8
     max-tablet:gap-8"

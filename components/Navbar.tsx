@@ -13,7 +13,7 @@ const Navbar = () => {
       initial={{ opacity: 1, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="absolute top-full w-screen left-0 text-center bg-base border border-primary shadow-md rounded-b-2xl z-10"
+      className="z-20 absolute top-full w-screen left-0 text-center bg-base shadow-md rounded-b-2xl "
     >
       <div className="my-4 gap-3 max-mobile:my-6 max-mobile:gap-6">
         {navLinks.map((link, index) => (

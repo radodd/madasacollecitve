@@ -41,6 +41,9 @@ body {
   .btn-blue {
     @apply bg-transparent border-[3px] border-secondary font-semibold text-secondary text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300;
   }
+  .btn-blue-white {
+    @apply bg-transparent border-[3px] border-white font-semibold text-white text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300;
+  }
   .btn-pink {
     @apply bg-transparent border-[3px] border-quaternary font-semibold text-quaternary text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300;
   }
