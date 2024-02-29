@@ -67,6 +67,6 @@ export const developers = [
   {
     name: "Daniel Castillo",
     title: "Software Developer",
-    pic: "/daniel-castillo-head-shot.png",
+    pic: "/daniel-castillo-head-shot.svg",
   },
 ];

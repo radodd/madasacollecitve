@@ -17,7 +17,7 @@ const Designers = () => {
         className="text-5xl font-bold
       max-tablet:text-4xl"
       >
-        Designers
+        Design
       </h1>
       <div className="flex gap-10 flex-wrap justify-center">
         {designers.map((designer) => (

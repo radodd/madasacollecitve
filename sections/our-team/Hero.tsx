@@ -14,7 +14,7 @@ const Hero = () => {
           style={{ width: "100%", height: "100%" }}
         />
       </div>
-      <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[64px] font-bold max-tablet:text-5xl">
+      <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[64px] font-bold max-tablet:text-5xl text-nowrap">
         Our Team
       </h1>
     </div>
