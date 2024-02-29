@@ -19,7 +19,7 @@ const Designers = () => {
       >
         Design
       </h1>
-      <div className="flex gap-10 flex-wrap justify-center">
+      <div className="flex gap-10 flex-wrap justify-start max-smallplus:justify-center">
         {designers.map((designer) => (
           <div
             key={designer.name}
@@ -46,18 +46,41 @@ const Designers = () => {
                     className="text-xl
                   max-tablet:text-md"
                   >
-                    {designer.title}
+                    {designer.role}
                   </p>
                   <p
                     className="text-xl
                   max-tablet:text-md"
                   >
-                    {designer.secondTitle}
+                    {designer.title}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="back">BACK</div>
+            <div className="back flex flex-col gap-6 px-10">
+              <Image
+                src={designer.icon}
+                alt={designer.icon}
+                width={isTablet ? 249 : 350}
+                height={isTablet ? 300 : 400}
+              />
+              <div className="flex flex-col gap-4 w-full">
+                <h1
+                  className="text-4xl font-bold
+                max-tablet:text-2xl"
+                >
+                  {designer.backTitle}
+                </h1>
+                <div>
+                  <p
+                    className="text-xl
+                  max-tablet:text-md"
+                  >
+                    {designer.backText}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>

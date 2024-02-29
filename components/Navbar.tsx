@@ -22,7 +22,9 @@ const Navbar = () => {
               href={link.href}
               target={index !== navLinks.length - 1 ? "" : "_blank"}
               className={`block text-md font-normal text-fifth hover:font-bold ${
-                index === navLinks.length - 1 ? "font-semibold" : ""
+                index === navLinks.length - 1
+                  ? "font-semibold no-underline"
+                  : ""
               }`}
             >
               {link.title}

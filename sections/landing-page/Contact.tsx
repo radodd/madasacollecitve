@@ -26,7 +26,7 @@ const Contact = () => {
         className="absolute justify-center"
       />
       <div
-        className="z-10 flex flex-col py-14 px-[70px] bg-white rounded-3xl
+        className="z-10 flex flex-col py-14 px-[70px] bg-white rounded-3xl 
       max-tablet:p-8"
       >
         <div
@@ -37,7 +37,13 @@ const Contact = () => {
             Let&apos;s make something incredible together
           </h1>
           <p className="text-2xl">Request a free discovery call.</p>
-          <Button type="button" title="Schedule a Call" variant="btn-blue" />
+          <Button
+            type="button"
+            title="Schedule a Call"
+            variant="btn-blue"
+            href="https://calendly.com/ethanf-flores/30min?month=2024-02"
+            target="_blank"
+          />
         </div>
       </div>
 
