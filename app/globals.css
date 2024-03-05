@@ -32,6 +32,16 @@
     object-fit: cover;
   }
 }
+@media screen and (max-width: 835px) {
+  #hamburger-hidden {
+    display: block; /* or any other style you want for smaller screens */
+  }
+}
+@media screen and (min-width: 836px) {
+  #hamburger-hidden {
+    display: none; /* hide the hamburger when width is greater than 835px */
+  }
+}
 
 body {
   font-family: "Open Sans";
@@ -51,6 +61,10 @@ body {
     @apply bg-quaternary border-[3px] border-white font-semibold text-white text-md px-8 py-4 rounded-full cursor-pointer hover:border-quaternary transition-all duration-300 min-w-[192px];
   }
 }
+
+/* #hamburger-hidden {
+  display: none;
+} */
 
 .hamburger .hamburger-inner,
 .hamburger .hamburger-inner::before,

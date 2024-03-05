@@ -63,7 +63,7 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger menu for small screens */}
-      <div className="small:hidden">
+      <div id="hamburger-hidden">
         <div
           className="inline-block cursor-pointer mx-8 max-tablet:mx-0"
           onClick={() => {

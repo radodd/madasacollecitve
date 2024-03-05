@@ -1,8 +1,8 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import ContactForm from "@/sections/contact/Form";
+import ContactForm from "@/sections/contact-us/Form";
 
-const Page = () => {
+const page = () => {
   return (
     <div>
       <Navbar />
@@ -12,4 +12,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default page;

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/SendEmail";
 import Button from "@/components/Button";

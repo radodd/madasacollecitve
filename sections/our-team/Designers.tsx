@@ -1,7 +1,6 @@
 "use client";
 import { designers } from "@/index";
 import Image from "next/image";
-import React from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 
 const Designers = () => {

@@ -4,7 +4,6 @@ import Contact from "@/sections/our-team/Contact";
 import Designers from "@/sections/our-team/Designers";
 import Developers from "@/sections/our-team/Developers";
 import Hero from "@/sections/our-team/Hero";
-import React from "react";
 
 const page = () => {
   return (

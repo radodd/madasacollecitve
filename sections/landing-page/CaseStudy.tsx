@@ -34,13 +34,18 @@ const CaseStudy = () => {
       "
       >
         <h1
-          className="text-4xl font-semibold pb-2
+          className="text-4xl font-semibold
           max-tablet:text-3xl
           "
         >
-          Responsive Website
+          Our Work
         </h1>
-
+        <h2
+          className="text-4xl
+      max-tablet:text-3xl"
+        >
+          Responsive Website
+        </h2>
         <p
           className="text-xl 
         max-tablet:md"
