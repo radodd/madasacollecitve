@@ -1,9 +1,11 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "..";
+import "@/app/globals.css";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -18,7 +20,7 @@ const Navbar = () => {
       <div className="my-4 gap-3 max-mobile:my-6 max-mobile:gap-6">
         {navLinks.map((link, index) => (
           <li key={link.title} className="pb-3 last:pb-0">
-            <a
+            <Link
               href={link.href}
               target={index !== navLinks.length - 1 ? "" : "_blank"}
               className={`block text-md font-normal text-fifth hover:font-bold ${
@@ -28,7 +30,7 @@ const Navbar = () => {
               }`}
             >
               {link.title}
-            </a>
+            </Link>
           </li>
         ))}
       </div>
@@ -63,10 +65,11 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger menu for small screens */}
-      <div id="hamburger-hidden">
+      <div id="dropdown" className="z-10">
         <div
           className="inline-block cursor-pointer mx-8 max-tablet:mx-0"
           onClick={() => {
+            console.log("Toggling dropdownOpen");
             setDropdownOpen(!dropdownOpen);
           }}
         >

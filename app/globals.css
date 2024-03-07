@@ -32,13 +32,13 @@
     object-fit: cover;
   }
 }
-@media screen and (max-width: 835px) {
-  #hamburger-hidden {
+@media screen and (max-width: 949px) {
+  #dropdown {
     display: block; /* or any other style you want for smaller screens */
   }
 }
-@media screen and (min-width: 836px) {
-  #hamburger-hidden {
+@media screen and (min-width: 950px) {
+  #dropdown {
     display: none; /* hide the hamburger when width is greater than 835px */
   }
 }
