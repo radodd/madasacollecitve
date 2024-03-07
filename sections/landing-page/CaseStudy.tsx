@@ -19,7 +19,7 @@ const CaseStudy = () => {
     >
       <Image
         alt="case study image Gen Fulton Consultancy"
-        src="/Final Deliverables.svg"
+        src="/case_study.svg"
         width={imageWidth}
         height={imageHeight}
         quality={100}

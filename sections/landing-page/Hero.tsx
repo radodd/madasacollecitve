@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="sun-media relative flex flex-col items-center pb-[100px] bg-base overflow-hidden">
       <Image
-        src="/Hero_Section_Circle.svg"
+        src="/hero_circle.svg"
         alt="circle"
         height={1448}
         width={1600}
@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="z-10 mt-[128px] mx-4 max-tablet:mt-[80px]">
         <Image
           alt="Madasa Logo"
-          src="/hero_madasa.svg"
+          src="/logo/hero_madasa.svg"
           width={836}
           height={136}
           className="pb-[29.79px] 
@@ -31,7 +31,7 @@ const Hero = () => {
 
         <Image
           alt="Masasa Collective Logo"
-          src="/hero_collective.svg"
+          src="/logo/hero_collective.svg"
           width={836}
           height={97.5}
           className="pb-16 

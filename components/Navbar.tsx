@@ -46,7 +46,7 @@ const Navbar = () => {
     >
       <div className="py-6">
         <Link href="/">
-          <Image alt="Logo" src="/short_logo.svg" width={54} height={54} />
+          <Image alt="Logo" src="/logo/short.svg" width={54} height={54} />
         </Link>
       </div>
       <div className="flex text-2xl gap-16 items-center text-fifth max-small:hidden">

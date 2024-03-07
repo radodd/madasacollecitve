@@ -28,7 +28,7 @@ export default function ContactForm() {
     "
     >
       <Image
-        src="/Hero_Section_Circle.svg"
+        src="/hero_circle.svg"
         alt="circle"
         height={1448}
         width={1600}

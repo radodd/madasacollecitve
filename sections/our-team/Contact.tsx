@@ -12,7 +12,7 @@ const Contact = () => {
     >
       <Image
         alt="contact circle"
-        src="/contact_circle.svg"
+        src="/contact-icons/circle.svg"
         height={1600}
         width={1448}
         style={{
@@ -40,7 +40,7 @@ const Contact = () => {
         />
       </div>
       <Image
-        src="/Vector.svg"
+        src="/contact-icons/icon2.svg"
         alt="vector"
         width={355}
         height={355}

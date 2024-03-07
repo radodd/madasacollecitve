@@ -12,7 +12,7 @@ const Contact = () => {
     max-tablet:py-16"
     >
       <Image
-        src="/contact_circle.svg"
+        src="/contact-icons/circle.svg"
         alt="contact circle"
         height={1448}
         width={1600}
@@ -49,7 +49,7 @@ const Contact = () => {
 
       <Image
         alt="schedule call"
-        src="/icon_contact.svg"
+        src="/contact-icons/icon.svg"
         width={341}
         height={354}
         className="z-10"

@@ -12,12 +12,7 @@ const Footer = () => {
         max-tablet:gap-6"
     >
       <div className="flex items-center">
-        <Image
-          alt="Logo"
-          src="/collective_logo_footer.svg"
-          width={175}
-          height={200}
-        />
+        <Image alt="Logo" src="/logo/footer.svg" width={175} height={200} />
       </div>
       <div
         className="flex flex-col text-right text-black text-md gap-2

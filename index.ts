@@ -21,17 +21,17 @@ export const whoWeAre = [
 
 export const cards = [
   {
-    icon: "/Branding.svg",
+    icon: "/landing-page-cards/branding.svg",
     title: "Branding",
     text: "Your vision is transformed into a brand identity that reflects your style & values.",
   },
   {
-    icon: "/Coconut.svg",
+    icon: "/landing-page-cards/product.svg",
     title: "Product Design",
     text: "Your needs are prioritized, while ensuring a user-centric design.",
   },
   {
-    icon: "/Papaya.svg",
+    icon: "/landing-page-cards/development.svg",
     title: "Development",
     text: "Your digital product is optimized for your use and your company's success.",
   },
@@ -42,7 +42,7 @@ export const designers = [
     name: "Sarina Zepeda",
     role: "Product Designer",
     title: "Founder",
-    pic: "/Sarina-Zepeda-head-shot.svg",
+    pic: "/team/headshot_serina.svg",
     icon: "/team/icon_serina.svg",
     backTitle: "I like",
     backText:
@@ -52,7 +52,7 @@ export const designers = [
     name: "Miguel Castillo",
     role: "Senior Product Designer",
     title: "Graphic Designer",
-    pic: "/Miguel-castillo-head-shot.svg",
+    pic: "/team/headshot_miguel.svg",
     icon: "/team/icon_miguel.svg",
     backTitle: "I like",
     backText:
@@ -65,7 +65,7 @@ export const developers = [
     name: "Ethan Flores",
     role: "Software Developer",
     title: "Founder",
-    pic: "/ethan-flores-head-shot.svg",
+    pic: "/team/headshot_ethan.svg",
     icon: "/team/icon_ethan.svg",
     backTitle: "I like",
     backText:
@@ -75,7 +75,7 @@ export const developers = [
     name: "Jose Roman",
     role: "Senior Software Developer",
     title: "",
-    pic: "/jose-roman-head-shot.svg",
+    pic: "/team/headshot_jose.svg",
     icon: "/team/icon_jose.svg",
     backTitle: "I like",
     backText: "my video games, my wife <3",
@@ -83,7 +83,7 @@ export const developers = [
   {
     name: "Daniel Castillo",
     title: "Software Developer",
-    pic: "/daniel-castillo-head-shot.svg",
+    pic: "/team/headshot_danny.svg",
     icon: "/team/icon_danny.svg",
     backTitle: "I like",
     backText: "my kids, cycling, movies, food, video games, Oaxaca, ",

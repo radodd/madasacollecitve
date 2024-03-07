@@ -7,7 +7,7 @@ const Hero = () => {
       <div>
         <Image
           alt="out team"
-          src="/our-team.svg"
+          src="/hero_team.svg"
           layout="fill "
           width={100}
           height={100}
