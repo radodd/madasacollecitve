@@ -75,9 +75,10 @@ body {
   color: #56b7cb !important;
 }
 
-.card {
+.card-team {
   align-items: center;
   position: relative;
+  justify-items: center;
   transition: all 0.4s linear;
   transform-style: preserve-3d;
   border-radius: 25px;
@@ -106,10 +107,46 @@ body {
   transform: rotateY(180deg);
 }
 
-.card:hover {
+.card-team:hover {
   transform: rotateY(180deg);
 }
 
 .container {
   perspective: 1000px;
 }
+
+.card-landing {
+  align-items: center;
+  position: relative;
+  justify-items: center;
+  /* transition: all 0.4s linear; */
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+
+.card-landing:hover {
+  transform: rotateY(180deg);
+}
+/* .main {
+  margin-top: 50vh;
+}
+
+.card-mobile {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+.card-mobile .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20%;
+  height: 500px;
+  width: 1000px;
+  border-radius: 25px;
+  padding: 50px;
+  transform-origin: top;
+} */

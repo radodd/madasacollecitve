@@ -22,7 +22,7 @@ const Designers = () => {
         {designers.map((designer) => (
           <div
             key={designer.name}
-            className="card min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
+            className="card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
             max-tablet:min-w-[329px] 
             max-tablet:min-h-[489px]"
           >

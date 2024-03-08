@@ -2,12 +2,17 @@
 import Image from "next/image";
 import { cards, whoWeAre } from "../..";
 import "hamburgers/dist/hamburgers.css";
-import CardFlip from "@/components/CardFlip";
+import CardFlip from "@/components/HeroCardsDesktop";
+import CardMobile from "@/components/CardMobile";
+import Card from "@/sections/landing-page/cards/HeroCardsMobileFormat";
+import Home from "@/sections/landing-page/cards/HeroCardsMobile";
+import Test from "@/sections/landing-page/cards/HeroCardsMobile";
+import HeroCardsDesktop from "@/components/HeroCardsDesktop";
 
 const Hero = () => {
   return (
-    <div className="sun-media relative flex flex-col items-center pb-[100px] bg-base overflow-hidden">
-      <Image
+    <div className="sun-media relative flex flex-col items-center pb-[100px] overflow-hidden">
+      {/* <Image
         src="/hero_circle.svg"
         alt="circle"
         height={1448}
@@ -17,7 +22,7 @@ const Hero = () => {
           height: "100%",
         }}
         className="absolute"
-      />
+      /> */}
       <div className="z-10 mt-[128px] mx-4 max-tablet:mt-[80px]">
         <Image
           alt="Madasa Logo"
@@ -47,7 +52,7 @@ const Hero = () => {
       >
         {whoWeAre}
       </h1>
-      <CardFlip />
+      <HeroCardsDesktop />
     </div>
   );
 };
