@@ -12,12 +12,14 @@
     "@react-email/components": "^0.0.15",
     "@react-email/tailwind": "^0.0.14",
     "@react-hook/media-query": "^1.1.1",
+    "@studio-freight/lenis": "^1.0.39",
     "framer-motion": "^11.0.5",
     "hamburgers": "^1.2.1",
     "next": "^14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "resend": "^3.2.0"
+    "resend": "^3.2.0",
+    "sass": "^1.71.1"
   },
   "devDependencies": {
     "@types/node": "^20",
