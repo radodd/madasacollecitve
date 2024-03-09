@@ -6,9 +6,11 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "..";
 import "@/app/globals.css";
+import Navbar2Button from "./Header/Nav2Button/index";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const DropdownMenu = () => (
     <motion.ul
@@ -38,7 +40,7 @@ const Navbar = () => {
   );
   return (
     <nav
-      className="relative flex justify-between items-center px-[90px] py-6 gap-4 bg-base
+      className="relative flex h-[300px] justify-between items-center px-[90px] py-6 gap-4 bg-base
         max-tablet:flex-row 
         max-tablet:pl-8
         max-tablet:pr-7
@@ -74,7 +76,7 @@ const Navbar = () => {
           }}
         >
           {/* Hamburger Icon */}
-          <button
+          {/* <button
             className={`hamburger hamburger--collapse ${
               dropdownOpen ? "is-active" : ""
             } `}
@@ -83,7 +85,8 @@ const Navbar = () => {
             <span className="hamburger-box">
               <span className="hamburger-inner"></span>
             </span>
-          </button>
+          </button> */}
+          {/* <Navbar2Button isActive={isActive} setIsActive={setIsActive} /> */}
         </div>
       </div>
 

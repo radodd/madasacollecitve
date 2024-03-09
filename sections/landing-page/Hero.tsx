@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { cards, whoWeAre } from "../..";
+import { cards, collectiveLetters, madasaLetters, whoWeAre } from "../..";
 import "hamburgers/dist/hamburgers.css";
 import CardFlip from "@/components/HeroCardsDesktop";
 import CardMobile from "@/components/CardMobile";
@@ -8,8 +8,118 @@ import Card from "@/sections/landing-page/cards/HeroCardsMobileFormat";
 import Home from "@/sections/landing-page/cards/HeroCardsMobile";
 import Test from "@/sections/landing-page/cards/HeroCardsMobile";
 import HeroCardsDesktop from "@/components/HeroCardsDesktop";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
+
+const customWidthByIndex = (index: number, isMobile: boolean) => {
+  if (isMobile) {
+    switch (index) {
+      case 0:
+      case 5:
+        return "27px";
+      case 1:
+        return "28px";
+      case 2:
+      case 3:
+        return "19px";
+      case 4:
+      case 9:
+        return "20px";
+      case 6:
+        return "25px";
+      case 7:
+        return "6px";
+      case 8:
+        return "29px";
+    }
+  } else {
+    switch (index) {
+      case 0:
+      case 5:
+        return "87px";
+      case 1:
+        return "91px";
+      case 2:
+      case 3:
+        return "62px";
+      case 4:
+      case 9:
+        return "65px";
+      case 6:
+        return "80px";
+      case 7:
+        return "20px";
+      case 8:
+        return "93px";
+    }
+  }
+};
+
+const customHeightByIndex = (index: number, isMobile: boolean) => {
+  if (isMobile) {
+    switch (index) {
+      case 0:
+      case 5:
+        return "30px";
+      case 1:
+        return "30px";
+      case 2:
+      case 3:
+        return "29px";
+      case 4:
+      case 9:
+        return "29px";
+      case 6:
+        return "29px";
+      case 7:
+        return "29px";
+      case 8:
+        return "29px";
+    }
+  }
+};
 
 const Hero = () => {
+  const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // const isMobile = useMediaQuery("(max-width: 556px");
+  // const isTablet = useMediaQuery("(max-width: 887px)");
+  // const isMobile = isMobile ? 299 : isTablet ? 500 : 654;
+  // const imageHeight = isMobile ? 150 : isTablet ? 300 : 409;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsTablet(window.innerWidth <= 887);
+      setIsMobile(window.innerWidth <= 556);
+    };
+
+    // Initial measurement on component mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once on mount
   return (
     <div className="sun-media relative flex flex-col items-center pb-[100px] overflow-hidden">
       {/* <Image
@@ -23,28 +133,74 @@ const Hero = () => {
         }}
         className="absolute"
       /> */}
-      <div className="z-10 mt-[128px] mx-4 max-tablet:mt-[80px]">
-        <Image
-          alt="Madasa Logo"
-          src="/logo/hero_madasa.svg"
-          width={836}
-          height={136}
-          className="pb-[29.79px] 
-          max-mobile:w-[261px]
-          "
-        />
+      <div className="z-10 mt-[128px] mx-4 pb-[70px] max-tablet:mt-[80px]">
+        <ul className="flex flex-wrap justify-center gap-3 pb-4">
+          {madasaLetters.map((letter, index) => (
+            <motion.li
+              className=""
+              key={index}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
+              style={{
+                width: isMobile
+                  ? index === 2
+                    ? "31px"
+                    : "42px"
+                  : !isMobile && isTablet
+                  ? index === 2
+                    ? "73px"
+                    : "83px"
+                  : !isMobile && !isTablet && index !== 2
+                  ? "135px"
+                  : "100px",
+              }}
+            >
+              <Image
+                src={letter.image}
+                alt={`Skill ${index + 1}`}
+                width={135}
+                height={135}
 
-        <Image
-          alt="Masasa Collective Logo"
-          src="/logo/hero_collective.svg"
-          width={836}
-          height={97.5}
-          className="pb-16 
-          max-mobile:w-[261px] 
-          "
-        />
+                // style={{ maxWidth: "65px", maxHeight: "65px" }}
+              />
+            </motion.li>
+          ))}
+        </ul>
+
+        <ul className="flex gap-3">
+          {collectiveLetters.map((letter, index) => (
+            <motion.li
+              className="flex"
+              key={index}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
+              style={{
+                width: customWidthByIndex(index, isMobile),
+                height: customHeightByIndex(index, isMobile),
+              }}
+            >
+              <Image
+                src={letter.image}
+                alt={`Skill ${index + 1}`}
+                width={94}
+                height={94}
+
+                // style={{ maxWidth: "65px", maxHeight: "65px" }}
+              />
+            </motion.li>
+          ))}
+        </ul>
       </div>
-
       <h1
         className="z-10 text-4xl text-white max-w-[1140px] mx-8 pb-36 text-center
       max-tablet:text-nav

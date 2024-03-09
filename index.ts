@@ -15,6 +15,59 @@ export const navLinks = [
   },
 ];
 
+export const madasaLetters = [
+  {
+    image: "/logo/letters/M.svg",
+  },
+  {
+    image: "/logo/letters/A.svg",
+  },
+  {
+    image: "/logo/letters/D.svg",
+  },
+  {
+    image: "/logo/letters/A.svg",
+  },
+  {
+    image: "/logo/letters/S.svg",
+  },
+  {
+    image: "/logo/letters/A.svg",
+  },
+];
+export const collectiveLetters = [
+  {
+    image: "/logo/letters/C.svg",
+  },
+  {
+    image: "/logo/letters/O.svg",
+  },
+  {
+    image: "/logo/letters/L.svg",
+  },
+  {
+    image: "/logo/letters/L.svg",
+  },
+  {
+    image: "/logo/letters/E.svg",
+  },
+  {
+    image: "/logo/letters/C.svg",
+  },
+  {
+    image: "/logo/letters/T.svg",
+  },
+  {
+    image: "/logo/letters/I.svg",
+  },
+  {
+    image: "/logo/letters/V.svg",
+  },
+  {
+    image: "/logo/letters/E.svg",
+  },
+];
+
 export const whoWeAre = [
   "We create digital products that launch businesses to their full potential.",
 ];
