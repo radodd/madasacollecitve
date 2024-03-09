@@ -8,7 +8,6 @@ import Hero from "@/sections/our-team/Hero";
 const page = () => {
   return (
     <div>
-      <Navbar />
       <Hero />
       <Designers />
       <section className="">

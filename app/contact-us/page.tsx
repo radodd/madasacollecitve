@@ -5,7 +5,6 @@ import ContactForm from "@/sections/contact-us/Form";
 const page = () => {
   return (
     <div>
-      <Navbar />
       <ContactForm />
       <Footer />
     </div>
