@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "..";
 import "@/app/globals.css";
 import Navbar2Button from "./Header/Nav2Button/index";
+import Header from "./Header";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

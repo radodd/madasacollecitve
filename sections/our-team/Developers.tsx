@@ -3,14 +3,18 @@ import { developers } from "@/index";
 import Image from "next/image";
 import React from "react";
 import { useMediaQuery } from "@react-hook/media-query";
+import { useNav } from "@/context/NavContext";
 
 const Developers = () => {
+  const { isActive } = useNav();
   const isTablet = useMediaQuery("(max-width: 768px)");
   return (
     <div
-      className="px-70 py-24 flex flex-col gap-10 bg-base
+      className={`${
+        isActive ? "blur" : ""
+      } px-70 py-24 flex flex-col gap-10 bg-base
     max-tablet:px-8
-    max-tablet:py-8"
+    max-tablet:py-8`}
     >
       <h1
         className="text-5xl font-bold

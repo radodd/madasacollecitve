@@ -1,14 +1,18 @@
 "use client";
 import Button from "@/components/Button";
 import Image from "next/image";
+import { useNav } from "@/context/NavContext";
 
 const Contact = () => {
+  const { isActive } = useNav();
   return (
     <div
-      className="sun-media relative z-20 p-70 bg-base flex gap-[90px]  overflow-hidden justify-center items-center max-medium:flex-col
+      className={`${
+        isActive ? "blur" : ""
+      } sun-media relative z-20 p-70 bg-base flex gap-[90px]  overflow-hidden justify-center items-center max-medium:flex-col
     max-medium:gap-16
     max-tablet:px-8
-    max-tablet:py-16"
+    max-tablet:py-16`}
     >
       <Image
         alt="contact circle"

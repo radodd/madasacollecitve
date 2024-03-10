@@ -1,9 +1,13 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { useNav } from "../../context/NavContext";
 
 const Hero = () => {
+  const { isActive } = useNav();
+  console.log("isActive from Team Page", isActive);
   return (
-    <div className="relative w-full h-full">
+    <div className={`${isActive ? "blur" : ""} relative w-full h-full`}>
       <div>
         <Image
           alt="out team"
