@@ -22,7 +22,9 @@
   transform-style: preserve-3d;
   border-radius: 25px;
 }
-
+.card-landing:hover {
+  transform: rotateY(180deg);
+}
 .mobile-front {
   background: linear-gradient(white, white);
   z-index: 2;

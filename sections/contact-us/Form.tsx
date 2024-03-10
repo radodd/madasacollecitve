@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/SendEmail";
 import Button from "@/components/Button";
 import Image from "next/image";
+import styles from "./contact.module.scss";
 
 export default function ContactForm() {
   return (

@@ -62,7 +62,7 @@ const Card = ({
             <div className="mobile-front flex flex-col gap-6">
               <Image src={icon} alt="image" width={216} height={216} />
               <h1
-                className="text-4xl font-bold
+                className="text-4xl flex justify-center font-bold
    max-tablet:text-2xl"
               >
                 {title}

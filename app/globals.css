@@ -107,12 +107,17 @@ body {
   transform: rotateY(180deg);
 }
 
-.card-team:hover {
+/* .card-team:hover {
   transform: rotateY(180deg);
-}
+} */
 
 .container {
   perspective: 1000px;
+}
+
+.sub-container:hover .card-team {
+  cursor: pointer;
+  transform: rotateY(180deg);
 }
 
 .card-landing {
@@ -124,9 +129,6 @@ body {
   border-radius: 25px;
 }
 
-.card-landing:hover {
-  transform: rotateY(180deg);
-}
 /* .main {
   margin-top: 50vh;
 }

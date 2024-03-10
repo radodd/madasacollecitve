@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div
-      className="flex justify-between bg-white px-[70px] py-8 w-full gap-4 
+      className="flex justify-between bg-tertiary px-[70px] py-8 w-full gap-4 
         max-tablet:flex-col 
         max-tablet:justify-center 
         max-tablet:items-center
@@ -15,7 +15,7 @@ const Footer = () => {
         <Image alt="Logo" src="/logo/footer.svg" width={175} height={200} />
       </div>
       <div
-        className="flex flex-col text-right text-black text-md gap-2
+        className="flex flex-col text-right text-white text-md gap-2
             max-tablet:text-center"
       >
         <p>Made in CA</p>

@@ -7,7 +7,7 @@ import { useMediaQuery } from "@react-hook/media-query";
 const CaseStudy = () => {
   const isMobile = useMediaQuery("(max-width: 394px");
   const isTablet = useMediaQuery("(max-width: 835px)");
-  const imageWidth = isMobile ? 299 : isTablet ? 500 : 654;
+  const imageWidth = isMobile ? 299 : isTablet ? 654 : 654;
   const imageHeight = isMobile ? 150 : isTablet ? 300 : 409;
 
   return (
@@ -17,14 +17,16 @@ const CaseStudy = () => {
     max-tablet:p-8
     max-tablet:gap-8"
     >
-      <Image
-        alt="case study image Gen Fulton Consultancy"
-        src="/case_study.svg"
-        width={imageWidth}
-        height={imageHeight}
-        quality={100}
-        className="rounded-3xl shadow-b2xl hover:shadow-b3xl transition-all duration-300 ease-in-out"
-      ></Image>
+      <div className="flex items-center justify-center bg-white max-h-[416px] max-w-[654px] rounded-3xl shadow-b2xl hover:shadow-b3xl ">
+        <Image
+          alt="case study image Gen Fulton Consultancy"
+          src="/case_study.svg"
+          width={imageWidth}
+          height={imageHeight}
+          quality={100}
+          className="flex items-center justify-center align-middle rounded-3xl transition-all duration-30 ease-in-out bg-white"
+        ></Image>
+      </div>
       <div
         className="flex flex-col py-10 px-12 gap-8 bg-white rounded-3xl shadow-b2xl max-w-[654px]
       max-tablet:gap-6

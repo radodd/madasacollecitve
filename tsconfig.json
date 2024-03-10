@@ -27,7 +27,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "sections/landing-page/cards/HeroCardsMobileFormat.jsx",
-    "components/Header/Nav2Button/index.tsx"
+    "components/Header/Nav2Button/index.tsx",
+    "sections/contact-us/Form.tsx"
   ],
   "exclude": ["node_modules"]
 }
