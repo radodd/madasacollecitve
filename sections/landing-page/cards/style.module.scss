@@ -5,10 +5,26 @@
   justify-content: center;
   position: sticky;
   top: 0px;
+  perspective: 1000px;
 
   .card {
     width: 329px;
     height: 329px;
     border: 2px solid black;
   }
+}
+
+.card-landing {
+  align-items: center;
+  position: relative;
+  justify-items: center;
+  /* transition: all 0.4s linear; */
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+
+.mobile-front {
+  background: linear-gradient(white, white);
+  z-index: 2;
+  backface-visibility: hidden;
 }
