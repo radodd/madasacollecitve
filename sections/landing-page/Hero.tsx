@@ -26,7 +26,11 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const customWidthByIndex = (index: number, isMobile: boolean) => {
+const customWidthByIndex = (
+  index: number,
+  isMobile: boolean,
+  isTablet: boolean
+) => {
   if (isMobile) {
     switch (index) {
       case 0:
@@ -46,6 +50,26 @@ const customWidthByIndex = (index: number, isMobile: boolean) => {
         return "6px";
       case 8:
         return "29px";
+    }
+  } else if (isTablet) {
+    switch (index) {
+      case 0:
+      case 5:
+        return "45px";
+      case 1:
+        return "50px";
+      case 2:
+      case 3:
+        return "35px";
+      case 4:
+      case 9:
+        return "35px";
+      case 6:
+        return "40px";
+      case 7:
+        return "15px";
+      case 8:
+        return "45px";
     }
   } else {
     switch (index) {
@@ -70,7 +94,11 @@ const customWidthByIndex = (index: number, isMobile: boolean) => {
   }
 };
 
-const customHeightByIndex = (index: number, isMobile: boolean) => {
+const customHeightByIndex = (
+  index: number,
+  isMobile: boolean,
+  isTablet: boolean
+) => {
   if (isMobile) {
     switch (index) {
       case 0:
@@ -90,6 +118,26 @@ const customHeightByIndex = (index: number, isMobile: boolean) => {
         return "29px";
       case 8:
         return "29px";
+    }
+  } else if (isTablet) {
+    switch (index) {
+      case 0:
+      case 5:
+        return "55px";
+      case 1:
+        return "50px";
+      case 2:
+      case 3:
+        return "55px";
+      case 4:
+      case 9:
+        return "50px";
+      case 6:
+        return "50px";
+      case 7:
+        return "50px";
+      case 8:
+        return "50px";
     }
   }
 };
@@ -153,7 +201,7 @@ const Hero = () => {
                     : "42px"
                   : !isMobile && isTablet
                   ? index === 2
-                    ? "73px"
+                    ? "62px"
                     : "83px"
                   : !isMobile && !isTablet && index !== 2
                   ? "135px"
@@ -172,7 +220,7 @@ const Hero = () => {
           ))}
         </ul>
 
-        <ul className="flex gap-3">
+        <ul className="flex gap-[8.5px]">
           {collectiveLetters.map((letter, index) => (
             <motion.li
               className="flex"
@@ -185,8 +233,8 @@ const Hero = () => {
               }}
               custom={index}
               style={{
-                width: customWidthByIndex(index, isMobile),
-                height: customHeightByIndex(index, isMobile),
+                width: customWidthByIndex(index, isMobile, isTablet),
+                height: customHeightByIndex(index, isMobile, isTablet),
               }}
             >
               <Image
