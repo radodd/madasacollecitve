@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import styles from "./HeroCardsMobile.module.scss";
 import Card from "./HeroCardsMobileFormat.jsx";
 import { cards } from "@/index";
-import { motion, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 
 export default function HeroCardsMobile() {

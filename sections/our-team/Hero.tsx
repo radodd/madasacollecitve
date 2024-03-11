@@ -19,7 +19,7 @@ const Hero = () => {
         isActive ? "blur" : ""
       } relative flex justify-center items-start bg-base`}
     >
-      <div className="flex bg-base">
+      <div className="flex w-full h-full ">
         {/* <Image
           alt="out team"
           src="/hero_team.svg"
@@ -32,10 +32,10 @@ const Hero = () => {
           autoPlay
           loop
           muted // Add controls for play, pause, etc.
-          className="flex  top-0 bottom-0 object-top "
           width="100%"
           height="100%"
           ref={videoRef}
+          className="flex object-fill"
         >
           <source src="/team.mov" type="video/mp4" />
           Your browser does not support the video tag.

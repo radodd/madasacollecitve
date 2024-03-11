@@ -22,13 +22,12 @@ module.exports = {
         bl2xl: "-10px 10px 5px -5px rgba(0, 0, 0, 0.25)",
         b2xl: "0px 10px 10px -5px rgba(0, 0, 0, 0.25)",
         b3xl: "0px 20px 20px -5px rgba(0, 0, 0, 0.25)",
-        // br2xl:'0px 12px 50px -12px rgba(0, 0, 0, 0.25)',
-        try: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       },
       padding: {
         70: "70px",
       },
       fontSize: {
+        sm: ["15px", "normal"],
         md: ["16px", "normal"],
         xl: ["20px", "normal"],
         "2xl": ["24px", "normal"],

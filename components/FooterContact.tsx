@@ -12,16 +12,23 @@ const FooterContact = () => {
         max-tablet:gap-6"
     >
       <div className="flex items-center">
-        <Image alt="Logo" src="/logo/footer.svg" width={175} height={200} />
+        <Image
+          alt="Logo"
+          src="/logo/footer.svg"
+          width={175}
+          height={200}
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
       </div>
       <div
-        className="flex flex-col text-right text-white text-md gap-2
-            max-tablet:text-center"
+        className="flex flex-col text-right text-white text-sm gap-2
+            max-tablet:text-center
+            max-mobile:"
       >
         <p>Made in CA</p>
         <p>contact@madasacollective.com</p>
-        <div className="flex gap-1 text-md">
-          <Image alt="copyright" src="/copyright.svg" height={24} width={24} />
+        <div className="flex gap-1 text-sm">
+          <Image alt="copyright" src="/copyright.svg" height={15} width={15} />
           <p>2024 Madasa Collective All Rights Reserved.</p>
         </div>
       </div>

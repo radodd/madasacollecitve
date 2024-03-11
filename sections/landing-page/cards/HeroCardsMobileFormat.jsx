@@ -4,19 +4,9 @@ import {
   AnimatePresence,
   motion,
   motionValue,
-  MotionValue,
   useTransform,
 } from "framer-motion";
 import { useState } from "react";
-
-// interface CardProps {
-//   icon: string;
-//   title: string;
-//   text: string;
-//   i: number;
-//   progress: MotionValue<number> | number;
-//   range?: number[];
-//   targetScale?: number;
 
 const Card = ({
   i,
@@ -56,15 +46,12 @@ const Card = ({
               scale,
               top: `calc(-10% + ${i * 25}px)`,
             }}
-            className={`${styles.card}  card-landing flex bg-white justify-center items-center bl2xl rounded-3xl`}
+            className={`${styles.card}  card-landing flex bg-white justify-center items-center rounded-3xl`}
             onClick={flipCard}
           >
             <div className="mobile-front flex flex-col gap-6">
-              <Image src={icon} alt="image" width={216} height={216} />
-              <h1
-                className="text-4xl flex justify-center font-bold
-   max-tablet:text-2xl"
-              >
+              <Image src={icon} alt="image" width={249} height={246} />
+              <h1 className="text-4xl flex justify-center font-bold">
                 {title}
               </h1>
             </div>
@@ -82,7 +69,7 @@ const Card = ({
               scale,
               top: `calc(-10% + ${i * 25}px)`,
             }}
-            className={`${styles.card} card-landing flex flex-col bg-white justify-center items-center bl2xl rounded-3xl`}
+            className={`${styles.card} card-landing flex flex-col bg-white justify-center items-center rounded-3xl`}
             onClick={flipCard}
           >
             <div className=" p-6">

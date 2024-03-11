@@ -30,9 +30,17 @@ const Contact = () => {
       />
       {/* <div className="bg-secondary w-[1600px] h-[1448px] absolute -translate-x-20 -translate-y-16 rounded-t-full"></div> */}
 
-      <div className="z-10 flex flex-col gap-10 text-black bg-white rounded-3xl p-14 max-w-[625px]">
-        <h1 className="text-5xl">Have a Project in mind?</h1>
-        <p className="text-2xl">
+      <div
+        className="z-10 flex flex-col gap-8 text-black bg-white rounded-3xl p-14 max-w-[625px]
+      max-mobile:p-8"
+      >
+        <h1
+          className="text-5xl
+        max-mobile:text-4xl"
+        >
+          Have a Project in mind?
+        </h1>
+        <p className="text-2xl max-mobile:text-xl">
           Let&apos;s team up to create a tailored digital solution that aligns
           with your needs and business goals.
         </p>

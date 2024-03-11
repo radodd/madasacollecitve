@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import React from "react";
 import { useMediaQuery } from "@react-hook/media-query";
+import Link from "next/link";
 
 const CaseStudy = () => {
   const isMobile = useMediaQuery("(max-width: 394px");
@@ -35,24 +36,27 @@ const CaseStudy = () => {
       >
         <h1
           className="text-5xl font-bold
-          max-tablet:text-3xl
+          max-tablet:text-4xl
           "
         >
           Our Work
         </h1>
         <h2
           className="text-4xl
-      max-tablet:text-3xl"
+      max-tablet:text-2xl"
         >
           Responsive Website
         </h2>
         <p
-          className="text-xl 
-        max-tablet:md"
+          className="text-xl text-pretty
+        max-tablet:text-md"
         >
-          GenFulton.com is a psychotherapist & mental performance coach who was
-          looking for help designing her website & a brand that encompassed her
-          multiple businesses.
+          <Link href="https://www.genfulton.com">
+            <span className="underline ">GenFulton.com </span>
+          </Link>
+          is a psychotherapist & mental performance coach who was looking for
+          help designing her website & a brand that encompassed her multiple
+          businesses.
         </p>
         <Button
           type="button"

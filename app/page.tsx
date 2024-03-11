@@ -8,18 +8,22 @@ import HeroCardsMobile from "../sections/landing-page/cards/HeroCardsMobile";
 
 export default function Home() {
   return (
-    <div className="bg-base">
-      <section className=" bg-football bg-no-repeat bg-cover bg-center pb-20 bg-base max-tablet:pb-16">
+    <>
+      <section
+        className=" bg-football bg-no-repeat bg-cover bg-center pb-20 
+      max-tablet:pb-16
+      max-mobile:mt-8"
+      >
         <Hero />
         <HeroCardsMobile />
       </section>
-      <section className="mt-[100px] ">
+      <section className="mt-[50px] ">
         <CaseStudy />
       </section>
 
       <Testimonial />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }

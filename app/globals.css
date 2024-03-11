@@ -45,6 +45,7 @@
 
 body {
   font-family: "Open Sans";
+  background-color: #feefdd;
 }
 
 @layer utilities {

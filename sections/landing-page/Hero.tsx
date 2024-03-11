@@ -176,8 +176,15 @@ const Hero = () => {
         }}
         className="absolute"
       /> */}
-      <div className="z-10 mt-[128px] mx-4 pb-[70px] max-tablet:mt-[80px]">
-        <ul className="flex flex-wrap justify-center gap-3 pb-4">
+      <div
+        className="z-10 mt-[128px] pb-[70px] 
+      max-tablet:mt-[64px]
+      max-mobile:pb-12"
+      >
+        <ul
+          className="flex flex-wrap justify-center gap-[3.75px] pb-4
+        max-mobile:pb-[9px]"
+        >
           {madasaLetters.map((letter, index) => (
             <motion.li
               className=""
@@ -215,7 +222,10 @@ const Hero = () => {
           ))}
         </ul>
 
-        <ul className="flex gap-[8.5px]">
+        <ul
+          className="flex gap-[8.5px]
+        max-mobile:gap-1"
+        >
           {collectiveLetters.map((letter, index) => (
             <motion.li
               className="flex"
@@ -247,7 +257,9 @@ const Hero = () => {
       <h1
         className="z-10 text-4xl text-white max-w-[1140px] mx-8 pb-36 text-center
       max-tablet:text-nav
-      max-tablet:pb-16"
+      max-tablet:pb-16
+      max-mobile:text-2xl
+      max-mobile:pb-12"
       >
         {whoWeAre}
       </h1>

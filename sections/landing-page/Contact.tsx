@@ -33,10 +33,18 @@ const Contact = () => {
           className="flex flex-col gap-8 max-w-[485px] 
         "
         >
-          <h1 className="text-5xl">
+          <h1
+            className="text-pretty text-5xl
+          max-mobile:text-4xl"
+          >
             Let&apos;s make something incredible together
           </h1>
-          <p className="text-2xl">Request a free discovery call.</p>
+          <p
+            className="text-pretty text-2xl
+          max-mobile:text-xl"
+          >
+            Request a free discovery call.
+          </p>
           <Button
             type="button"
             title="Schedule a Call"

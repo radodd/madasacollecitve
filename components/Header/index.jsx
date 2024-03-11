@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 
 import styles from "./style.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
@@ -40,9 +39,15 @@ const Navbar2 = () => {
       max-tablet:pr-7
       "
       >
-        <div className="py-6">
+        <div className="">
           <Link href="/">
-            <Image alt="Logo" src="/logo/short.svg" width={54} height={54} />
+            <Image
+              alt="Logo"
+              src="/logo/short.svg"
+              width={54}
+              height={54}
+              className="my-[20px]"
+            />
           </Link>
         </div>
 
@@ -65,7 +70,7 @@ const Navbar2 = () => {
 
         <div className={`${styles.header} z-30 small:hidden`}>
           <motion.div
-            className={styles.menu}
+            className={`${styles.menu} max-mobile:max-w-[385px] `}
             variants={variants}
             animate={isActive ? "open" : "close"}
             initial="closed"
