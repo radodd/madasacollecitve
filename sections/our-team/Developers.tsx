@@ -22,66 +22,67 @@ const Developers = () => {
       >
         Development
       </h1>
-      <div className="flex flex-row gap-10 flex-wrap justify-start max-smallplus:justify-center">
+      <div className="container flex flex-row gap-10 flex-wrap justify-start max-smallplus:justify-center">
         {developers.map((developer) => (
-          <div
-            key={developer.name}
-            className="card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
+          <div key={developer.name} className="sub-container">
+            <div
+              className="card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
             max-tablet:min-w-[329px] 
             max-tablet:min-h-[489px]"
-          >
-            <div className="front flex flex-col gap-6 px-10">
-              <Image
-                src={developer.pic}
-                alt={developer.name}
-                width={isTablet ? 249 : 350}
-                height={isTablet ? 300 : 400}
-              />
-              <div className="flex flex-col gap-4 w-full">
-                <h1
-                  className="text-4xl font-bold
+            >
+              <div className="front flex flex-col gap-6 px-10">
+                <Image
+                  src={developer.pic}
+                  alt={developer.name}
+                  width={isTablet ? 249 : 350}
+                  height={isTablet ? 300 : 400}
+                />
+                <div className="flex flex-col gap-4 w-full">
+                  <h1
+                    className="text-4xl font-bold
                 max-tablet:text-2xl"
-                >
-                  {developer.name}
-                </h1>
-                <div>
-                  <p
-                    className="text-xl
-                  max-tablet:text-md"
                   >
-                    {developer.title}
-                  </p>
-                  <p
-                    className="text-xl
+                    {developer.name}
+                  </h1>
+                  <div>
+                    <p
+                      className="text-xl
                   max-tablet:text-md"
-                  >
-                    {developer.role}
-                  </p>
+                    >
+                      {developer.title}
+                    </p>
+                    <p
+                      className="text-xl
+                  max-tablet:text-md"
+                    >
+                      {developer.role}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="back flex flex-col gap-6 px-10">
-              <Image
-                src={developer.icon}
-                alt={developer.icon}
-                width={isTablet ? 249 : 350}
-                height={isTablet ? 300 : 400}
-              />
-              <div className="flex flex-col gap-4 w-full">
-                <h1
-                  className="text-4xl font-bold
+              <div className="back flex flex-col gap-6 px-10">
+                <Image
+                  src={developer.icon}
+                  alt={developer.icon}
+                  width={isTablet ? 249 : 350}
+                  height={isTablet ? 300 : 400}
+                />
+                <div className="flex flex-col gap-4 w-full">
+                  <h1
+                    className="text-4xl font-bold
                 max-tablet:text-2xl"
-                >
-                  {developer.backTitle}
-                </h1>
-                <div>
-                  <p
-                    className="text-xl
-                  max-tablet:text-md"
                   >
-                    {developer.backText}
-                  </p>
+                    {developer.backTitle}
+                  </h1>
+                  <div>
+                    <p
+                      className="text-xl
+                  max-tablet:text-md"
+                    >
+                      {developer.backText}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

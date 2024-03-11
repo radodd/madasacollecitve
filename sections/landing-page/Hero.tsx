@@ -146,11 +146,6 @@ const Hero = () => {
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // const isMobile = useMediaQuery("(max-width: 556px");
-  // const isTablet = useMediaQuery("(max-width: 887px)");
-  // const isMobile = isMobile ? 299 : isTablet ? 500 : 654;
-  // const imageHeight = isMobile ? 150 : isTablet ? 300 : 409;
-
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth <= 887);

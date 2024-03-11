@@ -118,7 +118,7 @@ export const developers = [
     name: "Ethan Flores",
     role: "Software Developer",
     title: "Founder",
-    pic: "/team/headshot_ethan.svg",
+    pic: "/team/ethan.svg",
     icon: "/team/icon_ethan.svg",
     backTitle: "I like",
     backText:
