@@ -44,7 +44,7 @@ const Hero = () => {
         </video>
       </div>
 
-      <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[64px] font-bold max-tablet:text-5xl text-nowrap">
+      <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[64px] font-bold max-tablet:text-5xl max-mobile:text-4xl text-nowrap">
         Our Team
       </h1>
     </div>
