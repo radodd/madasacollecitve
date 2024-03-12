@@ -69,11 +69,14 @@ body {
 
 .hamburger .hamburger-inner,
 .hamburger .hamburger-inner::before,
-.hamburger .hamburger-inner::after,
+.hamburger .hamburger-inner::after {
+  background-color: #467ad4 !important;
+  /* color: #467ad4 !important; */
+}
+
 .is-active .hamburger-inner,
 .is-active .hamburger-inner::before {
-  background-color: #56b7cb !important;
-  color: #56b7cb !important;
+  background-color: white !important;
 }
 
 .card-team {

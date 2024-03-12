@@ -5,8 +5,10 @@ import { sendEmail } from "@/actions/SendEmail";
 import Button from "@/components/Button";
 import Image from "next/image";
 import styles from "./contact.module.scss";
+import { useNav } from "@/context/NavContext";
 
 export default function ContactForm() {
+  const { isActive } = useNav();
   return (
     // <motion.section
     //   id="contact"
@@ -25,8 +27,10 @@ export default function ContactForm() {
     //   }}
     // >
     <div
-      className="sun-media relative flex flex-col justify-center items-center bg-base overflow-hidden
-    "
+      className={`${
+        isActive ? "blur" : ""
+      } sun-media relative flex flex-col justify-center items-center bg-base overflow-hidden
+    `}
     >
       <Image
         src="/hero_circle.svg"

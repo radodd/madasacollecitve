@@ -29,7 +29,7 @@ const Navbar2Button: React.FC<Navbar2ButtonProps> = ({
           } `}
           type="button"
         >
-          <span className="hamburger-box -translate-y-2">
+          <span className="hamburger-box -translate-y-4">
             <span className="hamburger-inner"></span>
           </span>
         </button>{" "}

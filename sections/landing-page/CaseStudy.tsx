@@ -4,19 +4,23 @@ import Image from "next/image";
 import React from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 import Link from "next/link";
+import { useNav } from "@/context/NavContext";
 
 const CaseStudy = () => {
   const isMobile = useMediaQuery("(max-width: 394px");
   const isTablet = useMediaQuery("(max-width: 835px)");
   const imageWidth = isMobile ? 299 : isTablet ? 654 : 654;
   const imageHeight = isMobile ? 150 : isTablet ? 300 : 409;
+  const { isActive } = useNav();
 
   return (
     <div
-      className="flex justify-center items-center px-[70px] py-20 gap-16 bg-secondary 
+      className={`${
+        isActive ? "blur" : ""
+      } flex justify-center items-center px-[70px] py-20 gap-16 bg-secondary 
     max-wide:flex-col
     max-tablet:p-8
-    max-tablet:gap-8"
+    max-tablet:gap-8`}
     >
       <div className="flex items-center justify-center bg-white max-h-[416px] max-w-[654px] rounded-3xl shadow-b2xl hover:shadow-b3xl ">
         <Image

@@ -6,11 +6,11 @@ export const navLinks = [
     href: "/our-team",
   },
   {
-    title: "Contact",
+    title: "Contact Us",
     href: "/contact-us",
   },
   {
-    title: "Schedule a Call",
+    title: "Schedule a Discovery Meeting",
     href: "https://calendly.com/ethanf-flores/30min?month=2024-02",
   },
 ];

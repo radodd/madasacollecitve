@@ -16,7 +16,7 @@ const HamburgerIcon = () => {
         {" "}
         {/* Hamburger Icon */}
         <button
-          className={`hamburger hamburger--collapse ${
+          className={` hamburger hamburger--collapse ${
             isActive ? "is-active" : ""
           } `}
           type="button"

@@ -1,9 +1,14 @@
+import { useNav } from "@/context/NavContext";
+
 const Testimonial = () => {
+  const { isActive } = useNav();
   return (
     <div
-      className="bg-base p-20 flex justify-center items-center
+      className={`${
+        isActive ? "blur" : ""
+      } bg-base p-20 flex justify-center items-center
       max-tablet:p-9
-    "
+    `}
     >
       <div
         className="flex flex-col py-14 px-70 gap-8 bg-primary max-w-[1140px] rounded-3xl shadow-b2xl

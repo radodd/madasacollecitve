@@ -11,18 +11,18 @@ import { useNav } from "@/context/NavContext";
 
 const variants = {
   open: {
-    width: 480,
-    height: 650,
+    width: 500,
+    height: 350,
     top: "-25px",
     right: "-25px",
     transition: { duration: 0.75, ease: [0.75, 0, 0.24, 1] },
   },
   close: {
-    width: 100,
-    height: 40,
-    top: "0px",
-    right: "0px",
-    transition: { duration: 0.75, ease: [0.75, 0, 0.24, 1] },
+    width: 0,
+    height: 0,
+    top: "5px",
+    right: "5px",
+    transition: { duration: 0.85, ease: [0.75, 0, 0.24, 1] },
   },
 };
 const Navbar2 = () => {

@@ -3,8 +3,9 @@
   right: 30px;
   top: 28px;
   .menu {
-    width: 480px;
-    height: 650px;
+    width: 500px;
+    height: 450px;
+    transform: translateX(-47px) translateY(13px);
     position: relative;
     background-color: #df4894;
     border-radius: 25px;
@@ -14,7 +15,7 @@
     /* Custom dimensions for screens up to 767px width */
     .menu {
       width: 100px;
-      height: auto; /* Adjust as needed based on your design */
+      /* Adjust as needed based on your design */
     }
   }
 }

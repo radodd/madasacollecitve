@@ -1,3 +1,6 @@
+@import "./hamburgers-settings.scss";
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
 .button {
   height: 40px;
   width: 100px;
@@ -8,19 +11,20 @@
   top: 0;
   right: 0;
   .slider {
-    position: relative;
+    // position: relative;
     height: 100%;
     width: 100%;
 
     .el {
-      height: 105%;
+      height: 100%;
       width: 100%;
       padding-bottom: 5px;
-      background-color: #feefdd;
+      background-color: transparent;
       border-style: solid;
-      border-color: #feefdd;
+      // border-color: #feefdd;
       text-transform: uppercase;
       color: white;
+      transform: translateY(10px);
 
       &:nth-of-type(2) {
         position: absolute;
@@ -32,7 +36,7 @@
           transform: rotateX(90deg);
           p {
             &:nth-of-type(1) {
-              transform: translateY(-100%);
+              // transform: translateY(-100%);
               opacity: 0;
             }
             &:nth-of-type(2) {
@@ -63,3 +67,21 @@
     }
   }
 }
+
+$hamburger-padding-x: 15px !default;
+$hamburger-padding-y: 15px !default;
+$hamburger-layer-width: 40px !default;
+$hamburger-layer-height: 4px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-layer-color: #000 !default;
+$hamburger-layer-border-radius: 4px !default;
+$hamburger-hover-opacity: 1 !default;
+$hamburger-active-layer-color: $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter: none !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;

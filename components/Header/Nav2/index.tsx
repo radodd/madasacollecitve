@@ -3,6 +3,7 @@ import styles from "./style.module.scss";
 import { navLinks } from "@/index";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useNav } from "@/context/NavContext";
 
 const perspective = {
   initial: {
@@ -28,7 +29,11 @@ const perspective = {
     transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
   },
 };
-const index = () => {
+const Index = () => {
+  const { isActive, setIsActive } = useNav();
+  const handleLinkClick = () => {
+    setIsActive(!isActive);
+  };
   return (
     <div className={styles.nav}>
       <div className={styles.body}>
@@ -42,7 +47,9 @@ const index = () => {
                 exit="exit"
                 initial="initial"
               >
-                <Link href={link.href}>{link.title}</Link>
+                <Link href={link.href} onClick={handleLinkClick}>
+                  {link.title}
+                </Link>
               </motion.div>
             </div>
           );
@@ -52,4 +59,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

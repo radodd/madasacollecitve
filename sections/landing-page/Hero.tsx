@@ -11,6 +11,7 @@ import HeroCardsDesktop from "@/components/HeroCardsDesktop";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
+import { useNav } from "@/context/NavContext";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -145,6 +146,7 @@ const customHeightByIndex = (
 const Hero = () => {
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { isActive } = useNav();
 
   useEffect(() => {
     const handleResize = () => {
@@ -164,7 +166,11 @@ const Hero = () => {
     };
   }, []); // Empty dependency array ensures this effect runs only once on mount
   return (
-    <div className="sun-media relative flex flex-col items-center pb-[100px] overflow-hidden">
+    <div
+      className={`${
+        isActive ? "blur" : ""
+      } sun-media relative flex flex-col items-center pb-[100px] overflow-hidden`}
+    >
       {/* <Image
         src="/hero_circle.svg"
         alt="circle"
