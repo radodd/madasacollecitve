@@ -50,7 +50,34 @@ export default function ContactForm() {
         </h1>
       </div>
 
-      <form
+      <form action="" id="loginform" className={`${styles.form} z-10`}>
+        <div className={styles.animateLabel}>
+          <input
+            type="text"
+            id="username"
+            className={`${styles.input} h-[57px] px-4 mt-3 rounded-lg `}
+            required
+          />
+          <label className="text-md font-bold px-4 pb-2">Your Name</label>
+          <line></line>
+        </div>
+        <div className={styles.animateLabel}>
+          <input
+            type="text"
+            id="username"
+            className={`${styles.input} h-[57px] px-4 mt-3  `}
+            required
+          />
+          <label className="text-md font-bold px-4 pb-2">Email</label>
+          <line></line>
+        </div>
+      </form>
+    </div>
+    // </motion.section>
+  );
+}
+{
+  /* <form
         className="z-10 extrasmall:grid extrasmall:grid-cols-2 justify-center gap-10 mx-[70px] max-w-[700px] 
         max-tablet:gap-6 
         max-tablet:flex 
@@ -128,8 +155,5 @@ export default function ContactForm() {
         >
           <Button type="submit" variant="btn-blue-white" title="Submit" />
         </div>
-      </form>
-    </div>
-    // </motion.section>
-  );
+      </form> */
 }

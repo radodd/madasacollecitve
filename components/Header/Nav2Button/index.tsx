@@ -23,14 +23,24 @@ const Navbar2Button: React.FC<Navbar2ButtonProps> = ({
         animate={{ top: isActive ? "-100%" : "0" }}
         transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
       >
-        <div className={styles.el}>
+        <button
+          className={`${styles.el}  hamburger hamburger--collapse ${
+            isActive ? "is-active" : ""
+          } `}
+          type="button"
+        >
+          <span className="hamburger-box -translate-y-2">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>{" "}
+        {/* <div className={styles.el}>
           <PerspectiveText label="Menu" />
           <p>Menu</p>
         </div>
         <div className={styles.el}>
           <PerspectiveText label="Close" />
           <p>Close</p>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

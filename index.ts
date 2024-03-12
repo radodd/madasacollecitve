@@ -118,7 +118,7 @@ export const developers = [
     name: "Ethan Flores",
     role: "Software Developer",
     title: "Founder",
-    pic: "/team/ethan.svg",
+    pic: "/team/headshot_ethan.svg",
     icon: "/team/icon_ethan.svg",
     backTitle: "I like",
     backText:
@@ -136,7 +136,7 @@ export const developers = [
   {
     name: "Daniel Castillo",
     title: "Software Developer",
-    pic: "/team/headshot_danny.svg",
+    pic: "/team/headshot_danny.png",
     icon: "/team/icon_danny.svg",
     backTitle: "I like",
     backText: "my kids, cycling, movies, food, video games, Oaxaca, ",
