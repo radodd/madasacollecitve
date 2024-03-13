@@ -14,18 +14,24 @@ import {
 import { Tailwind } from "@react-email/tailwind";
 
 type ContactFormEmailProps = {
+  fullName: string;
+  company: string;
+  email: string;
+  phoneNumber: string;
   message: string;
-  senderEmail: string;
 };
 
 export default function EmailStyle({
+  fullName,
+  company,
+  phoneNumber,
   message,
-  senderEmail,
+  email,
 }: ContactFormEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>New message from your portfolio site</Preview>
+      <Preview>New message from Madasa Site</Preview>
       <Tailwind>
         <Body className="bg-gray-100 text-black">
           <Container>
@@ -33,9 +39,12 @@ export default function EmailStyle({
               <Heading className="leading-tight">
                 You received the following message from the contact form
               </Heading>
+              <Text>From: {fullName}</Text>
+              <Text>Where they work: {company}</Text>
               <Text>{message}</Text>
               <Hr />
-              <Text>The sender&apos;s email is: {senderEmail}</Text>
+              <Text>The sender&apos;s email is: {email}</Text>
+              <Text>The sender&apos;s contact number: {phoneNumber}</Text>
             </Section>
           </Container>
         </Body>

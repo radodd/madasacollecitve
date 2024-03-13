@@ -1,50 +1,115 @@
 .animateLabel {
   position: relative;
   margin-top: 6px;
+
   label {
     position: absolute;
-    bottom: 6px;
+    bottom: 30%;
     left: 0;
     transition: all 0.3s ease;
     font-size: 14px;
-    width: 100%;
-    color: black;
+    width: auto;
+    color: #e0e0e0;
   }
   input:valid + label,
   input:focus + label {
     bottom: 50px;
     font-size: 10px;
+    background-color: #e3712e;
+    width: auto;
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 3px;
   }
   input:focus + label {
-    color: white;
+    color: #e0e0e0;
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 3px;
   }
-  line:before {
-    content: "";
+  input:focus {
+    border: 2px solid #e0e0e0;
+  }
+  // line:before {
+  //   content: "";
+  //   position: absolute;
+  //   background: #6c5b3c;
+  //   width: 0;
+  //   height: 2px;
+  //   right: 50%;
+  //   bottom: 0;
+  //   border-bottom-left-radius: 50px; // Adjust the value as needed
+  //   border-bottom-right-radius: 50px;
+  // }
+  // input:focus ~ line:before {
+  //   width: 100%;
+  //   right: 0;
+  //   transition: all 0.3s ease;
+  //   border-radius: 50px;
+  //   border-bottom-left-radius: 50px; // Adjust the value as needed
+  //   border-bottom-right-radius: 50px; // Adjust the value as needed
+  // }
+}
+.animateLabelMessage {
+  position: relative;
+  margin-top: 6px;
+
+  label {
     position: absolute;
-    background: orange;
-    width: 0;
-    height: 2px;
-    right: 50%;
-    bottom: 0;
-  }
-  input:focus ~ line:before {
-    width: 95%;
-    right: 0;
+    top: 10%;
+    left: 0;
     transition: all 0.3s ease;
+    font-size: 14px;
+    width: auto;
+    color: #e0e0e0;
+  }
+  textarea {
+    padding-top: 6px;
+  }
+
+  textarea:valid + label,
+  textarea:focus + label {
+    top: 5px;
+    font-size: 10px;
+    background-color: #e3712e;
+    width: auto;
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 3px;
+  }
+  textarea:focus + label {
+    color: #e0e0e0;
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 3px;
+  }
+  textarea:focus {
+    padding-top: 5px;
+    border: 2px solid #e0e0e0;
   }
 }
+
 .form {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
 .input {
   width: 100%;
+  color: white;
 
-  background-color: aquamarine;
-  border: 1px solid black;
-  border-bottom: 1px solid black;
+  background-color: #e3712e;
+  border: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding-bottom: 6px;
+  padding-bottom: 0px;
   &:focus {
     outline: none;
   }

@@ -8,13 +8,38 @@ import ContactFormEmail from "@/components/ContactFormEmail";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("senderEmail");
+  const fullName = formData.get("fullName");
+  const company = formData.get("company");
+  const email = formData.get("email");
+  const phoneNumber = formData.get("phoneNumber");
   const message = formData.get("message");
 
+  console.log("running on server");
+  console.log(formData);
+  console.log(formData.get("fullName"));
+  console.log(formData.get("company"));
+  console.log(formData.get("email"));
+  console.log(formData.get("phoneNumber"));
+  console.log(formData.get("message"));
   //   server-side validation
-  if (!validateString(senderEmail, 500)) {
+  if (!validateString(fullName, 500)) {
+    return {
+      error: "Invalid sender name",
+    };
+  }
+  if (!validateString(company, 500 || 0)) {
+    return {
+      error: "Invalid sender company",
+    };
+  }
+  if (!validateString(email, 500)) {
     return {
       error: "Invalid sender email",
+    };
+  }
+  if (!validateString(phoneNumber, 500)) {
+    return {
+      error: "Invalid sender phone number",
     };
   }
   if (!validateString(message, 5000)) {
@@ -34,10 +59,13 @@ export const sendEmail = async (formData: FormData) => {
       to: "ethan.flores.js@gmail.com",
       subject: "message from contact form",
       // text: message as string,
-      reply_to: senderEmail as string,
+      reply_to: email as string,
       react: React.createElement(ContactFormEmail, {
+        fullName: fullName,
+        company: company,
+        email: email,
+        phoneNumber: phoneNumber,
         message: message,
-        senderEmail: senderEmail,
       }),
     });
   } catch (error: unknown) {

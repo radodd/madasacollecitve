@@ -24,7 +24,7 @@ const Navbar2Button: React.FC<Navbar2ButtonProps> = ({
         transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
       >
         <button
-          className={`${styles.el}  hamburger hamburger--collapse ${
+          className={`${styles.el} hamburger hamburger--collapse ${
             isActive ? "is-active" : ""
           } `}
           type="button"

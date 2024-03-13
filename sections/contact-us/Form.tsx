@@ -54,26 +54,85 @@ export default function ContactForm() {
         </h1>
       </div>
 
-      <form action="" id="loginform" className={`${styles.form} z-10`}>
-        <div className={styles.animateLabel}>
+      <form
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+          console.log(formData.get("fullName"));
+          console.log(formData.get("company"));
+          console.log(formData.get("email"));
+          console.log(formData.get("phoneNumber"));
+          console.log(formData.get("message"));
+
+          if (error) {
+            alert(error);
+            return;
+          }
+          alert("Email sent successfully!");
+        }}
+        id="loginform"
+        className={`${styles.form} z-10 mb-40 tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
+        max-tablet:flex-col`}
+      >
+        <div className={`${styles.animateLabel} flex flex-col`}>
           <input
             type="text"
-            id="username"
-            className={`${styles.input} h-[57px] px-4 mt-3 rounded-lg `}
+            name="fullName"
+            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
+            autoComplete="off"
             required
           />
-          <label className="text-md font-bold px-4 pb-2">Your Name</label>
+          <label className="text-md px-4">Full name *</label>
           <line></line>
         </div>
-        <div className={styles.animateLabel}>
+        <div className={`${styles.animateLabel} flex flex-col`}>
           <input
             type="text"
-            id="username"
-            className={`${styles.input} h-[57px] px-4 mt-3  `}
+            name="company"
+            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
+            autoComplete="off"
             required
           />
-          <label className="text-md font-bold px-4 pb-2">Email</label>
+          <label className="text-md px-4">Your company</label>
           <line></line>
+        </div>
+        <div className={`${styles.animateLabel} flex flex-col`}>
+          <input
+            type="text"
+            name="email"
+            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
+            autoComplete="off"
+            required
+          />
+          <label className="text-md px-4">Your email *</label>
+          <line></line>
+        </div>
+        <div className={`${styles.animateLabel} flex flex-col`}>
+          <input
+            type="number"
+            name="phoneNumber"
+            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
+            autoComplete="off"
+            required
+          />
+          <label className="text-md px-4">Phone number</label>
+          <line></line>
+        </div>
+        <div className={`${styles.animateLabelMessage} col-span-2`}>
+          <textarea
+            name="message"
+            className={`${styles.input}  px-4 mt-3 rounded-md`}
+            // rows={6}
+            autoComplete="off"
+            required
+          />
+          <label className="text-md px-4 col-span-2">Message</label>
+          <line></line>
+        </div>
+        <div
+          className="flex justify-center items-center col-span-2 pb-10 
+        max-tablet:pb-8"
+        >
+          <Button type="submit" variant="btn-blue-white" title="Submit" />
         </div>
       </form>
     </div>
