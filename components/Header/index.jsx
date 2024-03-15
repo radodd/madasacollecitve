@@ -70,7 +70,7 @@ const Navbar2 = () => {
 
         <div className={`${styles.header} z-30 small:hidden`}>
           <motion.div
-            className={`${styles.menu} max-mobile:max-w-[310px] max-mobile:max-h-[280px]`}
+            className={`${styles.menu} max-tablet:max-w-[310px] max-tablet:max-h-[280px]`}
             variants={variants}
             animate={isActive ? "open" : "close"}
             initial="closed"
