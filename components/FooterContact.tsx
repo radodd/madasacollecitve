@@ -27,7 +27,7 @@ const FooterContact = () => {
       >
         <p>Made in CA</p>
         <p>contact@madasacollective.com</p>
-        <div className="flex gap-1 text-sm">
+        <div className="flex gap-1 text-xs">
           <Image alt="copyright" src="/copyright.svg" height={15} width={15} />
           <p>2024 Madasa Collective All Rights Reserved.</p>
         </div>

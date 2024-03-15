@@ -6,9 +6,115 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import styles from "./contact.module.scss";
 import { useNav } from "@/context/NavContext";
+import { useEffect, useState } from "react";
+
+// const isInvalidFullName = (fullName: string) => {
+//   const fullNameFormat = /\d/;
+//   return fullNameFormat.test(fullName) && fullName.length > 0;
+// };
+
+// const isNumericInput = (event: any) => {
+//   const key = event.keyCode;
+//   return (
+//     (key >= 48 && key <= 57) || // Allow number line
+//     (key >= 96 && key <= 105) // Allow number pad
+//   );
+// };
+
+// const isModifierKey = (event: any) => {
+//   const key = event.keyCode;
+//   return (
+//     event.shiftKey === true ||
+//     key === 35 ||
+//     key === 36 || // Allow Shift, Home, End
+//     key === 8 ||
+//     key === 9 ||
+//     key === 13 ||
+//     key === 46 || // Allow Backspace, Tab, Enter, Delete
+//     (key > 36 && key < 41) || // Allow left, up, right, down
+//     // Allow Ctrl/Command + A,C,V,X,Z
+//     ((event.ctrlKey === true || event.metaKey === true) &&
+//       (key === 65 || key === 67 || key === 86 || key === 88 || key === 90))
+//   );
+// };
+
+// const enforceFormat = (event: any) => {
+//   // Input must be of a valid number format or a modifier key, and not longer than ten digits
+//   if (!isNumericInput(event) && !isModifierKey(event)) {
+//     event.preventDefault();
+//   }
+// };
+
+// const formatToPhone = (event: any) => {
+//   if (isModifierKey(event)) {
+//     return;
+//   }
+
+//   const input = event.target.value.replace(/\D/g, "").substring(0, 10); // First ten digits of input only
+//   const areaCode = input.substring(0, 3);
+//   const middle = input.substring(3, 6);
+//   const last = input.substring(6, 10);
+
+//   if (input.length > 6) {
+//     event.target.value = `(${areaCode}) ${middle} - ${last}`;
+//   } else if (input.length > 3) {
+//     event.target.value = `(${areaCode}) ${middle}`;
+//   } else if (input.length > 0) {
+//     event.target.value = `(${areaCode}`;
+//   }
+// };
+
+// console.log("valid", isInvalidFullName("John Doe")); // false
+// console.log(isInvalidFullName("John Doe1")); // t
 
 export default function ContactForm() {
   const { isActive } = useNav();
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [submitClickedFullName, setSubmitClickedFullName] = useState(false);
+  const [submitClickedPhoneNumber, setSubmitClickedPhoneNumber] =
+    useState(false);
+  // const isErrorFullName = isInvalidFullName(fullName) && submitClickedFullName;
+
+  const onChangeFullName = (e: any) => {
+    setSubmitClickedFullName(false);
+    console.log(e.target.value);
+    setFullName(e.target.value);
+  };
+
+  // const onChangePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const inputPhoneNumber = e.target.value; // Get the raw input value from the event
+  //   const formattedPhoneNumber = formatToPhone(inputPhoneNumber); // Format the phone number
+  //   // setPhoneNumber(formattedPhoneNumber); // Update the state variable with the formatted phone number
+  // };
+
+  const onSubmit = () => {
+    console.log("Form submitted"); // Add this line to log when the form is submitted
+
+    // setSubmitClickedFullName(true);
+
+    if (fullName === "") {
+      console.log("ERRRRRROORRR");
+    } else {
+      console.log("Full name before clearing:", fullName);
+      // Clear the full name input after successful submission
+      setFullName("");
+      console.log("Full name after clearing:", fullName);
+    }
+  };
+
+  // useEffect(() => {
+  //   const inputElement = document.getElementById("phoneNumber");
+  //   if (inputElement) {
+  //     inputElement.addEventListener("keydown", enforceFormat);
+  //     inputElement.addEventListener("keyup", formatToPhone);
+  //   }
+  // }, []); // Empty dependency a
+
+  useEffect(() => {
+    console.log("Full name after clearing:", fullName);
+  }, [fullName]);
+
   return (
     // <motion.section
     //   id="contact"
@@ -29,112 +135,131 @@ export default function ContactForm() {
     <div
       className={`${
         isActive ? "blur" : ""
-      } sun-media relative flex flex-col justify-center items-center bg-base overflow-hidden
+      }  flex flex-col justify-center items-center bg-base overflow-hidden
     `}
     >
-      <Image
-        src="/hero_circle.svg"
-        alt="circle"
-        height={1448}
-        width={1600}
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-        className="absolute translate-y-[200px]
-        max-tablet:translate-y-[110px]"
-      />
       <div
-        className="z-10 flex flex-col justify-center items-center pt-20 pb-24 gap-1 
+        className="z-10 flex  justify-center items-center pt-20 pb-24 
       max-tablet:pt-8
-      max-tablet:pb-12"
+      max-tablet:pb-12
+      max-mobile:pb-8
+      max-mobile:pt-8"
       >
         <h1 className="text-hero font-bold max-mobileplus:text-5xl">
           Get in touch!
         </h1>
       </div>
+      <div className=" relative w-full">
+        <Image
+          src="/contact_sun.svg"
+          alt="circle"
+          height={1448}
+          width={3158}
+          // style={{
+          //   width: "100%",
+          //   height: "100%",
+          // }}
+          className="absolute object-fit h-[1448px]
+        translate-y-[0px]"
+        />
+      </div>
 
-      <form
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-          console.log(formData.get("fullName"));
-          console.log(formData.get("company"));
-          console.log(formData.get("email"));
-          console.log(formData.get("phoneNumber"));
-          console.log(formData.get("message"));
+      <div className="w-full flex max-mobile:mt-14">
+        <form
+          action={async (formData) => {
+            const { data, error } = await sendEmail(formData);
+            console.log(formData.get("fullName"));
+            console.log(formData.get("company"));
+            console.log(formData.get("email"));
+            console.log(formData.get("phoneNumber"));
+            console.log(formData.get("message"));
 
-          if (error) {
-            alert(error);
-            return;
-          }
-          alert("Email sent successfully!");
-        }}
-        id="loginform"
-        className={`${styles.form} z-10 mb-40 tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
-        max-tablet:flex-col`}
-      >
-        <div className={`${styles.animateLabel} flex flex-col`}>
-          <input
-            type="text"
-            name="fullName"
-            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
-            autoComplete="off"
-            required
-          />
-          <label className="text-md px-4">Full name *</label>
-          <line></line>
-        </div>
-        <div className={`${styles.animateLabel} flex flex-col`}>
-          <input
-            type="text"
-            name="company"
-            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
-            autoComplete="off"
-            required
-          />
-          <label className="text-md px-4">Your company</label>
-          <line></line>
-        </div>
-        <div className={`${styles.animateLabel} flex flex-col`}>
-          <input
-            type="text"
-            name="email"
-            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
-            autoComplete="off"
-            required
-          />
-          <label className="text-md px-4">Your email *</label>
-          <line></line>
-        </div>
-        <div className={`${styles.animateLabel} flex flex-col`}>
-          <input
-            type="number"
-            name="phoneNumber"
-            className={`${styles.input} h-[57px] px-4 mt-3 rounded-md `}
-            autoComplete="off"
-            required
-          />
-          <label className="text-md px-4">Phone number</label>
-          <line></line>
-        </div>
-        <div className={`${styles.animateLabelMessage} col-span-2`}>
-          <textarea
-            name="message"
-            className={`${styles.input}  px-4 mt-3 rounded-md`}
-            // rows={6}
-            autoComplete="off"
-            required
-          />
-          <label className="text-md px-4 col-span-2">Message</label>
-          <line></line>
-        </div>
-        <div
-          className="flex justify-center items-center col-span-2 pb-10 
-        max-tablet:pb-8"
+            if (error) {
+              alert(error);
+              return;
+            }
+            alert("Email sent successfully!");
+          }}
+          id="loginform"
+          className={`${styles.form} z-10 w-full gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
+        max-tablet:flex-col
+        max-tablet:mx-8`}
         >
-          <Button type="submit" variant="btn-blue-white" title="Submit" />
-        </div>
-      </form>
+          <div className={`${styles.animateLabel} flex flex-col`}>
+            <input
+              type="text"
+              // id="fullName"
+              name="fullName"
+              // value={fullName}
+              onChange={onChangeFullName}
+              className={`${styles.input} h-[57px] px-4 rounded-md `}
+              autoComplete="off"
+              required
+              // style={{
+              //   borderColor: isErrorFullName ? "red" : "#ccc", // Adjust colors as needed
+
+              //   color: isErrorFullName ? "red" : "black", // Adjust text color based on error state
+              // }}
+            />
+            <label className="text-md px-4">Full name *</label>
+            <line></line>
+          </div>
+          <div className={`${styles.animateLabel} flex flex-col`}>
+            <input
+              type="text"
+              name="company"
+              className={`${styles.input} h-[57px] px-4  rounded-md `}
+              autoComplete="off"
+              required
+            />
+            <label className="text-md px-4">Your company</label>
+            <line></line>
+          </div>
+          <div className={`${styles.animateLabel} flex flex-col`}>
+            <input
+              type="email"
+              name="email"
+              className={`${styles.input} h-[57px] px-4 rounded-md `}
+              autoComplete="off"
+              required
+            />
+            <label className="text-md px-4">Your email *</label>
+            <line></line>
+          </div>
+          <div className={`${styles.animateLabel} flex flex-col`}>
+            <input
+              type="number"
+              name="phoneNumber"
+              className={`${styles.input} h-[57px] px-4  rounded-md `}
+              autoComplete="off"
+              required
+            />
+            <label className="text-md px-4">Phone number</label>
+            <line></line>
+          </div>
+          <div className={`${styles.animateLabelMessage} col-span-2`}>
+            <textarea
+              name="message"
+              className={`${styles.input}  px-4 rounded-md`}
+              autoComplete="off"
+              required
+            />
+            <label className="text-md px-4 col-span-2">Message</label>
+            <line></line>
+          </div>
+          <div
+            className="flex justify-center items-center col-span-2 pb-10 
+        max-tablet:pb-8"
+          >
+            <Button
+              onClick={onSubmit}
+              type="submit"
+              variant="btn-blue-white"
+              title="Submit"
+            />
+          </div>
+        </form>
+      </div>
     </div>
     // </motion.section>
   );

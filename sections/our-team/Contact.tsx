@@ -9,25 +9,26 @@ const Contact = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } sun-media relative z-20 p-70 bg-base flex gap-[90px]  overflow-hidden justify-center items-center max-medium:flex-col
+      } relative z-20 p-70 bg-base flex gap-[90px]  overflow-hidden justify-center items-center max-medium:flex-col
     max-medium:gap-16
     max-tablet:px-8
     max-tablet:py-16`}
     >
       <Image
         alt="contact circle"
-        src="/contact-icons/circle.svg"
-        height={1600}
+        src="/ourteam_circle.svg"
+        height={2000}
         width={1448}
-        style={{
-          width: "100%",
-          height: "100%",
+        // style={{
+        //   width: "100%",
+        //   height: "100%",
 
-          top: 0, // Adjust top positioning
-          left: 0, // Adjust left positioning
-        }}
-        className="absolute justify-center medium:scale-[1.35] wide:translate-y-[100px]"
+        //   top: 0, // Adjust top positioning
+        //   left: 0, // Adjust left positioning
+        // }}
+        className="absolute object-fill h-[1000px] w-full translate-y-[30px] max-mobile:h-[730px] "
       />
+
       {/* <div className="bg-secondary w-[1600px] h-[1448px] absolute -translate-x-20 -translate-y-16 rounded-t-full"></div> */}
 
       <div
@@ -51,11 +52,18 @@ const Contact = () => {
           href="https://calendly.com/ethanf-flores/30min?month=2024-02"
         />
       </div>
-      <Image
+      {/* <Image
         src="/contact-icons/icon2.svg"
         alt="vector"
         width={355}
         height={355}
+        className="z-20"
+      /> */}
+      <Image
+        src="/ourteam_contact.png"
+        alt="our team group photo"
+        width={612}
+        height={378}
         className="z-20"
       />
     </div>

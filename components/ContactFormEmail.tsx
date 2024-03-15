@@ -17,7 +17,7 @@ type ContactFormEmailProps = {
   fullName: string;
   company: string;
   email: string;
-  phoneNumber: string;
+  phoneNumber: number;
   message: string;
 };
 

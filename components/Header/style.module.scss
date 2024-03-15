@@ -5,17 +5,18 @@
   .menu {
     width: 500px;
     height: 450px;
-    transform: translateX(-47px) translateY(13px);
     position: relative;
     background-color: #df4894;
     border-radius: 25px;
-  }
-
-  @media screen and (max-width: 400px) {
-    /* Custom dimensions for screens up to 767px width */
-    .menu {
+    transform: translateX(-50px) translateY(13px);
+    @media screen and (max-width: 400px) {
+      transform: translateY(13px) translateX(-10px);
+    }
+    @media screen and (max-width: 400px) {
+      height: 400px;
+    }
+    @media screen and (max-width: 400px) {
       width: 100px;
-      /* Adjust as needed based on your design */
     }
   }
 }

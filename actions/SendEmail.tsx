@@ -2,7 +2,11 @@
 
 import React from "react";
 import { Resend } from "resend";
-import { validateString, getErrorMessage } from "@/lib/utils";
+import {
+  validateString,
+  getErrorMessage,
+  validateNumber,
+} from "@/lib/BackendValidation";
 import ContactFormEmail from "@/components/ContactFormEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -27,7 +31,7 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid sender name",
     };
   }
-  if (!validateString(company, 500 || 0)) {
+  if (!validateString(company, 500)) {
     return {
       error: "Invalid sender company",
     };
@@ -37,7 +41,7 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid sender email",
     };
   }
-  if (!validateString(phoneNumber, 500)) {
+  if (!validateNumber(phoneNumber, 500)) {
     return {
       error: "Invalid sender phone number",
     };

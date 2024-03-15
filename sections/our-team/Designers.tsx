@@ -9,9 +9,7 @@ const Designers = () => {
   const isTablet = useMediaQuery("(max-width: 768px)");
   return (
     <div
-      className={`${
-        isActive ? "blur" : ""
-      } px-70 pt-24 flex flex-col gap-10 bg-base
+      className={`${isActive ? "blur" : ""} px-70  flex flex-col gap-10 bg-base
     max-tablet:px-8
     max-tablet:py-8
     `}

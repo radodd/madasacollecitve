@@ -15,9 +15,9 @@ module.exports = {
         sun: 'url("/hero_circle.svg")',
         football: 'url("/hero_football.svg")',
       },
-      gap: {
-        "104px": "104px",
-      },
+      // gap: {
+      //   "104px": "104px",
+      // },
       boxShadow: {
         bl2xl: "-10px 10px 5px -5px rgba(0, 0, 0, 0.25)",
         b2xl: "0px 10px 10px -5px rgba(0, 0, 0, 0.25)",
@@ -27,6 +27,7 @@ module.exports = {
         70: "70px",
       },
       fontSize: {
+        xs: ["14px", "normal"],
         sm: ["15px", "normal"],
         md: ["16px", "normal"],
         xl: ["20px", "normal"],

@@ -9,6 +9,20 @@ export const validateString = (
   return true;
 };
 
+export const validateNumber = (
+  value: unknown,
+  maxLength: number
+): value is number => {
+  if (typeof value !== "number") {
+    return true;
+  }
+  const stringValue = value.toString();
+  if (stringValue.length > maxLength) {
+    return true;
+  }
+  return true;
+};
+
 export const getErrorMessage = (error: unknown): string => {
   let message: string;
 

@@ -136,6 +136,17 @@ body {
   border-radius: 25px;
 }
 
+.long-text {
+  max-height: 0;
+  overflow: hidden;
+  display: block;
+  transition: max-height 0.3s;
+}
+
+.expanded {
+  max-height: 120rem;
+  transition: max-height 2s;
+}
 /* .main {
   margin-top: 50vh;
 }
