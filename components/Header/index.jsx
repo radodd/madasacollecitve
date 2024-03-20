@@ -58,7 +58,9 @@ const Navbar2 = () => {
               href={link.href}
               target={index !== navLinks.length - 1 ? "" : "_blank"}
               className={`hover:underline ${
-                index === navLinks.length - 1 ? "btn-blue" : ""
+                index === navLinks.length - 1
+                  ? "btn-pink hover:no-underline"
+                  : ""
               }`}
             >
               {link.title}

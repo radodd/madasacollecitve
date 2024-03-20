@@ -59,7 +59,7 @@ const Navbar = () => {
             href={link.href}
             target={index !== navLinks.length - 1 ? "" : "_blank"}
             className={`hover:underline ${
-              index === navLinks.length - 1 ? "btn-blue" : ""
+              index === navLinks.length - 1 ? "btn-pink no-underline" : ""
             }`}
           >
             {link.title}

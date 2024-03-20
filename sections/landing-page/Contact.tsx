@@ -10,9 +10,9 @@ const Contact = () => {
       className={`${
         isActive ? "blur" : ""
       } sun-media relative flex justify-center items-center px-[70px] py-[104px] gap-[148px] bg-base 
-    max-wide:flex-col
+    max-[820px]:flex-col
     max-wide:gap-16
-    max-tablet:px-8
+    max-smallplus:px-8
     max-tablet:py-16`}
     >
       <Image
@@ -31,15 +31,16 @@ const Contact = () => {
       />
       <div
         className="z-10 flex flex-col py-14 px-[70px] bg-white rounded-3xl 
-      max-tablet:p-8"
+      max-smallplus:p-8"
       >
         <div
-          className="flex flex-col gap-8 max-w-[485px] 
+          className="flex flex-col gap-8 max-w-[673px] tablet:min-w-[390px]
         "
         >
           <h1
             className="text-pretty text-5xl
-          max-mobile:text-4xl"
+          max-tablet:text-4xl
+            "
           >
             Let&apos;s make something incredible together
           </h1>
@@ -52,7 +53,7 @@ const Contact = () => {
           <Button
             type="button"
             title="Schedule a Call"
-            variant="btn-blue"
+            variant="btn-pink"
             href="https://calendly.com/ethanf-flores/30min?month=2024-02"
             target="_blank"
           />
@@ -64,7 +65,7 @@ const Contact = () => {
         src="/contact-icons/icon.svg"
         width={341}
         height={354}
-        className="z-10"
+        className="z-10 max-small:max-w-[287px]"
       />
     </div>
   );

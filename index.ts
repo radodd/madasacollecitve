@@ -10,7 +10,7 @@ export const navLinks = [
     href: "/contact-us",
   },
   {
-    title: "Schedule a Discovery Meeting",
+    title: "Schedule a Call",
     href: "https://calendly.com/ethanf-flores/30min?month=2024-02",
   },
 ];
@@ -76,17 +76,20 @@ export const cards = [
   {
     icon: "/landing-page-cards/branding.svg",
     title: "Branding",
-    text: "Your vision is transformed into a brand identity that reflects your style & values.",
+    text: "Your vision is transformed into a brand that reflects your style & values.",
+    back: "/landing-page-cards/branding_back.svg",
   },
   {
     icon: "/landing-page-cards/product.svg",
     title: "Product Design",
     text: "Your needs are prioritized, while ensuring a user-centric design.",
+    back: "/landing-page-cards/product_back.svg",
   },
   {
     icon: "/landing-page-cards/development.svg",
     title: "Development",
     text: "Your digital product is optimized for your use and your company's success.",
+    back: "/landing-page-cards/development_back.svg",
   },
 ];
 
@@ -95,7 +98,7 @@ export const designers = [
     name: "Sarina Zepeda",
     role: "Product Designer",
     title: "Founder",
-    pic: "/team/headshot_serina.svg",
+    pic: "/team/headshot_serina1.png",
     icon: "/team/icon_serina.svg",
     backTitle: "I like",
     backText:

@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div>
       <ContactForm />
-      <FooterContact />
+      <Footer currentPage="contact" />
     </div>
   );
 };

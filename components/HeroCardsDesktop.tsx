@@ -28,8 +28,13 @@ const HeroCardsDesktop = () => {
                 {item.title}
               </h1>
             </div>
-            <div className="back p-6">
-              <p className="text-xl text-left">{item.text}</p>
+            <div className="back p-6 overflow-hidden">
+              <div className="absolute">
+                <Image src={item.back} alt="card" width={412} height={412} />
+              </div>
+              <p className="z-10 text-2xl text-center bg-white py-10 px-6 rounded-3xl over tracking-[0.96px]">
+                {item.text}
+              </p>
             </div>
           </div>
         </div>

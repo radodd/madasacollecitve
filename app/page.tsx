@@ -21,15 +21,12 @@ export default function Home() {
         <Hero />
         <HeroCardsMobile />
       </section>
-      <section className="mt-[50px] ">
+      <section className="mt-[50px]">
         <CaseStudy />
       </section>
-
       <Testimonial />
-
       <Contact />
-
-      <Footer />
+      <Footer currentPage="landing" />
     </>
   );
 }

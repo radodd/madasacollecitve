@@ -19,7 +19,7 @@ const page = () => {
         <Contact />
       </section>
 
-      <Footer />
+      <Footer currentPage="team" />
     </div>
   );
 };
