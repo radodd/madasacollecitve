@@ -108,7 +108,7 @@ export const designers = [
     name: "Miguel Castillo",
     role: "Senior Product Designer",
     title: "Graphic Designer",
-    pic: "/team/headshot_miguel.svg",
+    pic: "/team/headshot_miguel.png",
     icon: "/team/icon_miguel.svg",
     backTitle: "I like",
     backText:
@@ -131,7 +131,7 @@ export const developers = [
     name: "Jose Roman",
     role: "Senior Software Developer",
     title: "",
-    pic: "/team/headshot_jose.svg",
+    pic: "/team/headshot_jose.png",
     icon: "/team/icon_jose.svg",
     backTitle: "I like",
     backText: "my video games, my wife <3",
