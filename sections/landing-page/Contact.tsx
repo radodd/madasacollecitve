@@ -9,28 +9,26 @@ const Contact = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } sun-media relative flex justify-center items-center px-[70px] py-[104px] gap-[148px] bg-base 
+      } relative flex justify-center items-center px-[70px] py-[104px] gap-[148px] bg-base 
     max-[820px]:flex-col
     max-wide:gap-16
     max-smallplus:px-8
     max-tablet:py-16`}
     >
       <Image
-        src="/contact-icons/circle.svg"
+        src="/contact-icons/circle2.svg"
         alt="contact circle"
         height={1448}
         width={1600}
-        style={{
-          width: "100%",
-          height: "100%",
-
-          top: 0, // Adjust top positioning
-          left: 0, // Adjust left positioning
-        }}
-        className="absolute justify-center"
+        className="absolute z-10 justify-center w-full h-[650px] max-tablet:h-[475px]
+        max-[820px]:h-[780px]
+        max-[745px]:h-[800px]
+        max-[453px]:h-[950px]
+        "
       />
+
       <div
-        className="z-10 flex flex-col py-14 px-[70px] bg-white rounded-3xl 
+        className="z-20 flex flex-col py-14 px-[70px] bg-white rounded-3xl 
       max-smallplus:p-8"
       >
         <div

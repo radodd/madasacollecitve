@@ -24,7 +24,9 @@ export default function Home() {
       <section className="mt-[50px]">
         <CaseStudy />
       </section>
-      <Testimonial />
+      <section className="mb-[110px] max-tablet:mb-[65px]">
+        <Testimonial />
+      </section>
       <Contact />
       <Footer currentPage="landing" />
     </>

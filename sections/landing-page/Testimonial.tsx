@@ -6,8 +6,9 @@ const Testimonial = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } bg-base p-20 flex justify-center items-center
-      max-tablet:p-9
+      } z-10 bg-base m-20 flex justify-center items-center
+      max-tablet:mx-4
+      max-tablet:my-12
     `}
     >
       <div

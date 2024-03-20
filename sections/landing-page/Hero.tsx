@@ -56,21 +56,21 @@ const customWidthByIndex = (
     switch (index) {
       case 0:
       case 5:
-        return "45px";
+        return "66px";
       case 1:
-        return "50px";
+        return "68px";
       case 2:
       case 3:
-        return "35px";
+        return "48px";
       case 4:
       case 9:
-        return "35px";
+        return "49px";
       case 6:
-        return "40px";
+        return "60px";
       case 7:
         return "15px";
       case 8:
-        return "45px";
+        return "70px";
     }
   } else {
     switch (index) {
@@ -124,21 +124,21 @@ const customHeightByIndex = (
     switch (index) {
       case 0:
       case 5:
-        return "55px";
+        return "73px";
       case 1:
-        return "50px";
+        return "73px";
       case 2:
       case 3:
-        return "55px";
+        return "71px";
       case 4:
       case 9:
-        return "50px";
+        return "71px";
       case 6:
-        return "50px";
+        return "71px";
       case 7:
-        return "50px";
+        return "71px";
       case 8:
-        return "50px";
+        return "71px";
     }
   }
 };
@@ -151,7 +151,7 @@ const Hero = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth <= 887);
-      setIsMobile(window.innerWidth <= 556);
+      setIsMobile(window.innerWidth <= 620);
     };
 
     // Initial measurement on component mount
@@ -209,8 +209,8 @@ const Hero = () => {
                     : "42px"
                   : !isMobile && isTablet
                   ? index === 2
-                    ? "62px"
-                    : "83px"
+                    ? "75px"
+                    : "102px"
                   : !isMobile && !isTablet && index !== 2
                   ? "135px"
                   : "100px",
