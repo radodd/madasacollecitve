@@ -17,22 +17,22 @@ export const navLinks = [
 
 export const madasaLetters = [
   {
-    image: "/logo/letters/M.svg",
+    image: "/logo/letters/M.png",
   },
   {
-    image: "/logo/letters/A.svg",
+    image: "/logo/letters/A.png",
   },
   {
-    image: "/logo/letters/D.svg",
+    image: "/logo/letters/D.png",
   },
   {
-    image: "/logo/letters/A.svg",
+    image: "/logo/letters/A.png",
   },
   {
-    image: "/logo/letters/S.svg",
+    image: "/logo/letters/S.png",
   },
   {
-    image: "/logo/letters/A.svg",
+    image: "/logo/letters/A.png",
   },
 ];
 export const collectiveLetters = [
