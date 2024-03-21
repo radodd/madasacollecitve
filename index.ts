@@ -37,34 +37,34 @@ export const madasaLetters = [
 ];
 export const collectiveLetters = [
   {
-    image: "/logo/letters/C.svg",
+    image: "/logo/letters/C.png",
   },
   {
-    image: "/logo/letters/O.svg",
+    image: "/logo/letters/O.png",
   },
   {
-    image: "/logo/letters/L.svg",
+    image: "/logo/letters/L.png",
   },
   {
-    image: "/logo/letters/L.svg",
+    image: "/logo/letters/L.png",
   },
   {
-    image: "/logo/letters/E.svg",
+    image: "/logo/letters/E.png",
   },
   {
-    image: "/logo/letters/C.svg",
+    image: "/logo/letters/C.png",
   },
   {
-    image: "/logo/letters/T.svg",
+    image: "/logo/letters/T.png",
   },
   {
-    image: "/logo/letters/I.svg",
+    image: "/logo/letters/I.png",
   },
   {
-    image: "/logo/letters/V.svg",
+    image: "/logo/letters/V.png",
   },
   {
-    image: "/logo/letters/E.svg",
+    image: "/logo/letters/E.png",
   },
 ];
 
