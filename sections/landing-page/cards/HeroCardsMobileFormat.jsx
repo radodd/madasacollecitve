@@ -13,6 +13,7 @@ const Card = ({
   icon,
   title,
   text,
+  back,
   progress = motionValue(0),
   range,
   targetScale,
@@ -69,11 +70,22 @@ const Card = ({
               scale,
               top: `calc(-10% + ${i * 25}px)`,
             }}
-            className={`${styles.card} card-landing flex flex-col bg-white justify-center items-center rounded-3xl`}
+            className={`${styles.card} relative card-landing flex flex-col bg-white justify-center items-center rounded-3xl`}
             onClick={flipCard}
           >
-            <div className=" p-6">
-              <p className="text-xl text-left">{text}</p>
+            <div className="">
+              <div className="">
+                <Image
+                  src={back}
+                  alt="card"
+                  width={412}
+                  height={412}
+                  className=""
+                />
+              </div>
+              <p className="z-30 text-pretty text-xl text-left absolute bottom-[100px] left-[41px] bg-white rounded-3xl py-10 px-5 w-[256px]">
+                {text}
+              </p>
             </div>
           </motion.div>
         )}

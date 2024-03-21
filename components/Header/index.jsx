@@ -12,7 +12,7 @@ import { useNav } from "@/context/NavContext";
 const variants = {
   open: {
     width: 500,
-    height: 350,
+    height: 280,
     top: "-25px",
     right: "-25px",
     transition: { duration: 0.75, ease: [0.75, 0, 0.24, 1] },
@@ -43,7 +43,7 @@ const Navbar2 = () => {
           <Link href="/">
             <Image
               alt="Logo"
-              src="/logo/short.svg"
+              src="/logo/short.png"
               width={54}
               height={54}
               className="my-[20px]"
@@ -72,12 +72,10 @@ const Navbar2 = () => {
 
         <div className={`${styles.header} z-30 small:hidden`}>
           <motion.div
-            className={`${styles.menu} max-tablet:max-w-[310px] max-tablet:max-h-[280px]`}
+            className={`${styles.menu} max-tablet:max-w-[310px] max-tablet:max-h-[220px]`}
             variants={variants}
             animate={isActive ? "open" : "close"}
             initial="closed"
-            onAnimationStart={() => console.log("Animation started")}
-            onAnimationComplete={() => console.log("Animation completed")}
           >
             <AnimatePresence>{isActive && <Nav2 />}</AnimatePresence>
           </motion.div>

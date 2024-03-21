@@ -1,5 +1,5 @@
 .button {
-  height: 60px;
+  height: 70px;
   width: 70px;
   border-radius: 15px;
   cursor: pointer;
@@ -54,24 +54,24 @@
   }
 }
 
-.perspectiveText {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-style: preserve-3d;
-  transition: transform 0.75s cubic-bezier(0.75, 0, 0.24, 1);
-  p {
-    transition: all 0.75s cubic-bezier(0.75, 0, 0.24, 1);
-    &:nth-of-type(2) {
-      position: absolute;
-      transform: rotateX(-90deg) translateY(12px);
-      transform-origin: bottom center;
-      opacity: 0;
-    }
-  }
-}
+// .perspectiveText {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   transform-style: preserve-3d;
+//   transition: transform 0.75s cubic-bezier(0.75, 0, 0.24, 1);
+//   p {
+//     transition: all 0.75s cubic-bezier(0.75, 0, 0.24, 1);
+//     &:nth-of-type(2) {
+//       position: absolute;
+//       transform: rotateX(-90deg) translateY(12px);
+//       transform-origin: bottom center;
+//       opacity: 0;
+//     }
+//   }
+// }
 
 .hamburger .hamburger-inner,
 .hamburger .hamburger-inner::before,

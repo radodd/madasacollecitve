@@ -261,9 +261,9 @@ const Hero = () => {
         </ul>
       </div>
       <h1
-        className="z-10 text-4xl text-white max-w-[1140px] mx-8 pb-36 text-center
+        className="z-10 text-4xl text-white max-w-[1140px] mx-8 pb-[104px] text-center
       max-tablet:text-nav
-      max-tablet:pb-16
+      max-tablet:pb-12
       max-mobile:text-2xl
       max-mobile:pb-12"
       >

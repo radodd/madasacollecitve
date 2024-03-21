@@ -48,14 +48,14 @@ const Navbar2Button: React.FC<Navbar2ButtonProps> = ({
 
 export default Navbar2Button;
 
-interface PerspectiveTextProps {
-  label: string;
-}
-function PerspectiveText({ label }: PerspectiveTextProps) {
-  return (
-    <div className={styles.perspectiveText}>
-      <p>{label}</p>
-      <p>{label}</p>
-    </div>
-  );
-}
+// interface PerspectiveTextProps {
+//   label: string;
+// }
+// function PerspectiveText({ label }: PerspectiveTextProps) {
+//   return (
+//     <div className={styles.perspectiveText}>
+//       <p>{label}</p>
+//       <p>{label}</p>
+//     </div>
+//   );
+// }
