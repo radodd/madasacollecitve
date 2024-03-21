@@ -50,16 +50,16 @@ body {
 
 @layer utilities {
   .btn-blue {
-    @apply bg-transparent border-[3px] border-secondary font-semibold text-secondary text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
+    @apply bg-transparent border-[3px] border-secondary font-semibold text-secondary text-md text-center px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
   }
   .btn-blue-white {
-    @apply bg-transparent border-[3px] border-white font-semibold text-white text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
+    @apply bg-transparent border-[3px] border-white font-semibold text-white text-md text-center px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
   }
   .btn-pink {
     @apply bg-transparent border-[3px] border-quaternary font-semibold text-center text-quaternary text-md px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
   }
   .btn-pink-fill {
-    @apply bg-quaternary border-[3px] border-quaternary font-semibold text-white text-md px-8 py-4 rounded-full cursor-pointer  transition-all duration-300 min-w-[192px] hover:bg-[#B32360] hover:border-[#B32360] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
+    @apply bg-quaternary border-[3px] border-quaternary font-semibold text-white text-md text-center px-8 py-4 rounded-full cursor-pointer  transition-all duration-300 min-w-[192px] hover:bg-[#B32360] hover:border-[#B32360] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
   }
 }
 

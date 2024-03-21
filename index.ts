@@ -95,7 +95,7 @@ export const cards = [
 
 export const designers = [
   {
-    name: "Sarina Zepeda",
+    name: "Serina Zepeda",
     role: "Product Designer",
     title: "Founder",
     pic: "/team/headshot_serina1.png",
@@ -121,7 +121,7 @@ export const developers = [
     name: "Ethan Flores",
     role: "Software Developer",
     title: "Founder",
-    pic: "/team/headshot_ethan.svg",
+    pic: "/team/headshot_ethan.png",
     icon: "/team/icon_ethan.svg",
     backTitle: "I like",
     backText:

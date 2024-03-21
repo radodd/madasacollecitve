@@ -9,10 +9,11 @@ const Contact = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } relative z-20 p-70 bg-base flex gap-[90px]  overflow-hidden justify-center items-center max-medium:flex-col
-    max-medium:gap-16
+      } relative z-20 p-70 bg-base flex gap-14  overflow-hidden justify-center items-center max-medium:flex-col
+    max-medium:gap-6
     max-tablet:px-8
-    max-tablet:py-16`}
+    max-tablet:py-16
+    max-mobile:gap-8`}
     >
       <Image
         alt="contact circle"
@@ -39,14 +40,14 @@ const Contact = () => {
           className="text-5xl
         max-mobile:text-4xl"
         >
-          Have a Project in mind?
+          Have a project in mind?
         </h1>
         <p className="text-2xl max-mobile:text-xl">
           Let&apos;s team up to create a tailored digital solution that aligns
           with your needs and business goals.
         </p>
         <Button
-          title="Schedule a call"
+          title="Schedule a Call"
           type="button"
           variant="btn-pink-fill"
           href="https://calendly.com/ethanf-flores/30min?month=2024-02"

@@ -1,22 +1,30 @@
 "use client";
 import Button from "@/components/Button";
+import { useNav } from "@/context/NavContext";
 import { useMediaQuery } from "@react-hook/media-query";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const OurStory = () => {
+  const { isActive } = useNav();
   const isTablet = useMediaQuery("(max-width: 1000px)");
   const isDesktop = useMediaQuery("(min-width: 1000px)");
   const isMobile = useMediaQuery("(max-width: 740px)");
 
   const [collapse, setCollapse] = useState(false);
+
+  // const openPDF = ("/slides.pdf") => {
+  //   window.open("/slides.pdf", "_blank")
+  // }
   return (
     <div
-      className="flex justify-center items-center gap-14 px-70 py-[104px]
+      className={`${
+        isActive ? "blur" : ""
+      } flex justify-center items-center gap-14 px-70 py-[104px]
     max-[1000px]:gap-6
     max-[1000px]:px-8
     max-[1000px]:py-12 
-    max-extrasmall:flex-col-reverse"
+    max-extrasmall:flex-col-reverse`}
     >
       <div
         className="flex flex-col gap-8 py-14 px-[70px] bg-white rounded-3xl max-w-[900px] shadow-b2xl
@@ -26,47 +34,51 @@ const OurStory = () => {
       >
         <h1 className="text-5xl font-bold max-[1000px]:text-4xl">Our Story</h1>
         <p className="text-2xl max-[1000px]:text-xl">
-          Serina, a project engineer turned product designer, met Ethan, a
-          veteran turned software developer in Santa Barbara, CA...
+          A Product Designer met a Software Developer in Santa Barbara, CA, and
+          founded... a digital powerhouse.
         </p>
-        <p className="text-xl ">
-          Bonding over their shared experiences and frustrations in the tech
-          industry, they saw an opportunity to leverage their diverse
-          backgrounds and skill sets. Recognizing the need for a more
-          collaborative and inclusive approach to digital product development,
-          they founded Madasa Collective.{" "}
-          <span className="max-wide:hidden">
-            With over 4 years of experience in their previous respective fields
-            and having done bootcamps and career certificates, they assembled a
-            team for themselves and hired industry.
-          </span>
-        </p>
+
         <div className={`${collapse ? "hidden" : ""}`}>
           <Button
             type="button"
-            title="Learn More"
+            title="THIS WILL BE A DOWN CHEVRON"
             variant="btn-blue"
             onClick={() => setCollapse((prev) => !prev)}
           />
         </div>
 
-        {/* <div
+        <div
           className={`${collapse ? "expanded" : ""} flex flex-col long-text`}
         >
-          <p className="text-xl">
-            With over 4 years of experience in their previous respective fields
-            and having done bootcamps and career certificates, they assembled a
-            team for themselves and hired industry.
+          <p className="text-xl ">
+            Inspired by our previous backgrounds as a Structural Engineer
+            (Serina) and Army Combat Engineer Veteran (Ethan),{" "}
+            <span className="font-semibold">
+              we are driven by the belief that unconventional backgrounds can be
+              harnessed to redefine success.
+            </span>
+            As a result, we founded Madasa Collective, a California-based team
+            specializing in branding, product design, and software development.
+            We assembled a team of talented and experienced individuals across
+            multiple disciplines to craft innovative solutions. Our collective
+            combines industry expertise with diverse perspectives to deliver
+            high- quality products to our clients.
           </p>
           <div className="pt-8">
             <Button
-              title="close"
+              title="Learn More"
+              variant="btn-pink-fill"
+              type="button"
+              onClick={() => window.open("/slides.pdf", "_blank")}
+            />
+            <Button
+              title="THIS WILL BE AN UP CHEVRON"
               variant="btn-blue"
               type="button"
               onClick={() => setCollapse((prev) => !prev)}
             />
-          </div> 
-        </div>*/}
+          </div>
+        </div>
       </div>
 
       {/* See More Content */}
