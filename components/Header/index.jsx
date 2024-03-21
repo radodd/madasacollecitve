@@ -59,7 +59,7 @@ const Navbar2 = () => {
               target={index !== navLinks.length - 1 ? "" : "_blank"}
               className={`hover:underline ${
                 index === navLinks.length - 1
-                  ? "btn-pink hover:no-underline"
+                  ? "btn-pink-fill hover:no-underline"
                   : ""
               }`}
             >

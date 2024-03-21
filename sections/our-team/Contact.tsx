@@ -48,7 +48,7 @@ const Contact = () => {
         <Button
           title="Schedule a call"
           type="button"
-          variant="btn-blue"
+          variant="btn-pink-fill"
           href="https://calendly.com/ethanf-flores/30min?month=2024-02"
         />
       </div>
