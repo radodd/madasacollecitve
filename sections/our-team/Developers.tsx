@@ -1,13 +1,19 @@
 "use client";
 import { developers } from "@/index";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useNav } from "@/context/NavContext";
 
 const Developers = () => {
   const { isActive } = useNav();
   const isTablet = useMediaQuery("(max-width: 768px)");
+
+  const [flippedIndex, setFlippedIndex] = useState(-1);
+  const flipCard = (index: number) => {
+    setFlippedIndex(index === flippedIndex ? -1 : index);
+  };
+
   return (
     <div
       className={`${
@@ -23,12 +29,15 @@ const Developers = () => {
         Development
       </h1>
       <div className="container flex flex-row gap-10 flex-wrap justify-start max-smallplus:justify-center">
-        {developers.map((developer) => (
+        {developers.map((developer, index) => (
           <div key={developer.name} className="sub-container">
             <div
-              className="card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
+              onClick={() => flipCard(index)}
+              className={`${
+                index === flippedIndex ? "flipped" : ""
+              } card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
             max-tablet:min-w-[329px] 
-            max-tablet:min-h-[489px]"
+            max-tablet:min-h-[489px]`}
             >
               <div className="front flex flex-col gap-6 px-10">
                 <Image

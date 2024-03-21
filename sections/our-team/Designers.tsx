@@ -3,10 +3,17 @@ import { designers } from "@/index";
 import Image from "next/image";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useNav } from "@/context/NavContext";
+import { useState } from "react";
 
 const Designers = () => {
   const { isActive } = useNav();
   const isTablet = useMediaQuery("(max-width: 768px)");
+
+  const [flippedIndex, setFlippedIndex] = useState(-1);
+  const flipCard = (index: number) => {
+    setFlippedIndex(index === flippedIndex ? -1 : index);
+  };
+
   return (
     <div
       className={`${isActive ? "blur" : ""} px-70  flex flex-col gap-10 bg-base
@@ -21,12 +28,15 @@ const Designers = () => {
         Design
       </h1>
       <div className="container flex gap-10 flex-wrap justify-start max-smallplus:justify-center">
-        {designers.map((designer) => (
+        {designers.map((designer, index) => (
           <div key={designer.name} className="sub-container">
             <div
-              className="card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
+              onClick={() => flipCard(index)}
+              className={`${
+                index === flippedIndex ? "flipped" : ""
+              } card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
             max-tablet:min-w-[329px] 
-            max-tablet:min-h-[489px]"
+            max-tablet:min-h-[489px]`}
             >
               <div className="front flex flex-col gap-6 px-10">
                 <Image

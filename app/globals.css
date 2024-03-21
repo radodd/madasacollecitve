@@ -129,7 +129,7 @@ body {
   }
 }
 @media (max-width: 834px) {
-  .sub-container:active .card-team {
+  .sub-container .card-team.flipped {
     cursor: pointer;
     transform: rotateY(180deg); /* Apply the transformation on click */
   }
