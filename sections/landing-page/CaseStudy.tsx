@@ -25,7 +25,7 @@ const CaseStudy = () => {
       <div className="flex items-center justify-center bg-white max-h-[416px] max-w-[654px] rounded-3xl shadow-b2xl hover:shadow-b3xl ">
         <Image
           alt="case study image Gen Fulton Consultancy"
-          src="/case_study.svg"
+          src="/case_study22.png"
           width={imageWidth}
           height={imageHeight}
           quality={100}
