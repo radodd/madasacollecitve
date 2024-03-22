@@ -4,11 +4,12 @@ import { cards } from "..";
 const HeroCardsDesktop = () => {
   return (
     <div
-      className="z-10 container flex flex-row items-center justify-center gap-[111px] px-[70px] 
-    max-wide:flex-col
+      className="z-10 container flex flex-wrap items-center justify-center gap-10 px-[70px] 
+    max-smallplus:gap-8
+    max-smallplus:px-8
     max-tablet:px-8
     max-tablet:gap-8
-    max-tablet:hidden"
+    max-mobileplus:hidden"
     >
       {cards.map((item) => (
         <div key={item.title} className="sub-container w-[368px] h-[412px]">
@@ -16,7 +17,6 @@ const HeroCardsDesktop = () => {
             className="card-team flex flex-col gap-6 shadow-b2xl px-16  min-h-[412px] transition-all duration-[800ms] ease-in-out 
        max-w-[368px]
        min-w-[368px]
-     
        max-tablet:px-10"
           >
             <div className="front flex flex-col gap-6">

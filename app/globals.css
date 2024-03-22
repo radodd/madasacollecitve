@@ -21,17 +21,17 @@
   }
 } */
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .sun-media {
     object-fit: fill;
   }
-}
+} */
 
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
   .absolute {
     object-fit: cover;
   }
-}
+} */
 @media screen and (max-width: 949px) {
   #dropdown {
     display: block; /* or any other style you want for smaller screens */

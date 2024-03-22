@@ -1,16 +1,11 @@
 "use client";
+
 import Image from "next/image";
-import { cards, collectiveLetters, madasaLetters, whoWeAre } from "../..";
+import { collectiveLetters, madasaLetters, whoWeAre } from "../..";
 import "hamburgers/dist/hamburgers.css";
-import CardFlip from "@/components/HeroCardsDesktop";
-import CardMobile from "@/components/CardMobile";
-import Card from "@/sections/landing-page/cards/HeroCardsMobileFormat";
-import Home from "@/sections/landing-page/cards/HeroCardsMobile";
-import Test from "@/sections/landing-page/cards/HeroCardsMobile";
 import HeroCardsDesktop from "@/components/HeroCardsDesktop";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useMediaQuery } from "@react-hook/media-query";
 import { useNav } from "@/context/NavContext";
 
 const fadeInAnimationVariants = {
@@ -169,10 +164,10 @@ const Hero = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } sun-media relative flex flex-col items-center pb-[100px] overflow-hidden`}
+      } relative flex flex-col items-center pb-[100px]`}
     >
-      {/* <Image
-        src="/hero_circle.svg"
+      <Image
+        src="/hero_football.svg"
         alt="circle"
         height={1448}
         width={1600}
@@ -180,8 +175,12 @@ const Hero = () => {
           width: "100%",
           height: "100%",
         }}
-        className="absolute"
-      /> */}
+        className="absolute max-[1440px]:object-cover max-[470px]:min-h-[290vh]
+        max-[457px]:min-h-[298vh]
+
+        max-[393px]:min-h-[282vh]
+       max-[361px]:min-h-[285vh]"
+      />
       <div
         className="z-10 mt-[128px] pb-[70px] 
       max-tablet:mt-[64px]
@@ -270,6 +269,7 @@ const Hero = () => {
         {whoWeAre}
       </h1>
       <HeroCardsDesktop />
+      {/* <HeroCardsMobile /> */}
     </div>
   );
 };

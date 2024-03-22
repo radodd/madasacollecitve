@@ -4,7 +4,7 @@ import CaseStudy from "@/sections/landing-page/CaseStudy";
 import Contact from "@/sections/landing-page/Contact";
 import Hero from "@/sections/landing-page/Hero";
 import Testimonial from "@/sections/landing-page/Testimonial";
-import HeroCardsMobile from "../sections/landing-page/cards/HeroCardsMobile";
+import HeroCardsMobile from "../sections/landing-page/MobileCards/HeroCardsMobile";
 import { useNav } from "@/context/NavContext";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <section
         className={`${
           isActive ? "blur" : ""
-        } bg-football bg-no-repeat bg-cover bg-center pb-20 
+        } bg-no-repeat bg-cover bg-center pb-20 
       max-tablet:pb-16
       max-mobile:mt-8`}
       >
