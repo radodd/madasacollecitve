@@ -175,13 +175,13 @@ const Hero = () => {
           width: "100%",
           height: "100%",
         }}
-        className="absolute max-[1440px]:object-cover max-[469px]:min-h-[1920px]
-        max-[457px]:min-h-[1920px]
-        max-[453px]:min-h-[1950px]
-        max-[393px]:min-h-[1860px]
-       max-[361px]:min-h-[1860px]
-       max-[358px]:min-h-[1865px]
-       max-[356px]:min-h-[1880px]"
+        className="absolute max-[1440px]:object-cover max-[469px]:min-h-[2000px]
+        max-[457px]:min-h-[2010px]
+        max-[453px]:min-h-[2030px]
+        max-[393px]:min-h-[1930px]
+       max-[362px]:min-h-[1870px]
+       max-[359px]:min-h-[1940px]
+       max-[356px]:min-h-[1960px]"
       />
       <div
         className="z-10 mt-[128px] pb-[70px] 
