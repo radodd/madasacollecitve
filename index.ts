@@ -11,7 +11,7 @@ export const navLinks = [
   },
   {
     title: "Schedule a Call",
-    href: "https://calendly.com/ethanf-flores/30min?month=2024-02",
+    href: "https://calendly.com/madasacollective/60min",
   },
 ];
 

@@ -9,7 +9,7 @@ const Contact = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } relative flex justify-center items-center px-[70px] py-[104px] gap-[148px] bg-base 
+      } relative flex justify-center  items-center px-[70px] py-[104px] gap-[148px] bg-base 
     max-[820px]:flex-col
     max-wide:gap-16
     max-smallplus:px-8
@@ -20,10 +20,15 @@ const Contact = () => {
         alt="contact circle"
         height={1448}
         width={1600}
-        className="absolute z-10 justify-center w-full h-[650px] max-tablet:h-[475px]
+        style={{ width: "100%", height: "100%" }}
+        className="absolute object-fit
+       
+          max-[1210px]:object-cover  max-tablet:h-[475px]
         max-[820px]:h-[780px]
         max-[745px]:h-[800px]
         max-[453px]:h-[950px]
+       
+
         "
       />
 
@@ -52,7 +57,7 @@ const Contact = () => {
             type="button"
             title="Schedule a Call"
             variant="btn-pink-fill"
-            href="https://calendly.com/ethanf-flores/30min?month=2024-02"
+            href="https://calendly.com/madasacollective/60min"
             target="_blank"
           />
         </div>

@@ -20,11 +20,11 @@ const OurStory = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } flex justify-center items-center gap-14 px-70 py-[104px]
+      } flex justify-center items-center gap-14 px-70 py-[104px] bg-primary
     max-[1000px]:gap-6
     max-[1000px]:px-8
     max-[1000px]:py-12 
-    max-extrasmall:flex-col-reverse`}
+    max-extrasmall:flex-col`}
     >
       <div
         className="flex flex-col gap-8 py-14 px-[70px] bg-white rounded-3xl max-w-[900px] shadow-b2xl
@@ -32,25 +32,38 @@ const OurStory = () => {
       max-[1000px]:py-8
       "
       >
-        <h1 className="text-5xl font-bold max-[1000px]:text-4xl">Our Story</h1>
-        <p className="text-2xl max-[1000px]:text-xl">
+        <h1 className="text-5xl font-bold max-[1000px]:text-4xl text-secondary">
+          The Story
+        </h1>
+        <p className="text-2xl text-pretty max-[1000px]:text-xl">
           A Product Designer met a Software Developer in Santa Barbara, CA, and
-          founded... a digital powerhouse.
+          founded...
+          <span className="text-secondary font-bold">
+            a digital powerhouse.{" "}
+          </span>
         </p>
 
-        <div className={`${collapse ? "hidden" : ""}`}>
-          <Button
+        <div className={`${collapse ? "hidden" : ""} flex justify-center`}>
+          {/* <Button
             type="button"
             title="THIS WILL BE A DOWN CHEVRON"
             variant="btn-blue"
             onClick={() => setCollapse((prev) => !prev)}
+          /> */}
+          <Image
+            src="/chevron_down.svg"
+            height={32}
+            width={32}
+            alt="down chevron"
+            onClick={() => setCollapse((prev) => !prev)}
+            className=""
           />
         </div>
 
         <div
           className={`${collapse ? "expanded" : ""} flex flex-col long-text`}
         >
-          <p className="text-xl ">
+          <p className="text-xl text-pretty">
             Inspired by our previous backgrounds as a Structural Engineer
             (Serina) and Army Combat Engineer Veteran (Ethan),{" "}
             <span className="font-semibold">
@@ -67,16 +80,20 @@ const OurStory = () => {
           <div className="pt-8">
             <Button
               title="Learn More"
-              variant="btn-pink-fill"
+              variant="btn-blue"
               type="button"
               onClick={() => window.open("/slides.pdf", "_blank")}
             />
-            <Button
-              title="THIS WILL BE AN UP CHEVRON"
-              variant="btn-blue"
-              type="button"
-              onClick={() => setCollapse((prev) => !prev)}
-            />
+            <div className="flex justify-center mt-6">
+              <Image
+                src="/chevron_down.svg"
+                height={32}
+                width={32}
+                alt="down chevron"
+                onClick={() => setCollapse((prev) => !prev)}
+                className="transform rotate-180"
+              />
+            </div>
           </div>
         </div>
       </div>

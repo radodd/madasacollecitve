@@ -27,7 +27,16 @@ const Contact = () => {
         //   top: 0, // Adjust top positioning
         //   left: 0, // Adjust left positioning
         // }}
-        className="absolute object-fill h-[1000px] w-full translate-y-[30px] max-mobile:h-[730px] "
+        style={{ width: "100%", height: "100%" }}
+        className="absolute object-fit
+       
+          max-[1225px]:object-cover  max-tablet:h-[475px]
+        max-[820px]:h-[780px]
+        max-[745px]:h-[800px]
+        max-[453px]:h-[950px]
+       
+
+        "
       />
 
       {/* <div className="bg-secondary w-[1600px] h-[1448px] absolute -translate-x-20 -translate-y-16 rounded-t-full"></div> */}
@@ -50,7 +59,7 @@ const Contact = () => {
           title="Schedule a Call"
           type="button"
           variant="btn-pink-fill"
-          href="https://calendly.com/ethanf-flores/30min?month=2024-02"
+          href="https://calendly.com/madasacollective/60min"
         />
       </div>
       {/* <Image
