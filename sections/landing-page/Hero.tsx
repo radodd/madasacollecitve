@@ -178,7 +178,7 @@ const Hero = () => {
         className="absolute max-[1440px]:object-cover max-[469px]:min-h-[2000px]
         max-[457px]:min-h-[2030px]
         max-[453px]:min-h-[2030px]
-        max-[393px]:min-h-[1930px]
+        max-[393px]:min-h-[1990px]
        max-[362px]:min-h-[1950px]
        max-[359px]:min-h-[1940px]
        max-[356px]:min-h-[1980px]"
