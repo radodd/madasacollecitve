@@ -68,7 +68,7 @@ const OurStory = () => {
       <div className="">
         {isMobile && (
           <Image
-            src="/ourstory.png"
+            src="/ourstory_mobile.png"
             width={329}
             height={400}
             alt="founder photo 3"
