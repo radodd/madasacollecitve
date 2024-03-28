@@ -7,10 +7,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateY(-20px) translateX(-34px);
-  @media screen and (max-width: 400px) {
+  transform: translateY(-24px) translateX(-30px);
+  @media screen and (max-width: 620px) {
     /* Media query for screens with max width 768px */
-    transform: translateY(-20px) translateX(1px); /* Adjusted transform value for smaller screens */
+    transform: translateY(-24px) translateX(1px); /* Adjusted transform value for smaller screens */
   }
 
   .slider {

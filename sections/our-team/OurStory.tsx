@@ -79,7 +79,7 @@ const OurStory = () => {
       <div
         className="flex flex-col justify-center p-16 bg-white rounded-3xl min-h-[474px] shadow-b2xl
         w-full 
-        max-tablet:min-h-[339px]
+        max-tablet:min-h-[312px]
         max-[1000px]:px-8
         max-[1000px]:py-8
         
@@ -87,7 +87,8 @@ const OurStory = () => {
       >
         <h1
           className="text-5xl font-bold max-[1000px]:text-4xl text-secondary pb-8 tablet:pb-16
-        max-tablet:pb-12"
+        max-tablet:pb-12
+        max-mobile:pb-8"
         >
           The Story
         </h1>
@@ -102,7 +103,8 @@ const OurStory = () => {
         <div
           className={`${collapse ? "hidden" : ""} flex justify-center pt-8
         tablet:pt-16
-        max-tablet:pt-12`}
+        max-tablet:pt-12
+        max-mobile:pt-8`}
         >
           {/* <Button
             type="button"
@@ -126,9 +128,9 @@ const OurStory = () => {
           <p className="text-xl text-pretty pt-6">
             Inspired by our previous backgrounds as a Structural Engineer
             (Serina) and Army Combat Engineer Veteran (Ethan),{" "}
-            <span className="font-semibold">
+            <span className="font-bold text-secondary">
               we are driven by the belief that unconventional backgrounds can be
-              harnessed to redefine success.
+              harnessed to redefine success.{" "}
             </span>
             As a result, we founded Madasa Collective, a California-based team
             specializing in branding, product design, and software development.
