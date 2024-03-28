@@ -71,6 +71,9 @@ export const sendEmail = async (formData: FormData) => {
         phoneNumber: phoneNumber,
         message: message,
       }),
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      },
     });
   } catch (error: unknown) {
     return {
