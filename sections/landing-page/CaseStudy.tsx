@@ -22,7 +22,10 @@ const CaseStudy = () => {
     max-tablet:p-8
     max-tablet:gap-8`}
     >
-      <div className="flex items-center justify-center bg-white max-h-[416px] max-w-[654px] rounded-3xl shadow-b2xl hover:shadow-b3xl ">
+      <div
+        className="flex items-center justify-center bg-white max-h-[416px] max-w-[654px] rounded-3xl shadow-b2xl hover:shadow-b3xl
+      max-mobile:max-w-[329px] "
+      >
         <Image
           alt="case study image Gen Fulton Consultancy"
           src="/case_study22.png"
@@ -32,6 +35,7 @@ const CaseStudy = () => {
           className="flex items-center justify-center align-middle rounded-3xl transition-all duration-30 ease-in-out bg-white"
         ></Image>
       </div>
+
       <div
         className="flex flex-col py-10 px-12 gap-8 bg-white rounded-3xl shadow-b2xl max-w-[654px]
       max-tablet:gap-6
