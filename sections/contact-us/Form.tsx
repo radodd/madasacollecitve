@@ -194,7 +194,8 @@ export default function ContactForm() {
           }}
           className="absolute
         max-h-[840px]
-        translate-y-[100px]"
+        translate-y-[40px]
+        "
         />
       )}
 
