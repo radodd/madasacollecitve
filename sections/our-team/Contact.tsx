@@ -29,13 +29,11 @@ const Contact = () => {
         // }}
         style={{ width: "100%", height: "100%" }}
         className="absolute object-fit
-       
-          max-[1225px]:object-cover  max-tablet:h-[475px]
-        max-[820px]:h-[780px]
-        max-[745px]:h-[800px]
-        max-[453px]:h-[950px]
-       
-
+          max-[1225px]:object-cover 
+          max-tablet:h-[475px]
+          max-[820px]:h-[780px]
+          max-[745px]:h-[800px]
+          max-[453px]:h-[950px]
         "
       />
 

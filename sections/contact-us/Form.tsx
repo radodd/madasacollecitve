@@ -7,6 +7,7 @@ import Image from "next/image";
 import styles from "./contact.module.scss";
 import { useNav } from "@/context/NavContext";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 
 // const isInvalidFullName = (fullName: string) => {
 //   const fullNameFormat = /\d/;
@@ -68,6 +69,8 @@ import { useEffect, useState } from "react";
 // console.log(isInvalidFullName("John Doe1")); // t
 
 export default function ContactForm() {
+  const isTablet = useMediaQuery("(max-width: 835px)");
+  const isMobile = useMediaQuery("(max-width: 599px)");
   const { isActive } = useNav();
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -139,9 +142,9 @@ export default function ContactForm() {
     `}
     >
       <div
-        className="z-10 flex  justify-center items-center pt-20 pb-24 
+        className="z-10 flex justify-center items-center pt-20 pb-[136px] 
       max-tablet:pt-8
-      max-tablet:pb-12
+     
       max-mobile:pb-8
       max-mobile:pt-8"
       >
@@ -149,22 +152,53 @@ export default function ContactForm() {
           Get in touch!
         </h1>
       </div>
-      <div className=" relative w-full">
+      {!isTablet && (
         <Image
-          src="/contact_sun.svg"
+          src="/contact_desktop.png"
           alt="circle"
           height={1448}
-          width={3158}
-          // style={{
-          //   width: "100%",
-          //   height: "100%",
-          // }}
-          className="absolute object-fit h-[1448px]
-        translate-y-[0px]"
+          width={2158}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          className="absolute
+        max-h-[680px]
+        translate-y-[100px]"
         />
-      </div>
+      )}
+      {isTablet && (
+        <Image
+          src="/contact_tablet.png"
+          alt="circle"
+          height={1448}
+          width={2158}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          className="absolute
+        max-h-[750px]
+        translate-y-[100px]"
+        />
+      )}
+      {isMobile && (
+        <Image
+          src="/contact_tablet.png"
+          alt="circle"
+          height={1448}
+          width={2158}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          className="absolute
+        max-h-[840px]
+        translate-y-[100px]"
+        />
+      )}
 
-      <div className="w-full flex max-mobile:mt-14">
+      <div className="max-w-[1000px] w-full  flex max-mobile:mt-14">
         <form
           action={async (formData) => {
             const { data, error } = await sendEmail(formData);
@@ -181,7 +215,7 @@ export default function ContactForm() {
             alert("Email sent successfully!");
           }}
           id="loginform"
-          className={`${styles.form} z-10 w-full gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
+          className={`${styles.form} z-10  w-full gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
         max-tablet:flex-col
         max-tablet:mx-8`}
         >
@@ -248,13 +282,14 @@ export default function ContactForm() {
             <line></line>
           </div>
           <div
-            className="flex justify-center items-center col-span-2 pb-10 
-        max-tablet:pb-8"
+            className="flex justify-center items-center col-span-2 pb-[61px] 
+        max-tablet:pb-[206px]
+        max-[599px]:pb-[56px]"
           >
             <Button
               onClick={onSubmit}
               type="submit"
-              variant="btn-blue-white"
+              variant="btn-blue-fill"
               title="Submit"
             />
           </div>
