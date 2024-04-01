@@ -69,8 +69,8 @@ import { useMediaQuery } from "@react-hook/media-query";
 // console.log(isInvalidFullName("John Doe1")); // t
 
 export default function ContactForm() {
-  const isTablet = useMediaQuery("(max-width: 835px)");
-  const isMobile = useMediaQuery("(max-width: 599px)");
+  const isTablet = useMediaQuery("(min-width: 401px) and (max-width: 835px)");
+  const isMobile = useMediaQuery("(max-width: 400px)");
   const { isActive } = useNav();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -172,7 +172,7 @@ export default function ContactForm() {
         translate-y-[235px]"
         />
       )}
-      {isTablet && (
+      {isTablet && !isMobile && (
         <Image
           src="/contact_tablet.png"
           alt="circle"
@@ -187,7 +187,7 @@ export default function ContactForm() {
         translate-y-[100px]"
         />
       )}
-      {isMobile && (
+      {isMobile && !isTablet && (
         <Image
           src="/contact_tablet.png"
           alt="circle"
@@ -199,7 +199,7 @@ export default function ContactForm() {
           }}
           className="absolute
         max-h-[840px]
-        translate-y-[105px]
+        translate-y-[35px]
         "
         />
       )}
