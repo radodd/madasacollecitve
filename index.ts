@@ -102,7 +102,7 @@ export const designers = [
     icon: "/team/icon_serina.svg",
     backTitle: "I like",
     backText:
-      "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, painting",
+      "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, and painting.",
   },
   {
     name: "Miguel Castillo",
@@ -112,7 +112,7 @@ export const designers = [
     icon: "/team/icon_miguel.svg",
     backTitle: "I like",
     backText:
-      "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, painting",
+      "sparkling water, gardening, salsa dancing, traveling and staying active.",
   },
 ];
 
@@ -125,7 +125,7 @@ export const developers = [
     icon: "/team/icon_ethan.svg",
     backTitle: "I like",
     backText:
-      "my cats, hot tropical sun, the beach, surfing, CrossFit, Soul South Korea, Okinawa, and Guam",
+      "my cats, hot tropical sun, the beach, surfing, CrossFit, Soul South Korea, Okinawa, and Guam.",
   },
   {
     name: "Jose Roman",
@@ -134,7 +134,7 @@ export const developers = [
     pic: "/team/headshot_jose.png",
     icon: "/team/icon_jose.svg",
     backTitle: "I like",
-    backText: "my video games, my wife <3",
+    backText: "my video games, and my wife. <3",
   },
   {
     name: "Daniel Castillo",
@@ -142,6 +142,6 @@ export const developers = [
     pic: "/team/headshot_danny.png",
     icon: "/team/icon_danny.svg",
     backTitle: "I like",
-    backText: "my kids, cycling, movies, food, video games, Oaxaca, ",
+    backText: "my kids, cycling, movies, food, video games, and Oaxaca, ",
   },
 ];

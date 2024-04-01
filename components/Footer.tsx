@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
   };
   return (
     <div
-      className={`flex justify-between  px-[70px] py-8 w-full gap-4 
+      className={`flex justify-between px-[70px] py-8 w-full h-[380px] gap-4 
         max-tablet:flex-col 
         max-tablet:justify-center 
         max-tablet:items-center
@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         max-tablet:gap-6
         ${getBackgroundColor()}`}
     >
-      <div className="flex items-center">
+      <div className="flex items-start">
         <Image
           alt="Logo"
           src="/logo/footer.svg"
@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         />
       </div>
       <div
-        className="flex flex-col text-right text-white text-sm gap-2
+        className="z-10 flex flex-col text-right text-white text-sm gap-2
             max-tablet:text-center"
       >
         <p>Made in CA</p>

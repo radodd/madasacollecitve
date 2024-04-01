@@ -73,6 +73,7 @@ export default function ContactForm() {
   const isMobile = useMediaQuery("(max-width: 599px)");
   const { isActive } = useNav();
   const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [submitClickedFullName, setSubmitClickedFullName] = useState(false);
   const [submitClickedPhoneNumber, setSubmitClickedPhoneNumber] =
@@ -81,6 +82,10 @@ export default function ContactForm() {
 
   const onChangeFullName = (e: any) => {
     setSubmitClickedFullName(false);
+    console.log(e.target.value);
+    setFullName(e.target.value);
+  };
+  const onChangeEmail = (e: any) => {
     console.log(e.target.value);
     setFullName(e.target.value);
   };
@@ -142,9 +147,9 @@ export default function ContactForm() {
     `}
     >
       <div
-        className="z-10 flex justify-center items-center pt-20 pb-[136px] 
+        className="z-10 flex justify-center items-center pt-14 pb-[136px] 
+        max-[599px]:pb-[96px]
       max-tablet:pt-8
-     
       max-mobile:pb-8
       max-mobile:pt-8"
       >
@@ -163,8 +168,8 @@ export default function ContactForm() {
             height: "100%",
           }}
           className="absolute
-        max-h-[680px]
-        translate-y-[100px]"
+        max-h-[880px]
+        translate-y-[235px]"
         />
       )}
       {isTablet && (
@@ -194,7 +199,7 @@ export default function ContactForm() {
           }}
           className="absolute
         max-h-[840px]
-        translate-y-[40px]
+        translate-y-[105px]
         "
         />
       )}
@@ -252,8 +257,9 @@ export default function ContactForm() {
           </div>
           <div className={`${styles.animateLabel} flex flex-col`}>
             <input
-              type="email"
+              type="text"
               name="email"
+              // onChange={onChangeEmail}
               className={`${styles.input} h-[57px] px-4 rounded-md `}
               autoComplete="off"
               required

@@ -231,7 +231,7 @@ const Hero = () => {
 
         <ul
           className="flex gap-[8.5px]
-        max-mobile:gap-1"
+        max-[620px]:gap-1"
         >
           {collectiveLetters.map((letter, index) => (
             <motion.li

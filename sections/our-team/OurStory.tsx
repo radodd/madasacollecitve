@@ -31,9 +31,9 @@ const OurStory = () => {
           <Image
             src="/ourstory_desktop.png"
             width={441}
-            height={574}
+            height={474}
             alt="founder photo 1"
-            className="object-fill shadow-b2xl rounded-3xl min-w-[416px]"
+            className="object-fill shadow-b2xl rounded-3xl min-w-[441px]"
           />
         )}
         {isDesktop && collapse && (
@@ -80,30 +80,33 @@ const OurStory = () => {
         className="flex flex-col justify-center p-16 bg-white rounded-3xl min-h-[474px] shadow-b2xl
         w-full 
         max-tablet:min-h-[312px]
+        max-[1000px]:min-h-[339px]
         max-[1000px]:px-8
         max-[1000px]:py-8
         
       "
       >
         <h1
-          className="text-5xl font-bold max-[1000px]:text-4xl text-secondary pb-8 tablet:pb-16
-        max-tablet:pb-12
+          className="text-5xl font-bold max-[1000px]:text-4xl text-secondary pb-[64px] 
+        max-[1250px]:pb-12
+        
         max-mobile:pb-8"
         >
           The Story
         </h1>
-        <p className="text-4xl text-pretty tracking-[-0.01em]  max-[1000px]:text-xl">
+        <p className="text-4xl text-pretty tracking-[-0.01em] max-[1250px]:text-2xl max-[1000px]:text-xl">
           A Product Designer met a Software Developer in Santa Barbara, CA, and
           founded...
-          <span className="text-secondary font-bold text-pretty">
+          <span className="text-secondary font-bold text-pretty block">
+            {" "}
             a digital powerhouse.{" "}
           </span>
         </p>
 
         <div
-          className={`${collapse ? "hidden" : ""} flex justify-center pt-8
-        tablet:pt-16
-        max-tablet:pt-12
+          className={`${collapse ? "hidden" : ""} flex justify-center pt-[64px]
+        
+        max-[1250px]:pt-12
         max-mobile:pt-8`}
         >
           {/* <Button
@@ -146,7 +149,7 @@ const OurStory = () => {
               type="button"
               onClick={() => window.open("/slides.pdf", "_blank")}
             />
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-center mt-6 ">
               <Image
                 src="/chevron_down.svg"
                 height={32}
