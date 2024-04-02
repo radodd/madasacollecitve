@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
   const getHeight = () => {
     switch (currentPage) {
       case "contact":
-        return "h-[400px]";
+        return "h-[600px]";
     }
   };
   return (

@@ -7,8 +7,8 @@ import React, { useState } from "react";
 
 const OurStory = () => {
   const { isActive } = useNav();
-  const isDesktop = useMediaQuery("(min-width: 1001px)");
-  const isTablet = useMediaQuery("(max-width: 1000px)");
+  const isDesktop = useMediaQuery("(min-width: 1321px)");
+  const isTablet = useMediaQuery("(max-width: 1320px)");
   const isMobile = useMediaQuery("(max-width: 739px)");
 
   const [collapse, setCollapse] = useState(false);
@@ -24,7 +24,7 @@ const OurStory = () => {
     max-[1000px]:gap-6
     max-[1000px]:px-8
     max-[1000px]:py-12 
-    max-extrasmall:flex-col-reverse`}
+    max-[840px]:flex-col-reverse`}
     >
       <div className="">
         {isDesktop && !collapse && (
@@ -52,7 +52,7 @@ const OurStory = () => {
             width={441}
             height={636}
             alt="founder photo 2"
-            className="shadow-b2xl rounded-3xl min-w-[373px]"
+            className="shadow-b2xl rounded-3xl min-w-[282px]"
           />
         )}
         {isTablet && !isMobile && !collapse && (
@@ -65,39 +65,46 @@ const OurStory = () => {
           />
         )}
       </div>
-      <div className="">
-        {isMobile && (
-          <Image
-            src="/ourstory_mobile.png"
-            width={329}
-            height={400}
-            alt="founder photo 3"
-            className="object-fill shadow-b2xl rounded-3xl"
-          />
-        )}
-      </div>
+
+      {isMobile && (
+        <Image
+          src="/ourstory_mobile.png"
+          width={329}
+          height={400}
+          alt="founder photo 3"
+          className="object-fill shadow-b2xl rounded-3xl"
+        />
+      )}
+
       <div
-        className="flex flex-col justify-center p-16 bg-white rounded-3xl min-h-[474px] shadow-b2xl
-        w-full 
+        className={`flex flex-col justify-center p-16 bg-white rounded-3xl shadow-b2xl w-full 
         max-tablet:min-h-[312px]
-        max-[1000px]:min-h-[339px]
+      
         max-[1000px]:px-8
         max-[1000px]:py-8
-        
-      "
+        ${
+          collapse
+            ? "" + (!isTablet && !isMobile ? "min-h-[682px]" : "min-h-[639px] ")
+            : "" + (!isTablet && !isMobile ? "min-h-[474px]" : "")
+        }
+      `}
       >
         <h1
-          className="text-5xl font-bold max-[1000px]:text-4xl text-secondary pb-[64px] 
-        max-[1250px]:pb-12
-        
+          className="text-5xl font-bold max-[1320px]:text-4xl text-secondary pb-[64px] 
+        max-[1250px]:pb-10
+        max-[1320px]:pb-6
         max-mobile:pb-8"
         >
           The Story
         </h1>
-        <p className="text-4xl text-pretty tracking-[-0.01em] max-[1250px]:text-2xl max-[1000px]:text-xl">
+        <p
+          className={`text-pretty tracking-[-0.01em] 
+          max-[1320px]:text-xl
+        ${collapse ? "text-2xl" : "text-4xl"}`}
+        >
           A Product Designer met a Software Developer in Santa Barbara, CA, and
           founded...
-          <span className="text-secondary font-bold text-pretty block">
+          <span className="text-secondary font-bold text-pretty">
             {" "}
             a digital powerhouse.{" "}
           </span>
@@ -128,7 +135,7 @@ const OurStory = () => {
         <div
           className={`${collapse ? "expanded" : ""} flex flex-col long-text`}
         >
-          <p className="text-xl text-pretty pt-6">
+          <p className="text-xl text-pretty pt-6 max-[1000px]:text-md">
             Inspired by our previous backgrounds as a Structural Engineer
             (Serina) and Army Combat Engineer Veteran (Ethan),{" "}
             <span className="font-bold text-secondary">
@@ -142,7 +149,7 @@ const OurStory = () => {
             combines industry expertise with diverse perspectives to deliver
             high- quality products to our clients.
           </p>
-          <div className="pt-8">
+          <div className="pt-8 max-[1000px]:pt-6">
             <Button
               title="Learn More"
               variant="btn-blue"

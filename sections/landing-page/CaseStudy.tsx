@@ -39,9 +39,11 @@ const CaseStudy = () => {
 
       <div
         className="flex flex-col py-10 px-12 gap-8 bg-white rounded-3xl shadow-b2xl 
-        tablet:max-h-[415px]
+        tablet:min-h-[409px]
+        tablet:max-h-[409px]
       max-tablet:gap-6
       max-tablet:p-8
+      max-[1504px]:gap-6
       "
       >
         <h1
