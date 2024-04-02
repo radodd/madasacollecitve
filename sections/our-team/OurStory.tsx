@@ -147,7 +147,12 @@ const OurStory = () => {
               title="Learn More"
               variant="btn-blue"
               type="button"
-              onClick={() => window.open("/slides.pdf", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://www.canva.com/design/DAF-mBhPfaA/i8H6H6r_sPlcZJUq6ZRH8g/view?utm_content=DAF-mBhPfaA&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+                  "_blank"
+                )
+              }
             />
             <div className="flex justify-center mt-6 ">
               <Image

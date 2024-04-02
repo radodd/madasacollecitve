@@ -134,7 +134,7 @@ export const developers = [
     pic: "/team/headshot_jose.png",
     icon: "/team/icon_jose.svg",
     backTitle: "I like",
-    backText: "my video games, and my wife. <3",
+    backText: "my video games, soccer, and my wife. <3",
   },
   {
     name: "Daniel Castillo",
