@@ -147,8 +147,8 @@ export default function ContactForm() {
     `}
     >
       <div
-        className="z-10 flex justify-center items-center pt-14 pb-[136px] 
-        max-[599px]:pb-[96px]
+        className="z-10 flex justify-center items-center pt-14 pb-[90px] 
+        max-[599px]:pb-[50px]
       max-tablet:pt-8
       max-mobile:pb-8
       max-mobile:pt-8"
@@ -157,7 +157,7 @@ export default function ContactForm() {
           Get in touch!
         </h1>
       </div>
-      {!isTablet && (
+      {/* {!isTablet && (
         <Image
           src="/contact_desktop.png"
           alt="circle"
@@ -202,9 +202,12 @@ export default function ContactForm() {
         translate-y-[35px]
         "
         />
-      )}
+      )} */}
 
-      <div className="max-w-[1000px] w-full  flex max-mobile:mt-14">
+      <div
+        className="bg-primary  w-full  flex justify-center pt-[40px]
+"
+      >
         <form
           action={async (formData) => {
             const { data, error } = await sendEmail(formData);
@@ -221,7 +224,7 @@ export default function ContactForm() {
             alert("Email sent successfully!");
           }}
           id="loginform"
-          className={`${styles.form} z-10  w-full gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
+          className={`${styles.form} z-10 flex max-w-[1200px] gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
         max-tablet:flex-col
         max-tablet:mx-8`}
         >
@@ -289,7 +292,7 @@ export default function ContactForm() {
             <line></line>
           </div>
           <div
-            className="flex justify-center items-center col-span-2 pb-[61px] 
+            className="flex justify-end items-center col-span-2 pb-[61px] 
         max-tablet:pb-[206px]
         max-[599px]:pb-[56px]"
           >
