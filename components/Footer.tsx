@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
   const getHeight = () => {
     switch (currentPage) {
       case "contact":
-        return "h-[380px]";
+        return "h-[400px]";
     }
   };
   return (
@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         ${getHeight()}
         ${getBackgroundColor()}`}
     >
-      <div className="flex items-start">
+      <div className="flex items-end">
         <Image
           alt="Logo"
           src="/logo/footer.svg"
@@ -43,7 +43,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         />
       </div>
       <div
-        className="z-10 flex flex-col text-right text-white text-sm gap-2
+        className="z-10 flex flex-col text-right justify-end items-end text-white text-sm gap-2
             max-tablet:text-center"
       >
         <p>Made in CA</p>
