@@ -15,15 +15,22 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         return "bg-primary";
     }
   };
+  const getHeight = () => {
+    switch (currentPage) {
+      case "contact":
+        return "h-[380px]";
+    }
+  };
   return (
     <div
-      className={`flex justify-between px-[70px] py-8 w-full h-[380px] gap-4 
+      className={`flex justify-between px-[70px] py-8 w-full  gap-4 
         max-tablet:flex-col 
         max-tablet:justify-center 
         max-tablet:items-center
         max-tablet:px-2
         max-tablet:py-6
         max-tablet:gap-6
+        ${getHeight()}
         ${getBackgroundColor()}`}
     >
       <div className="flex items-start">
