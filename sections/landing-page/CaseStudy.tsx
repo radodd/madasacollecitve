@@ -8,9 +8,9 @@ import { useNav } from "@/context/NavContext";
 
 const CaseStudy = () => {
   const isMobile = useMediaQuery("(max-width: 394px");
-  const isTablet = useMediaQuery("(max-width: 835px)");
+  const isTablet = useMediaQuery("(max-width: 1512px)");
   const imageWidth = isMobile ? 299 : isTablet ? 654 : 654;
-  const imageHeight = isMobile ? 150 : isTablet ? 300 : 409;
+  const imageHeight = isMobile ? 150 : isTablet ? 400 : 400;
   const { isActive } = useNav();
 
   return (
@@ -18,14 +18,17 @@ const CaseStudy = () => {
       className={`${
         isActive ? "blur" : ""
       } flex justify-center items-center px-[70px] py-20 gap-16 bg-secondary 
-    max-wide:flex-col
-    max-tablet:p-8
-    max-tablet:gap-8`}
+    max-[1300px]:flex-col
+    max-[1300px]:p-8
+    max-[1300px]:gap-8`}
     >
       <div
-        className="flex items-center justify-center bg-white max-h-[416px]  rounded-3xl shadow-b2xl hover:shadow-b3xl
-        tablet:min-w-[654px]
-        max-mobile:max-w-[329px] "
+        className="flex items-center justify-center bg-white
+        max-h-[416px] rounded-3xl shadow-b2xl hover:shadow-b3xl
+        max-[2500px]:min-w-[654px]
+        max-[1300px]:min-w-[770px]
+        max-[833px]:min-w-[329px] 
+        "
       >
         <Image
           alt="case study image Gen Fulton Consultancy"
@@ -38,30 +41,40 @@ const CaseStudy = () => {
       </div>
 
       <div
-        className="flex flex-col py-10 px-12 gap-8 bg-white rounded-3xl shadow-b2xl 
-        tablet:min-h-[409px]
-        tablet:max-h-[409px]
-      max-tablet:gap-6
-      max-tablet:p-8
-      max-[1504px]:gap-6
+        className="flex flex-col justify-center py-10 px-12 gap-8 bg-white rounded-3xl shadow-b2xl 
+        min-[1301px]:min-h-[409px]
+        max-[1436px]:py-8
+        max-[1300px]:gap-6
+        max-[1300px]:py-8
+        max-[1300px]:px-8
+        max-[1504px]:gap-6
+
+
+        max-tablet:min-w-[329px]
+        
+        
+        max-[1300px]:min-w-[770px]
+        max-[1344px]:gap-4
+      
       "
       >
         <h1
           className="text-5xl font-bold
-          max-tablet:text-4xl
+          max-[1300px]:text-4xl
           "
         >
           Our Work
         </h1>
         <h2
           className="text-4xl
-      max-tablet:text-2xl"
+      max-[1300px]:text-2xl"
         >
           Responsive Website
         </h2>
         <p
           className="text-xl text-pretty
-        max-tablet:text-md"
+          max-[1343px]:max-w-[347px]
+        max-[1300px]:text-md"
         >
           <Link href="https://www.genfulton.com">
             <span className="underline ">GenFulton.com </span>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useNav } from "@/context/NavContext";
 import { useState } from "react";
+import Link from "next/link";
 
 const Designers = () => {
   const { isActive } = useNav();
@@ -71,7 +72,7 @@ const Designers = () => {
                   </div>
                 </div>
               </div>
-              <div className="back flex flex-col gap-6 px-10">
+              <div className="back flex flex-col gap-6 p-10">
                 <Image
                   src={designer.icon}
                   alt={designer.icon}
@@ -92,6 +93,34 @@ const Designers = () => {
                     >
                       {designer.backText}
                     </p>
+                    <div className="flex gap-8 justify-center pt-6">
+                      <a
+                        href={designer.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src="/linkedin.png"
+                          alt={`link to ${designer.name}'s LinkedIn profile`}
+                          height={24}
+                          width={24}
+                          className=""
+                        />
+                      </a>
+                      <a
+                        href={designer.portfolio}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src="/portfolio.png"
+                          alt={`link to ${designer.name}'s portfolio site`}
+                          height={24}
+                          width={24}
+                          className=""
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

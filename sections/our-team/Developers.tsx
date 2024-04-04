@@ -92,6 +92,34 @@ const Developers = () => {
                       {developer.backText}
                     </p>
                   </div>
+                  <div className="flex gap-8 justify-center pt-6">
+                    <a
+                      href={developer.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src="/linkedin.png"
+                        alt={`link to ${developer.name}'s LinkedIn profile`}
+                        height={24}
+                        width={24}
+                        className=""
+                      />
+                    </a>
+                    <a
+                      href={developer.portfolio}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src="/portfolio.png"
+                        alt={`link to ${developer.name}'s portfolio site`}
+                        height={24}
+                        width={24}
+                        className=""
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

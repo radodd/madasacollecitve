@@ -43,7 +43,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         />
       </div>
       <div
-        className="z-10 flex flex-col text-right justify-end items-end text-white text-sm gap-2
+        className="z-10 flex flex-col tablet:text-right justify-end text-white text-sm gap-2
             max-tablet:text-center"
       >
         <p>Made in CA</p>

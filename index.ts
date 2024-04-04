@@ -103,6 +103,8 @@ export const designers = [
     backTitle: "I like",
     backText:
       "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, and painting.",
+    linkedin: "https://www.linkedin.com/in/serina-zepeda/",
+    portfolio: "/portfolio.png",
   },
   {
     name: "Miguel Castillo",
@@ -113,6 +115,8 @@ export const designers = [
     backTitle: "I like",
     backText:
       "sparkling water, gardening, salsa dancing, traveling and staying active.",
+    linkedin: "https://www.linkedin.com/in/miguelcasdesign/",
+    portfolio: "https://miguelcastillodesign.com/",
   },
 ];
 
@@ -126,6 +130,8 @@ export const developers = [
     backTitle: "I like",
     backText:
       "my cats, hot tropical sun, the beach, surfing, CrossFit, Soul South Korea, Okinawa, and Guam.",
+    linkedin: "https://www.linkedin.com/in/ethanf-flores/",
+    portfolio: "https://ethanflores.vercel.app/",
   },
   {
     name: "Jose Roman",
@@ -135,6 +141,8 @@ export const developers = [
     icon: "/team/icon_jose.svg",
     backTitle: "I like",
     backText: "my video games, soccer, and my wife. <3",
+    linkedin: "https://www.linkedin.com/in/jose-roman-lujano-a3055966/",
+    portfolio: "",
   },
   {
     name: "Daniel Castillo",
@@ -143,5 +151,7 @@ export const developers = [
     icon: "/team/icon_danny.svg",
     backTitle: "I like",
     backText: "my kids, cycling, movies, food, video games, and Oaxaca, ",
+    linkedin: "https://www.linkedin.com/in/daniel-castillo-software-developer/",
+    portfolio: "",
   },
 ];
