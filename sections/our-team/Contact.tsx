@@ -15,7 +15,7 @@ const Contact = () => {
     max-[832px]:py-12
     max-mobile:gap-8`}
     >
-      {/* <Image
+      <Image
         alt="contact circle"
         src="/ourteam_circle.svg"
         height={2000}
@@ -28,7 +28,7 @@ const Contact = () => {
           max-[745px]:h-[800px]
           max-[453px]:h-[950px]
         "
-      /> */}
+      />
       <div
         className="z-10 flex flex-col gap-8 text-black bg-white rounded-3xl p-14 max-w-[625px]
       max-mobile:p-8
