@@ -104,7 +104,7 @@ export const designers = [
     backText:
       "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, and painting.",
     linkedin: "https://www.linkedin.com/in/serina-zepeda/",
-    portfolio: "/portfolio.png",
+    portfolio: "http://serinazepeda.com/",
   },
   {
     name: "Miguel Castillo",

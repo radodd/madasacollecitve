@@ -77,7 +77,8 @@ const Designers = () => {
                   src={designer.icon}
                   alt={designer.icon}
                   width={isTablet ? 249 : 350}
-                  height={isTablet ? 300 : 400}
+                  height={isTablet ? 300 : 321}
+                  className={`${isTablet ? "max-h-[228px]" : "max-h-[320px]"}`}
                 />
                 <div className="flex flex-col gap-4 w-full">
                   <h1

@@ -9,24 +9,17 @@ const Contact = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } relative z-20 p-70 bg-base flex gap-14  overflow-hidden justify-center items-center max-medium:flex-col
+      } relative z-20 p-70 bg-base flex gap-16  overflow-hidden justify-center items-center max-[1240px]:flex-col
     max-medium:gap-6
     max-tablet:px-8
-    max-tablet:py-16
+    max-[832px]:py-12
     max-mobile:gap-8`}
     >
-      <Image
+      {/* <Image
         alt="contact circle"
         src="/ourteam_circle.svg"
         height={2000}
         width={1448}
-        // style={{
-        //   width: "100%",
-        //   height: "100%",
-
-        //   top: 0, // Adjust top positioning
-        //   left: 0, // Adjust left positioning
-        // }}
         style={{ width: "100%", height: "100%" }}
         className="absolute object-fit
           max-[1225px]:object-cover 
@@ -35,13 +28,13 @@ const Contact = () => {
           max-[745px]:h-[800px]
           max-[453px]:h-[950px]
         "
-      />
-
-      {/* <div className="bg-secondary w-[1600px] h-[1448px] absolute -translate-x-20 -translate-y-16 rounded-t-full"></div> */}
-
+      /> */}
       <div
         className="z-10 flex flex-col gap-8 text-black bg-white rounded-3xl p-14 max-w-[625px]
-      max-mobile:p-8"
+      max-mobile:p-8
+      min-[1225px]:max-h-[378px]
+      min-[1225px]:min-w-[562px]
+      "
       >
         <h1
           className="text-5xl
@@ -60,19 +53,17 @@ const Contact = () => {
           href="https://calendly.com/madasacollective/60min"
         />
       </div>
-      {/* <Image
-        src="/contact-icons/icon2.svg"
-        alt="vector"
-        width={355}
-        height={355}
-        className="z-20"
-      /> */}
       <Image
         src="/ourteam_contact.png"
         alt="our team group photo"
         width={612}
         height={378}
-        className="z-20"
+        className="z-20 
+        max-[831px]:min-h-[248.8px]
+        max-[831px]:min-w-[329px]
+        max-[467px]:min-h-[100px]
+        max-[467px]:min-w-[100px]
+        "
       />
     </div>
   );
