@@ -43,6 +43,7 @@ const CaseStudy = () => {
       <div
         className="flex flex-col justify-center py-10 px-12 gap-8 bg-white rounded-3xl shadow-b2xl 
         min-[1301px]:min-h-[409px]
+        max-[1300px]:max-w-[770px]
         max-[1436px]:py-8
         max-[1300px]:gap-6
         max-[1300px]:py-8
@@ -54,7 +55,7 @@ const CaseStudy = () => {
         
         
         max-[1300px]:min-w-[770px]
-        max-[1344px]:gap-4
+      
       
       "
       >
@@ -73,7 +74,7 @@ const CaseStudy = () => {
         </h2>
         <p
           className="text-xl text-pretty
-          max-[1343px]:max-w-[347px]
+          
         max-[1300px]:text-md"
         >
           <Link href="https://www.genfulton.com">
@@ -96,3 +97,4 @@ const CaseStudy = () => {
 };
 
 export default CaseStudy;
+// max-[1343px]:max-w-[347px]
