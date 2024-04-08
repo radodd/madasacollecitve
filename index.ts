@@ -129,7 +129,7 @@ export const developers = [
     icon: "/team/icon_ethan.svg",
     backTitle: "I like",
     backText:
-      "my cats, hot tropical sun, the beach, surfing, CrossFit, Soul South Korea, Okinawa, and Guam.",
+      "my cats, hot tropical sun, the beach, surfing, CrossFit, Okinawa, and Guam.",
     linkedin: "https://www.linkedin.com/in/ethanf-flores/",
     portfolio: "https://ethanflores.vercel.app/",
   },
