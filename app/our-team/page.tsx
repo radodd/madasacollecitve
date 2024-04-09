@@ -5,6 +5,11 @@ import Designers from "@/sections/our-team/Designers";
 import Developers from "@/sections/our-team/Developers";
 import Hero from "@/sections/our-team/Hero";
 import OurStory from "@/sections/our-team/OurStory";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Team",
+};
 
 const page = () => {
   return (

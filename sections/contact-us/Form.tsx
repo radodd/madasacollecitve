@@ -8,6 +8,9 @@ import styles from "./contact.module.scss";
 import { useNav } from "@/context/NavContext";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
+import toast from "react-hot-toast";
+import Lottie from "lottie-react";
+import Plane from "@/public/Plane.json";
 
 // const isInvalidFullName = (fullName: string) => {
 //   const fullNameFormat = /\d/;
@@ -83,23 +86,18 @@ export default function ContactForm() {
   // const isErrorFullName = isInvalidFullName(fullName) && submitClickedFullName;
 
   const onChangeFullName = (e: any) => {
-    console.log(e.target.value);
     setFullName(e.target.value);
   };
   const onChangeCompany = (e: any) => {
-    console.log(e.target.value);
     setCompany(e.target.value);
   };
   const onChangeEmail = (e: any) => {
-    console.log(e.target.value);
     setEmail(e.target.value);
   };
   const onChangePhoneNumber = (e: any) => {
-    console.log(e.target.value);
     setPhoneNumber(e.target.value);
   };
   const onChangeMessage = (e: any) => {
-    console.log(e.target.value);
     setMessage(e.target.value);
   };
 
@@ -218,17 +216,12 @@ export default function ContactForm() {
         <form
           action={async (formData) => {
             const { data, error } = await sendEmail(formData);
-            console.log(formData.get("fullName"));
-            console.log(formData.get("company"));
-            console.log(formData.get("email"));
-            console.log(formData.get("phoneNumber"));
-            console.log(formData.get("message"));
 
             if (error) {
-              alert(error);
+              toast.error(error);
               return;
             }
-            alert("Email sent successfully!");
+            toast.success("Email sent successfully!");
             setFullName("");
             setCompany("");
             setEmail("");
@@ -315,7 +308,15 @@ export default function ContactForm() {
               type="submit"
               variant="btn-blue-fill"
               title="Submit"
-            />
+            >
+              {/* <>
+                {" "}
+                <Lottie
+                  animationData={Plane}
+                  style={{ width: 100, height: 100 }}
+                />
+              </> */}
+            </Button>
           </div>
         </form>
       </div>
