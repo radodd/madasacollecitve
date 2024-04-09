@@ -73,21 +73,34 @@ export default function ContactForm() {
   const isMobile = useMediaQuery("(max-width: 400px)");
   const { isActive } = useNav();
   const [fullName, setFullName] = useState("");
+  const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [submitClickedFullName, setSubmitClickedFullName] = useState(false);
-  const [submitClickedPhoneNumber, setSubmitClickedPhoneNumber] =
-    useState(false);
+  const [message, setMessage] = useState("");
+  // const [submitClickedFullName, setSubmitClickedFullName] = useState(false);
+  // const [submitClickedPhoneNumber, setSubmitClickedPhoneNumber] =
+  //   useState(false);
   // const isErrorFullName = isInvalidFullName(fullName) && submitClickedFullName;
 
   const onChangeFullName = (e: any) => {
-    setSubmitClickedFullName(false);
     console.log(e.target.value);
     setFullName(e.target.value);
   };
+  const onChangeCompany = (e: any) => {
+    console.log(e.target.value);
+    setCompany(e.target.value);
+  };
   const onChangeEmail = (e: any) => {
     console.log(e.target.value);
-    setFullName(e.target.value);
+    setEmail(e.target.value);
+  };
+  const onChangePhoneNumber = (e: any) => {
+    console.log(e.target.value);
+    setPhoneNumber(e.target.value);
+  };
+  const onChangeMessage = (e: any) => {
+    console.log(e.target.value);
+    setMessage(e.target.value);
   };
 
   // const onChangePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -96,20 +109,16 @@ export default function ContactForm() {
   //   // setPhoneNumber(formattedPhoneNumber); // Update the state variable with the formatted phone number
   // };
 
-  const onSubmit = () => {
-    console.log("Form submitted"); // Add this line to log when the form is submitted
-
-    // setSubmitClickedFullName(true);
-
-    if (fullName === "") {
-      console.log("ERRRRRROORRR");
-    } else {
-      console.log("Full name before clearing:", fullName);
-      // Clear the full name input after successful submission
-      setFullName("");
-      console.log("Full name after clearing:", fullName);
-    }
-  };
+  // const onSubmit = async (fullName: string) => {
+  //   if (fullName === "") {
+  //     console.log("ERRRRRROORRR");
+  //   } else {
+  //     console.log("Full name before clearing:", fullName);
+  //     // Clear the full name input after successful submission
+  //     setFullName("");
+  //     console.log("Full name after clearing:", fullName);
+  //   }
+  // };
 
   // useEffect(() => {
   //   const inputElement = document.getElementById("phoneNumber");
@@ -119,9 +128,7 @@ export default function ContactForm() {
   //   }
   // }, []); // Empty dependency a
 
-  useEffect(() => {
-    console.log("Full name after clearing:", fullName);
-  }, [fullName]);
+  // useEffect(() => {}, []);
 
   return (
     // <motion.section
@@ -222,6 +229,11 @@ export default function ContactForm() {
               return;
             }
             alert("Email sent successfully!");
+            setFullName("");
+            setCompany("");
+            setEmail("");
+            setPhoneNumber("");
+            setMessage("");
           }}
           id="loginform"
           className={`${styles.form} z-10 flex max-w-[1200px] gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
@@ -233,7 +245,7 @@ export default function ContactForm() {
               type="text"
               // id="fullName"
               name="fullName"
-              // value={fullName}
+              value={fullName}
               onChange={onChangeFullName}
               className={`${styles.input} h-[57px] px-4 rounded-md `}
               autoComplete="off"
@@ -245,51 +257,53 @@ export default function ContactForm() {
               // }}
             />
             <label className="text-md px-4">Full name *</label>
-            <line></line>
           </div>
           <div className={`${styles.animateLabel} flex flex-col`}>
             <input
               type="text"
               name="company"
+              value={company}
+              onChange={onChangeCompany}
               className={`${styles.input} h-[57px] px-4  rounded-md `}
               autoComplete="off"
               required
             />
             <label className="text-md px-4">Your company</label>
-            <line></line>
           </div>
           <div className={`${styles.animateLabel} flex flex-col`}>
             <input
               type="text"
               name="email"
-              // onChange={onChangeEmail}
+              value={email}
+              onChange={onChangeEmail}
               className={`${styles.input} h-[57px] px-4 rounded-md `}
               autoComplete="off"
               required
             />
             <label className="text-md px-4">Your email *</label>
-            <line></line>
           </div>
           <div className={`${styles.animateLabel} flex flex-col`}>
             <input
               type="number"
               name="phoneNumber"
+              value={phoneNumber}
+              onChange={onChangePhoneNumber}
               className={`${styles.input} h-[57px] px-4  rounded-md `}
               autoComplete="off"
               required
             />
             <label className="text-md px-4">Phone number</label>
-            <line></line>
           </div>
           <div className={`${styles.animateLabelMessage} col-span-2`}>
             <textarea
               name="message"
+              value={message}
+              onChange={onChangeMessage}
               className={`${styles.input}  px-4 rounded-md`}
               autoComplete="off"
               required
             />
             <label className="text-md px-4 col-span-2">Message</label>
-            <line></line>
           </div>
           <div
             className="flex justify-end items-center col-span-2 pb-[61px] 
@@ -297,7 +311,7 @@ export default function ContactForm() {
         max-[599px]:pb-[56px]"
           >
             <Button
-              onClick={onSubmit}
+              // onClick={() => onSubmit}
               type="submit"
               variant="btn-blue-fill"
               title="Submit"
