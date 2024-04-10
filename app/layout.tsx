@@ -37,6 +37,14 @@ const jsonLd: WithContext<Organization> = {
     addressRegion: "California",
     addressCountry: "USA",
   },
+  keywords: [
+    "freelance",
+    "web design",
+    "web development",
+    "branding",
+    "logo",
+    "SEO",
+  ],
   founder: [
     {
       "@type": "Person",
