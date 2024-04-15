@@ -14,6 +14,7 @@ import {
 } from "schema-dts";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: {
@@ -79,6 +80,7 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
           <Analytics />
+          <SpeedInsights />
         </NavProvider>
       </body>
     </html>
