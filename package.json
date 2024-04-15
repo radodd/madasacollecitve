@@ -13,6 +13,7 @@
     "@react-email/tailwind": "^0.0.14",
     "@react-hook/media-query": "^1.1.1",
     "@studio-freight/lenis": "^1.0.39",
+    "@vercel/analytics": "^1.2.2",
     "@vercel/blob": "^0.22.1",
     "framer-motion": "^11.0.5",
     "hamburgers": "^1.2.1",
