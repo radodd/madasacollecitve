@@ -31,7 +31,7 @@ const CaseStudy = () => {
         "
       >
         <Image
-          alt="case study image Gen Fulton Consultancy"
+          alt="A case study of Madasa's previous client Gen Fulton Consultancy (GenFulton.com) - website design, website development, logo design, branding"
           src="/case_study22.png"
           width={imageWidth}
           height={imageHeight}

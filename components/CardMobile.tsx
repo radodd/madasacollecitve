@@ -20,7 +20,7 @@ const CardMobile = () => {
      max-tablet:px-10"
           >
             <div className="front flex flex-col gap-6">
-              <Image src={item.icon} alt="card" width={256} height={256} />
+              <Image src={item.icon} alt={item.alt} width={256} height={256} />
               <h1
                 className="text-4xl font-bold
      max-tablet:text-2xl"

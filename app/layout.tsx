@@ -28,7 +28,8 @@ const jsonLd: WithContext<Organization> = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Madasa Collective",
-  description: "Description of your freelance web development business.",
+  description:
+    "We create digital products that launch businesses to their full potential. Madasa is a Santa Barbara based collective that specializes in web design, web development, logo design, and SEO.",
   url: "https://www.madasacollective.com",
   logo: "/logo/short.png",
 

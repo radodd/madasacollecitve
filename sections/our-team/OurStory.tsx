@@ -32,7 +32,7 @@ const OurStory = () => {
             src="/ourstory_desktop.png"
             width={441}
             height={474}
-            alt="founder photo 1"
+            alt="Founders of Madasa Collective a Santa Barbara company - Ethan Flores (software engineer) and Serina Zepeda (product designer)"
             className="object-fill shadow-b2xl rounded-3xl min-w-[441px]"
           />
         )}
@@ -41,7 +41,7 @@ const OurStory = () => {
             src="/ourstory_desktop_open.png"
             width={441}
             height={724}
-            alt="founder photo 2"
+            alt="Founders of Madasa Collective a Santa Barbara company - Ethan Flores (software engineer) and Serina Zepeda (product designer)"
             className="object-fill shadow-b2xl rounded-3xl min-w-[416px]"
           />
         )}
@@ -51,7 +51,7 @@ const OurStory = () => {
             src="/ourstory_tablet_open.png"
             width={441}
             height={636}
-            alt="founder photo 2"
+            alt="Founders of Madasa Collective a Santa Barbara company - Ethan Flores (software engineer) and Serina Zepeda (product designer)"
             className="shadow-b2xl rounded-3xl min-w-[282px]"
           />
         )}
@@ -60,7 +60,7 @@ const OurStory = () => {
             src="/ourstory_tablet.png"
             width={441}
             height={636}
-            alt="founder photo 2"
+            alt="Founders of Madasa Collective a Santa Barbara company - Ethan Flores (software engineer) and Serina Zepeda (product designer)"
             className="shadow-b2xl rounded-3xl min-w-[282px]"
           />
         )}
@@ -71,7 +71,7 @@ const OurStory = () => {
           src="/ourstory_mobile.png"
           width={329}
           height={400}
-          alt="founder photo 3"
+          alt="Founders of Madasa Collective a Santa Barbara company - Ethan Flores (software engineer) and Serina Zepeda (product designer)"
           className="object-fill shadow-b2xl rounded-3xl"
         />
       )}

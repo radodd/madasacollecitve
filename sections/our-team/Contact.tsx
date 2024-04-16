@@ -55,7 +55,7 @@ const Contact = () => {
       </div>
       <Image
         src="/ourteam_contact.png"
-        alt="our team group photo"
+        alt="Madasa Collective team photo in Santa Barbara, CA - Ethan Flores, Serina Zepeda, and Miguel Castillo"
         width={612}
         height={378}
         className="z-20 
