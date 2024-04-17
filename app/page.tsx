@@ -4,8 +4,13 @@ import CaseStudy from "@/sections/landing-page/CaseStudy";
 import Contact from "@/sections/landing-page/Contact";
 import Hero from "@/sections/landing-page/Hero";
 import Testimonial from "@/sections/landing-page/Testimonial";
-import HeroCardsMobile from "../sections/landing-page/MobileCards/HeroCardsMobile";
+// import HeroCardsMobile from "../sections/landing-page/MobileCards/HeroCardsMobile";
 import { useNav } from "@/context/NavContext";
+import dynamic from "next/dynamic";
+
+const HeroCardsMobile = dynamic(
+  () => import("../sections/landing-page/MobileCards/HeroCardsMobile")
+);
 
 export default function Home() {
   const { isActive } = useNav();

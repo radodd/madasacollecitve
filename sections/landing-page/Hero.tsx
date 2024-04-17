@@ -3,10 +3,13 @@
 import Image from "next/image";
 import { collectiveLetters, madasaLetters, whoWeAre } from "../..";
 import "hamburgers/dist/hamburgers.css";
-import HeroCardsDesktop from "@/components/HeroCardsDesktop";
+// import HeroCardsDesktop from "@/components/HeroCardsDesktop";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNav } from "@/context/NavContext";
+import dynamic from "next/dynamic";
+
+const HeroCardsDesktop = dynamic(() => import("@/components/HeroCardsDesktop"));
 
 const fadeInAnimationVariants = {
   initial: {
@@ -222,8 +225,6 @@ const Hero = () => {
                 alt={`Skill ${index + 1}`}
                 width={135}
                 height={135}
-
-                // style={{ maxWidth: "65px", maxHeight: "65px" }}
               />
             </motion.li>
           ))}
@@ -254,8 +255,6 @@ const Hero = () => {
                 alt={`Skill ${index + 1}`}
                 width={94}
                 height={94}
-
-                // style={{ maxWidth: "65px", maxHeight: "65px" }}
               />
             </motion.li>
           ))}
@@ -271,7 +270,6 @@ const Hero = () => {
         {whoWeAre}
       </h1>
       <HeroCardsDesktop />
-      {/* <HeroCardsMobile /> */}
     </div>
   );
 };

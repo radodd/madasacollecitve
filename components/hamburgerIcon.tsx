@@ -9,7 +9,6 @@ const HamburgerIcon = () => {
       <div
         className="inline-block cursor-pointer mx-8 max-tablet:mx-0"
         onClick={() => {
-          console.log("Toggling dropdownOpen");
           setIsActive(!isActive);
         }}
       >

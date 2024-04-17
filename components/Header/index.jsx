@@ -28,8 +28,6 @@ const variants = {
 const Navbar2 = () => {
   const { isActive, setIsActive } = useNav(false);
 
-  console.log("Current state:", isActive);
-
   return (
     <>
       <nav

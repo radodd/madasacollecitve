@@ -5,7 +5,6 @@ import { useNav } from "../../context/NavContext";
 
 const Hero = () => {
   const { isActive } = useNav();
-  console.log("isActive from Team Page", isActive);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {

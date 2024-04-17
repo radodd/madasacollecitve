@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Navbar2Button from "@/components/Header/Nav2Button";
 import Header from "../components/Header";
-import { NavProvider } from "../context/NavContext";
+// import { NavProvider } from "../context/NavContext";
 import { Toaster } from "react-hot-toast";
-import {
-  WithContext,
-  Organization,
-  PostalAddress,
-  ContactPoint,
-  Person,
-} from "schema-dts";
+import { WithContext, Organization } from "schema-dts";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+// import dynamic from "next/dynamic";
+import { Suspense, lazy } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -62,6 +56,13 @@ const jsonLd: WithContext<Organization> = {
   ],
 };
 
+// const NavProvider = dynamic(() => import("../context/NavContext"));
+const LazyNavProvider = lazy(() =>
+  import("../context/NavContext").then((module) => ({
+    default: module.NavProvider,
+  }))
+);
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -70,23 +71,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavProvider>
-          <Header />
-          {children}
-          <Toaster position="top-right" />
-          {/* JSON-LD script */}
-          <Script
-            id="json-ld-schema"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-          <Analytics />
-          <SpeedInsights />
-        </NavProvider>
+        <Suspense fallback={<div>Loading NavProvider...</div>}>
+          <LazyNavProvider>
+            <Header />
+            {children}
+            <Toaster position="top-right" />
+            {/* JSON-LD script */}
+            <Script
+              id="json-ld-schema"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <Analytics />
+            <SpeedInsights />
+          </LazyNavProvider>
+        </Suspense>
       </body>
     </html>
   );
-}
-{
-  /* <Navbar /> */
 }
