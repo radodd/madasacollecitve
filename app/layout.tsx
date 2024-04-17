@@ -79,7 +79,7 @@ export default function RootLayout({
         <meta property="og:image" content="/opengraph-image.png" />
         <meta
           property="og:title"
-          content="Madasa Collective: Launch your business to their full potential. We specialize in Logo Design and Branding, Web Design, and Web Development."
+          content="Launch your business to its full potential. We specialize in Branding, Web Design and Development."
         />
         <meta
           property="og:description"
