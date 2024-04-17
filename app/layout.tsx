@@ -77,6 +77,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Add Open Graph meta tags */}
+        <meta property="og:image" content="/opengraph-image.png" />
+        <meta property="og:title" content="Your Open Graph Title" />
+        <meta property="og:description" content="Your Open Graph Description" />
+        {/* Add more Open Graph meta tags as needed */}
+      </head>
       <body>
         <Suspense fallback={<div>Loading NavProvider...</div>}>
           <LazyNavProvider>
