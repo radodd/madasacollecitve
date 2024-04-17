@@ -15,7 +15,11 @@ export const metadata: Metadata = {
     default: "Madasa Collective",
     template: "%s - Madasa Collective",
   },
-  description: "Your digital powerhouse",
+  description:
+    "Your digital powerhouse that launches your business to their full potential. We specialize in Logo Design and Branding, Web Design, and Web Development.",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 const jsonLd: WithContext<Organization> = {
