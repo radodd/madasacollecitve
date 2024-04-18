@@ -229,7 +229,7 @@ export default function ContactForm() {
             setMessage("");
           }}
           id="loginform"
-          className={`${styles.form} z-10 flex max-w-[1200px] gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
+          className={`${styles.form} z-10 flex min-[1080px]:min-w-[906px] min-w-[81vw] gap-8 mx-[100px] tablet:grid tablet:grid-cols-2 justify-center max-tablet:flex 
         max-tablet:flex-col
         max-tablet:mx-8`}
         >
