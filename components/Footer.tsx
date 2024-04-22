@@ -38,9 +38,8 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
           alt="Logo"
           src="/logo/footer.png"
           width={175}
-          height={62}
+          height={63}
           sizes="175px"
-          // style={{ filter: "brightness(0) invert(1)" }}
         />
       </div>
       <div
@@ -50,7 +49,13 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         <p>Made in CA</p>
         <p>contact@madasacollective.com</p>
         <div className="flex gap-1 text-xs">
-          <Image alt="copyright" src="/copyright.png" width={15} height={19} />
+          <Image
+            alt="copyright"
+            src="/copyright.png"
+            width={19}
+            height={19}
+            sizes="15"
+          />
           <p>2024 Madasa Collective All Rights Reserved.</p>
         </div>
       </div>

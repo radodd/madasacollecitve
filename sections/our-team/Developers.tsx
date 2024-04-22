@@ -45,6 +45,7 @@ const Developers = () => {
                   alt={developer.name}
                   width={isTablet ? 249 : 350}
                   height={isTablet ? 285 : 400}
+                  sizes="(min-width: 840px) 350px, 249px"
                 />
                 <div className="flex flex-col gap-4 w-full">
                   <h1
