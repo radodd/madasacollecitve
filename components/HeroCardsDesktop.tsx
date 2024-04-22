@@ -20,7 +20,13 @@ const HeroCardsDesktop = () => {
        max-tablet:px-10"
           >
             <div className="front flex flex-col gap-6">
-              <Image src={item.icon} alt={item.alt} width={256} height={256} />
+              <Image
+                src={item.icon}
+                alt={item.alt}
+                width={256}
+                height={256}
+                sizes="256px"
+              />
               <h1
                 className="text-4xl font-bold
        max-tablet:text-2xl"
@@ -29,12 +35,16 @@ const HeroCardsDesktop = () => {
               </h1>
             </div>
             <div className="back p-6 overflow-hidden">
-              <div className="absolute">
+              <div
+                className="absolute"
+                style={{ width: "412px", height: "auto" }}
+              >
                 <Image
                   src={item.back}
                   alt="Custom Madasa Collective designs"
                   width={412}
-                  height={412}
+                  height={461}
+                  sizes="412px"
                 />
               </div>
               <p className="z-10 text-2xl text-left bg-white py-10 px-6 rounded-3xl over tracking-[0.96px]">

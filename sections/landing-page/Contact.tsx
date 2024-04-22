@@ -65,10 +65,12 @@ const Contact = () => {
 
       <Image
         alt="schedule call"
-        src="/contact-icons/icon.svg"
+        src="/contact-icons/icon.png"
         width={341}
-        height={354}
-        className="z-10 max-small:max-w-[287px]"
+        height={355}
+        className="z-10 max-small:max-w-[287px] h-auto"
+        sizes="(min-width: 960px) 319px, 287px"
+        // style={{ width: "341px", height: "auto" }}
       />
     </div>
   );

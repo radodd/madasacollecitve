@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 // import { NavProvider } from "../context/NavContext";
@@ -11,15 +12,16 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Suspense, lazy } from "react";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://madasacolletive.com"),
   title: {
     default: "Madasa Collective",
     template: "%s - Madasa Collective",
   },
   description:
     "Your digital powerhouse that launches your business to their full potential. We specialize in Logo Design and Branding, Web Design, and Web Development.",
-  twitter: {
-    card: "summary_large_image",
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  // },
 };
 
 const jsonLd: WithContext<Organization> = {
@@ -60,6 +62,11 @@ const jsonLd: WithContext<Organization> = {
   ],
 };
 
+const openSans = Open_Sans({
+  weight: ["300", "400", "600", "700"],
+  subsets: ["latin"],
+});
+
 // const NavProvider = dynamic(() => import("../context/NavContext"));
 const LazyNavProvider = lazy(() =>
   import("../context/NavContext").then((module) => ({
@@ -87,7 +94,7 @@ export default function RootLayout({
         />
         {/* Add more Open Graph meta tags as needed */}
       </head>
-      <body>
+      <body className={openSans.className}>
         <Suspense fallback={<div>Loading NavProvider...</div>}>
           <LazyNavProvider>
             <Header />

@@ -74,24 +74,24 @@ export const whoWeAre = [
 
 export const cards = [
   {
-    icon: "/landing-page-cards/branding.svg",
+    icon: "/landing-page-cards/branding.png",
     title: "Branding",
     text: "Your vision is transformed into a brand that reflects your style & values.",
-    back: "/landing-page-cards/branding_back.svg",
+    back: "/landing-page-cards/branding_back.png",
     alt: "Business branding, logo design, color palette ",
   },
   {
-    icon: "/landing-page-cards/product.svg",
+    icon: "/landing-page-cards/product.png",
     title: "Product Design",
     text: "Your needs are prioritized, while ensuring a user-centric design.",
-    back: "/landing-page-cards/product_back.svg",
+    back: "/landing-page-cards/product_back.png",
     alt: "Product design, client collaboration, site maps, wire frames, low fidelity wire frames, high fidelity wire frames, website design",
   },
   {
-    icon: "/landing-page-cards/development.svg",
+    icon: "/landing-page-cards/development.png",
     title: "Development",
     text: "Your digital product is optimized for your use and your company's success.",
-    back: "/landing-page-cards/development_back.svg",
+    back: "/landing-page-cards/development_back.png",
     alt: "web development, web deployment, full stack, seo",
   },
 ];

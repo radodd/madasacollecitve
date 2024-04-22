@@ -44,7 +44,7 @@ const Developers = () => {
                   src={developer.pic}
                   alt={developer.name}
                   width={isTablet ? 249 : 350}
-                  height={isTablet ? 300 : 400}
+                  height={isTablet ? 285 : 400}
                 />
                 <div className="flex flex-col gap-4 w-full">
                   <h1
@@ -75,7 +75,7 @@ const Developers = () => {
                   src={developer.icon}
                   alt={developer.icon}
                   width={isTablet ? 249 : 350}
-                  height={isTablet ? 300 : 400}
+                  height={isTablet ? 228 : 350}
                 />
                 <div className="flex flex-col gap-4 w-full">
                   <h1
@@ -101,8 +101,8 @@ const Developers = () => {
                       <Image
                         src="/linkedin.png"
                         alt={`link to ${developer.name}'s LinkedIn profile`}
-                        height={24}
                         width={24}
+                        height={25}
                         className=""
                       />
                     </a>
@@ -114,8 +114,8 @@ const Developers = () => {
                       <Image
                         src="/portfolio.png"
                         alt={`link to ${developer.name}'s portfolio site`}
-                        height={24}
                         width={24}
+                        height={25}
                         className=""
                       />
                     </a>

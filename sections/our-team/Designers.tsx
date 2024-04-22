@@ -46,7 +46,7 @@ const Designers = () => {
                   src={designer.pic}
                   alt={designer.name}
                   width={isTablet ? 249 : 350}
-                  height={isTablet ? 300 : 400}
+                  height={isTablet ? 285 : 400}
                   quality={100}
                 />
                 <div className="flex flex-col gap-4 w-full">
@@ -77,7 +77,7 @@ const Designers = () => {
                   src={designer.icon}
                   alt={designer.icon}
                   width={isTablet ? 249 : 350}
-                  height={isTablet ? 300 : 321}
+                  height={isTablet ? 228 : 320}
                   className={`${isTablet ? "max-h-[228px]" : "max-h-[320px]"}`}
                 />
                 <div className="flex flex-col gap-4 w-full">
@@ -103,8 +103,8 @@ const Designers = () => {
                         <Image
                           src="/linkedin.png"
                           alt={`link to ${designer.name}'s LinkedIn profile`}
-                          height={24}
                           width={24}
+                          height={25}
                           className=""
                         />
                       </a>
@@ -116,8 +116,8 @@ const Designers = () => {
                         <Image
                           src="/portfolio.png"
                           alt={`link to ${designer.name}'s portfolio site`}
-                          height={24}
                           width={24}
+                          height={25}
                           className=""
                         />
                       </a>

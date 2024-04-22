@@ -1,3 +1,4 @@
+import "../globals.css";
 import Footer from "@/components/Footer";
 import ContactForm from "@/sections/contact-us/Form";
 import { Metadata } from "next";

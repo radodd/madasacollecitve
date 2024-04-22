@@ -23,21 +23,30 @@ const CaseStudy = () => {
     max-[1300px]:gap-8`}
     >
       <div
-        className="flex items-center justify-center bg-white
+        className="flex items-center justify-center bg-red-400
         max-h-[416px] rounded-3xl shadow-b2xl hover:shadow-b3xl
         max-[2500px]:min-w-[654px]
         max-[1300px]:min-w-[770px]
         max-[833px]:min-w-[329px] 
         "
+        style={{ height: "auto" }}
       >
-        <Image
+        {/* <Image
           alt="A case study of Madasa's previous client Gen Fulton Consultancy (GenFulton.com) - website design, website development, logo design, branding"
           src="/case_study22.png"
           width={imageWidth}
-          height={imageHeight}
-          quality={100}
-          className="flex items-center justify-center align-middle rounded-3xl transition-all duration-30 ease-in-out bg-white"
-        ></Image>
+          height={0}
+          className="flex items-center justify-center align-middle rounded-3xl transition-all duration-30 ease-in-out bg-white h-auto"
+          style={{ width: `${imageWidth}`, height: "auto" }}
+        ></Image> */}
+        <Image
+          alt="TEST"
+          src="/case_study22.png"
+          width={654}
+          height={409}
+          sizes="(min-width: 760px) 654px, (min-width: 420px) calc(93.13vw - 35px), calc(7vw + 308px)"
+          className="flex rounded-3xl transition-all duration-30 ease-in-out bg-white"
+        />
       </div>
 
       <div

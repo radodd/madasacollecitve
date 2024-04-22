@@ -51,7 +51,13 @@ const Card = ({
             onClick={flipCard}
           >
             <div className="mobile-front flex flex-col gap-6">
-              <Image src={icon} alt="image" width={249} height={246} />
+              <Image
+                src={icon}
+                alt="image"
+                width={256}
+                height={256}
+                sizes="256px"
+              />
               <h1 className="text-4xl flex justify-center font-bold">
                 {title}
               </h1>
@@ -79,8 +85,8 @@ const Card = ({
                   src={back}
                   alt="card"
                   width={412}
-                  height={412}
-                  className=""
+                  height={462}
+                  sizes="412px"
                 />
               </div>
               <p className="z-30 text-pretty text-xl text-left absolute bottom-[100px] left-[41px] bg-white rounded-3xl py-10 px-5 w-[256px]">

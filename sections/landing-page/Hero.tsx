@@ -25,6 +25,86 @@ const fadeInAnimationVariants = {
   }),
 };
 
+const customWidthByIndexMadasa = (
+  index: number,
+  isMobile: boolean,
+  isTablet: boolean
+) => {
+  if (isMobile) {
+    switch (index) {
+      case 0:
+      case 1:
+      case 3:
+      case 4:
+      case 5:
+        return "42";
+      case 2:
+        return "31";
+    }
+  } else if (isTablet) {
+    switch (index) {
+      case 0:
+      case 1:
+      case 3:
+      case 4:
+      case 5:
+        return "102";
+      case 2:
+        return "75";
+    }
+  } else {
+    switch (index) {
+      case 0:
+      case 1:
+      case 3:
+      case 4:
+      case 5:
+        return "135";
+      case 2:
+        return "100";
+    }
+  }
+};
+
+const customHeightByIndexMadasa = (
+  index: number,
+  isMobile: boolean,
+  isTablet: boolean
+) => {
+  if (isMobile) {
+    switch (index) {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        return "42";
+    }
+  } else if (isTablet) {
+    switch (index) {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        return "102";
+    }
+  } else {
+    switch (index) {
+      case 0:
+      case 1:
+      case 3:
+      case 4:
+      case 5:
+        return "135";
+      case 2:
+        return "136";
+    }
+  }
+};
+
 const customWidthByIndex = (
   index: number,
   isMobile: boolean,
@@ -206,25 +286,26 @@ const Hero = () => {
                 once: true,
               }}
               custom={index}
-              style={{
-                width: isMobile
-                  ? index === 2
-                    ? "31px"
-                    : "42px"
-                  : !isMobile && isTablet
-                  ? index === 2
-                    ? "75px"
-                    : "102px"
-                  : !isMobile && !isTablet && index !== 2
-                  ? "135px"
-                  : "100px",
-              }}
+              // style={{
+              //   width: isMobile
+              //     ? index === 2
+              //       ? "31px"
+              //       : "42px"
+              //     : !isMobile && isTablet
+              //     ? index === 2
+              //       ? "75px"
+              //       : "102px"
+              //     : !isMobile && !isTablet && index !== 2
+              //     ? "135px"
+              //     : "100px",
+              //   height: "auto",
+              // }}
             >
               <Image
                 src={letter.image}
                 alt={`Skill ${index + 1}`}
-                width={135}
-                height={135}
+                width={customWidthByIndexMadasa(index, isMobile, isTablet)}
+                height={customHeightByIndexMadasa(index, isMobile, isTablet)}
               />
             </motion.li>
           ))}

@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // basePath: '/madasa-collective',
-  experimental: {
-    serverActions: true,
-  },
+  // metadata: {
+  //   metadataBase: "https://madasacollective.com",
+  // },
 };
 
 export default nextConfig;
