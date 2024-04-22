@@ -150,7 +150,7 @@ const OurStory = () => {
               src="/chevron_down.svg"
               width={30}
               height={29}
-              alt="down chevron"
+              alt="We specialize in branding, product design, and software development."
               onClick={() => setExpanded((prev) => !prev)}
               className=""
             />
@@ -171,7 +171,7 @@ const OurStory = () => {
               development. We assembled a team of talented and experienced
               individuals across multiple disciplines to craft innovative
               solutions. Our collective combines industry expertise with diverse
-              perspectives to deliver high- quality products to our clients.
+              perspectives to deliver high-quality products to our clients.
             </p>
             <div className="pt-8 max-[1000px]:pt-6">
               <Button
