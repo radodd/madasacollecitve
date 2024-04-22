@@ -23,7 +23,7 @@ const CaseStudy = () => {
     max-[1300px]:gap-8`}
     >
       <div
-        className="flex items-center justify-center bg-red-400
+        className="flex items-center justify-center bg-white
         max-h-[416px] rounded-3xl shadow-b2xl hover:shadow-b3xl
         max-[2500px]:min-w-[654px]
         max-[1300px]:min-w-[770px]
