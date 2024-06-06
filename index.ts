@@ -101,7 +101,7 @@ export const designers = [
     name: "Serina Zepeda",
     role: "Product Designer",
     title: "Founder",
-    pic: "/team/headshot_serina1.png",
+    pic: "/team/headshot_serina_edit.png",
     icon: "/team/icon_serina.svg",
     backTitle: "I like",
     backText:
@@ -114,7 +114,7 @@ export const designers = [
     name: "Miguel Castillo",
     role: "Senior Product Designer",
     title: "Graphic Designer",
-    pic: "/team/headshot_miguel.png",
+    pic: "/team/headshot_miguel_edit.png",
     icon: "/team/icon_miguel.svg",
     backTitle: "I like",
     backText:
@@ -130,7 +130,7 @@ export const developers = [
     name: "Ethan Flores",
     role: "Software Developer",
     title: "Founder",
-    pic: "/team/headshot_ethan.png",
+    pic: "/team/headshot_ethan_edit.png",
     icon: "/team/icon_ethan.svg",
     backTitle: "I like",
     backText:
@@ -154,7 +154,7 @@ export const developers = [
   {
     name: "Daniel Castillo",
     title: "Software Developer",
-    pic: "/team/headshot_danny.png",
+    pic: "/team/headshot_danny_edit.png",
     icon: "/team/icon_danny.svg",
     backTitle: "I like",
     backText: "my kids, cycling, movies, food, video games, and Oaxaca, ",
