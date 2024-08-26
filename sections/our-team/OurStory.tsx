@@ -6,6 +6,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Fragment } from "react";
 
+import styles from "./OurStory.module.scss";
+
 const OurStory = () => {
   const { isActive } = useNav();
   const isDesktop = useMediaQuery("(min-width: 1321px)");

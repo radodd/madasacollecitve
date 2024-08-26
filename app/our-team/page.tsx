@@ -6,6 +6,7 @@ import Designers from "@/sections/our-team/Designers";
 import Developers from "@/sections/our-team/Developers";
 import Hero from "@/sections/our-team/Hero";
 import OurStory from "@/sections/our-team/OurStory";
+import OurStory2 from "@/sections/our-team/OurStory(dev)";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <OurStory />
+      <OurStory2 />
       <Designers />
       <section className="">
         <Developers />
