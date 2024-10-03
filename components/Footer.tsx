@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         ${getHeight()}
         ${getBackgroundColor()}`}
     >
-      <div className="flex items-end">
+      <div className="z-10 flex items-end">
         <Image
           alt="Logo"
           src="/logo/footer.png"

@@ -1,0 +1,18 @@
+@use "../../app/queries.scss";
+@import "../../app/queries.scss";
+
+.header {
+  color: var(--Primary-Text, #2c2d31);
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 80px;
+  @include mid-break {
+    padding-bottom: 60px;
+  }
+  @include small-break {
+    padding-bottom: 24px;
+  }
+}

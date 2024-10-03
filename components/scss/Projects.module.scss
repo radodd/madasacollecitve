@@ -1,0 +1,97 @@
+@use "../../app/queries.scss";
+@import "../../app/queries.scss";
+
+.container {
+  h1 {
+    color: var(--Primary-Text, #2c2d31);
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 24px 32px;
+    @include mid-break {
+      font-size: 40px;
+      padding: 40px 72px;
+    }
+    @include large-break {
+      font-size: 40px;
+      padding: 40px 72px;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--Primary-Text, #2c2d31);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  gap: 16px;
+  padding: 24px 32px;
+  @include mid-break {
+    font-size: 32px;
+    padding: 40px 72px;
+    gap: 0;
+    h2 {
+      padding: 24px 0 16px;
+    }
+  }
+  @include large-break {
+    font-size: 32px;
+    padding: 40px 72px;
+    gap: 0;
+    h2 {
+      padding: 24px 0 16px;
+    }
+  }
+}
+
+.imageContainer {
+  height: 240px;
+  width: 100%;
+  @include mid-break {
+    height: 480px;
+  }
+  @include large-break {
+    height: 640px;
+    max-width: 1368px;
+  }
+  img {
+    border-radius: 16px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1368px;
+  text-align: left;
+}
+
+.tagContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1368px;
+  text-align: left;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  color: var(--Secondary, #467ad4);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 16px;
+  border-radius: 100px;
+  border: 2px solid var(--color-275, rgba(217, 217, 217, 0.75));
+}

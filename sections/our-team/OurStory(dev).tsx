@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./OurStory.module.scss";
+import styles from "../../components/scss/OurStory.module.scss";
 import Button from "@/components/Button";
 
 const OurStory2 = () => {

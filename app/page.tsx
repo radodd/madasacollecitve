@@ -7,6 +7,10 @@ import Testimonial from "@/sections/landing-page/Testimonial";
 // import HeroCardsMobile from "../sections/landing-page/MobileCards/HeroCardsMobile";
 import { useNav } from "@/context/NavContext";
 import dynamic from "next/dynamic";
+import Hero2 from "@/sections/landing-page/Hero2";
+import OurServices from "@/sections/landing-page/OurServices";
+import styles from "../components/scss/Sections.module.scss";
+import Image from "next/image";
 
 const HeroCardsMobile = dynamic(
   () => import("../sections/landing-page/MobileCards/HeroCardsMobile")
@@ -17,22 +21,34 @@ export default function Home() {
   return (
     <>
       <section
-        className={`${
-          isActive ? "blur" : ""
-        } bg-no-repeat bg-cover bg-center pb-20 
-      max-tablet:pb-16
-      max-mobile:mt-8`}
+        className={`${isActive ? "blur" : ""} bg-no-repeat bg-cover bg-center`}
       >
-        <Hero />
+        <Hero2 />
         <HeroCardsMobile />
       </section>
-      <section className="mt-[50px]">
+      <section className={`${styles["section-padding"]} flex justify-center`}>
+        <OurServices />
+      </section>
+      <section className={styles["casestudy-padding"]}>
         <CaseStudy />
       </section>
-      <section className="mb-[110px] max-tablet:mb-[65px]">
+      <section className={styles["section-padding"]}>
         <Testimonial />
       </section>
-      <Contact />
+      <section className="relative border-3 border-green-400">
+        <Contact />
+      </section>
+      {/* <div className={styles["image-container"]}>
+        <Image
+          src="/contact-icons/circle2.svg"
+          alt="contact circle"
+          height={1448}
+          width={1600}
+          // style={{ width: "100%", height: "100%" }}
+          // className="absolute object-fit top-[180rem] z-0"
+        />
+      </div> */}
+
       <Footer currentPage="landing" />
     </>
   );

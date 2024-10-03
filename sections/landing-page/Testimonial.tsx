@@ -6,13 +6,12 @@ const Testimonial = () => {
     <div
       className={`${
         isActive ? "blur" : ""
-      } z-10 bg-base m-20 flex justify-center items-center
-      max-tablet:mx-4
-      max-tablet:my-12
+      } z-10 bg-base flex justify-center items-center
+     
     `}
     >
       <div
-        className="flex flex-col py-14 px-70 gap-8 bg-primary max-w-[1140px] rounded-3xl shadow-b2xl
+        className="flex flex-col py-14 px-70 gap-8 bg-primary max-w-[1184px] rounded-3xl shadow-b2xl
       max-tablet:py-10
       max-tablet:px-8
       max-tablet:max-w-[650px]"

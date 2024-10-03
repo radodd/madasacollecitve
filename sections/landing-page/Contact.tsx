@@ -1,21 +1,52 @@
 import Button from "@/components/Button";
 import { useNav } from "@/context/NavContext";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import styles from "../../components/scss/Contact.module.scss";
 
 const Contact = () => {
   const { isActive } = useNav();
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMobilePlus, setIsMobilePlus] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktopPlus, setIsDesktopPlus] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // setIsTablet(window.innerWidth <= 1280);
+      setIsMobile(window.innerWidth <= 468);
+      setIsMobilePlus(window.innerWidth >= 469 && window.innerWidth <= 744);
+      setIsDesktop(window.innerWidth >= 1512);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const imageSrc = isMobile
+    ? "/contact_background_mobile.svg"
+    : isMobilePlus
+    ? "/contact_background_mobileplus.svg"
+    : isDesktop
+    ? "/contact_background_desktopplus.svg"
+    : "/contact-icons/circle2.svg";
   return (
-    <div
-      className={`${
-        isActive ? "blur" : ""
-      } relative flex justify-center  items-center px-[70px] py-[104px] gap-[148px] bg-base 
-    max-[820px]:flex-col
-    max-wide:gap-16
-    max-smallplus:px-8
-    max-tablet:py-16`}
-    >
-      <Image
+    <div className={`${isActive ? "blur" : ""} ${styles.container}`}>
+      <div className={styles["background-container"]}>
+        <Image
+          src={imageSrc}
+          alt="contact circle"
+          height={3300}
+          width={1500}
+          // style={{ width: "100%", height: "100%" }}
+          // className="absolute object-fit top-[180rem] z-0"
+        />
+      </div>
+      {/* <Image
         src="/contact-icons/circle2.svg"
         alt="contact circle"
         height={1448}
@@ -30,23 +61,10 @@ const Contact = () => {
        
 
         "
-      />
-
-      <div
-        className="z-20 flex flex-col py-14 px-[70px] bg-white rounded-3xl 
-      max-smallplus:p-8"
-      >
-        <div
-          className="flex flex-col gap-8 max-w-[673px] tablet:min-w-[390px]
-        "
-        >
-          <h1
-            className="text-pretty text-5xl
-          max-tablet:text-4xl
-            "
-          >
-            Let&apos;s make something incredible together
-          </h1>
+      /> */}
+      <div className={styles["content-container"]}>
+        <div className={styles["text-container"]}>
+          <h1>Let&apos;s make something incredible together</h1>
           <p
             className="text-pretty text-2xl
           max-mobile:text-xl"
@@ -61,17 +79,18 @@ const Contact = () => {
             target="_blank"
           />
         </div>
+        <div className={styles["image-container"]}>
+          <Image
+            alt="schedule call"
+            src="/contact-icons/icon.png"
+            width={341}
+            height={355}
+            // className="z-10 max-small:max-w-[287px] h-auto"
+            // sizes="(min-width: 960px) 319px, 287px"
+            // style={{ width: "341px", height: "auto" }}
+          />
+        </div>
       </div>
-
-      <Image
-        alt="schedule call"
-        src="/contact-icons/icon.png"
-        width={341}
-        height={355}
-        className="z-10 max-small:max-w-[287px] h-auto"
-        sizes="(min-width: 960px) 319px, 287px"
-        // style={{ width: "341px", height: "auto" }}
-      />
     </div>
   );
 };

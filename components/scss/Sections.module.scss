@@ -1,0 +1,45 @@
+@use "../../app/queries.scss";
+@import "../../app/queries.scss";
+
+.section-padding {
+  @include section-padding();
+}
+
+.casestudy-padding {
+  background-color: $secondary;
+  @include section-padding();
+}
+
+.image-container {
+  position: absolute; // Change to relative positioning
+  bottom: 0rem;
+  display: flex;
+  justify-content: center; // Center the image
+  align-items: center; // Center the image vertically if needed
+  border: darkred 3px solid;
+  max-height: 598px; // Set a max height for the container
+  min-width: 100%; // Ensure it takes full width
+  // overflow: hidden; // Hide overflow to prevent distortion
+
+  img {
+    border: red 2px dotted;
+    max-height: 100%; // Use max-height to prevent overflow
+    max-width: 100%; // Make the image responsive
+    object-fit: cover; // Ensure the image scales correctly within the container
+
+    top: 0; // Reset top positioning
+
+    @include large-break {
+    }
+  }
+}
+
+.projects-padding {
+  padding: 24px 32px;
+  @include mid-break {
+    padding: 72px 40px;
+  }
+  @include large-break {
+    padding: 72px 40px;
+  }
+}

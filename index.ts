@@ -5,8 +5,9 @@ export const navLinks = [
     title: "Our Team",
     href: "/our-team",
   },
+  { title: "Projects", href: "/projects-page" },
   {
-    title: "Contact Us",
+    title: "Contact",
     href: "/contact-us",
   },
   {

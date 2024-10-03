@@ -6,7 +6,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Fragment } from "react";
 
-import styles from "./OurStory.module.scss";
+import styles from "../../components/scss/OurStory.module.scss";
 
 const OurStory = () => {
   const { isActive } = useNav();
@@ -22,14 +22,13 @@ const OurStory = () => {
   // }
 
   useEffect(() => {
-    setIsClient(true); // Set isClient to true on the client-side
+    setIsClient(true);
     console.log(isClient);
-  }, []); // Run only once aftn only once after the initial render
+  }, []);
 
   useEffect(() => {
-    // Set isClient to true on the client-side
     console.log(isClient);
-  }, [isClient]); // Run only once aft
+  }, [isClient]);
 
   return (
     <div
