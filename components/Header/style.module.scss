@@ -3,13 +3,12 @@
   right: 30px;
   top: 28px;
   .menu {
-    // width: 500px;
-    // height: 450px;
     position: relative;
     background-color: #df4894;
     border-radius: 25px;
     transform: translateX(-50px) translateY(13px);
-    @media screen and (max-width: 400px) {
+
+    @media screen and (max-width: 620px) {
       transform: translateY(13px) translateX(-10px);
     }
     @media screen and (max-width: 400px) {

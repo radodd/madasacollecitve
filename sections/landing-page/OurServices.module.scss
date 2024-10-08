@@ -9,10 +9,13 @@
   font-weight: 700;
   line-height: normal;
   padding-bottom: 80px;
-  @include mid-break {
-    padding-bottom: 60px;
+  @media (min-width: 745px) and (max-width: 1279px) {
+    padding-bottom: 64px;
   }
-  @include small-break {
+  @media (min-width: 470px) and (max-width: 744px) {
     padding-bottom: 24px;
+  }
+  @media (max-width: 469px) {
+    padding-bottom: 0;
   }
 }

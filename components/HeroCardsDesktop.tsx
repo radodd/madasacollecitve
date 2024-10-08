@@ -29,7 +29,7 @@ const HeroCardsDesktop = () => {
               />
               <h1
                 className="text-4xl font-bold
-       max-tablet:text-2xl"
+       "
               >
                 {item.title}
               </h1>

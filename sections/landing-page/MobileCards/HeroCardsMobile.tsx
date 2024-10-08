@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useRef } from "react";
-import styles from "./HeroCardsMobile.module.scss";
 import Card from "./HeroCardsMobileFormat.jsx";
 import { cards } from "@/index";
 import { useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import { useNav } from "@/context/NavContext";
+
+import styles from "./HeroCardsMobile.module.scss";
 
 export default function HeroCardsMobile() {
   const { isActive } = useNav();

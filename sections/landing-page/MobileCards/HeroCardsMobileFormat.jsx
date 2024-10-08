@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./style.module.scss";
 import {
   AnimatePresence,
   motion,
@@ -7,6 +6,8 @@ import {
   useTransform,
 } from "framer-motion";
 import { useState } from "react";
+
+import styles from "../../../components/scss/HeroCardsMobileFormat.module.scss";
 
 const Card = ({
   i,
@@ -33,7 +34,7 @@ const Card = ({
     setIsFlipped(!isFlipped);
   };
   return (
-    <div className={`${styles.cardContainer} `}>
+    <div className={`${styles.cardContainer}  `}>
       <AnimatePresence mode="wait">
         {!isFlipped && (
           <motion.div
@@ -45,9 +46,11 @@ const Card = ({
             transition={{ duration: 0.5, ease: "linear" }}
             style={{
               scale,
-              top: `calc(-10% + ${i * 25}px)`,
+              top: `${i * 200}`,
             }}
-            className={`${styles.card}  card-landing flex bg-white justify-center items-center rounded-3xl`}
+            className={`${styles.card} card-landing ${
+              i === 0 ? styles.firstCard : styles.secondCard
+            }`}
             onClick={flipCard}
           >
             <div className="mobile-front flex flex-col gap-6">
@@ -101,26 +104,3 @@ const Card = ({
 };
 
 export default Card;
-
-// <div className={styles.mobileCardContainer}>
-//   <AnimatePresence mode="wait">
-//     <motion.div
-//       key={i}
-//       initial="hidden"
-//       animate={isFlipped ? "hidden" : "visible"}
-//       variants={variants}
-//       transition={{ duration: 0.5 }}
-//       style={{
-//         scale,
-//         top: `calc(-10% + ${i * 25}px)`,
-//       }}
-//       className={styles.mobileCard}
-//       onClick={flipCard}
-//     >
-//       <div className={styles.mobileCardFront}>FRONT</div>
-//       <div className={styles.mobileCardBack}>
-//         <h1>BACK</h1>
-//       </div>
-//     </motion.div>
-//   </AnimatePresence>
-// </div>

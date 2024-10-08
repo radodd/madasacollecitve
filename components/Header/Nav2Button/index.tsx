@@ -29,33 +29,13 @@ const Navbar2Button: React.FC<Navbar2ButtonProps> = ({
           } `}
           type="button"
         >
-          <span className="hamburger-box -translate-y-4">
+          <span className="hamburger-box  -translate-y-4">
             <span className="hamburger-inner"></span>
           </span>
-        </button>{" "}
-        {/* <div className={styles.el}>
-          <PerspectiveText label="Menu" />
-          <p>Menu</p>
-        </div>
-        <div className={styles.el}>
-          <PerspectiveText label="Close" />
-          <p>Close</p>
-        </div> */}
+        </button>
       </motion.div>
     </div>
   );
 };
 
 export default Navbar2Button;
-
-// interface PerspectiveTextProps {
-//   label: string;
-// }
-// function PerspectiveText({ label }: PerspectiveTextProps) {
-//   return (
-//     <div className={styles.perspectiveText}>
-//       <p>{label}</p>
-//       <p>{label}</p>
-//     </div>
-//   );
-// }

@@ -12,7 +12,7 @@ import { useNav } from "@/context/NavContext";
 const variants = {
   open: {
     width: 500,
-    height: 280,
+    height: 360,
     top: "-25px",
     right: "-25px",
     transition: { duration: 0.75, ease: [0.75, 0, 0.24, 1] },
@@ -70,7 +70,7 @@ const Navbar2 = () => {
 
         <div className={`${styles.header} z-30 small:hidden`}>
           <motion.div
-            className={`${styles.menu} max-tablet:max-w-[310px] max-tablet:max-h-[220px]`}
+            className={`${styles.menu} max-tablet:max-w-[310px] max-tablet:max-h-[290px]`}
             variants={variants}
             animate={isActive ? "open" : "close"}
             initial="closed"
@@ -79,30 +79,6 @@ const Navbar2 = () => {
           </motion.div>
           <Nav2Button isActive={isActive} setIsActive={setIsActive} />
         </div>
-
-        {/* <div
-          className="inline-block cursor-pointer mx-8 max-tablet:mx-0"
-          onClick={() => {
-            console.log("Toggling dropdownOpen");
-            setDropdownOpen(!dropdownOpen);
-          }}
-        > */}
-        {/* Hamburger Icon */}
-        {/* <button
-          className={`hamburger hamburger--collapse ${
-            dropdownOpen ? "is-active" : ""
-          } `}
-          type="button"
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button> */}
-        {/* <Navbar2Button isActive={isActive} setIsActive={setIsActive} /> */}
-        {/* </div> */}
-
-        {/* Conditionally render Dropdown menu for small screens */}
-        {/* <AnimatePresence>{dropdownOpen && <DropdownMenu />}</AnimatePresence> */}
       </nav>
     </>
   );
