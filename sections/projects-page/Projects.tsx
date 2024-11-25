@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "../../components/scss/Projects.module.scss";
 import Image from "next/image";
@@ -15,8 +15,8 @@ export const ProjectsList = [
   },
   {
     title: "Gen Fulton Consultancy | Responsive Website",
-    image_mobile: "/project_gen_mobile.png",
-    image_desktop: "/project_gen_desktop.png",
+    image_mobile: "/project_gen_desktop.png",
+    image_desktop: "/project_gen_mobile.png",
     href: "https://genfulton.com",
     tags: ["Web Design", "Branding", "Web Development"],
   },
@@ -53,13 +53,37 @@ type ProjectCardProps = {
 };
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [featuredImage, setFeaturedImage] = useState(project.image_desktop);
+  const [hoverable, setHoverable] = useState(true);
+  useEffect(() => {
+    const checkHoverSupport = () => {
+      const hoverable = window.matchMedia("(hover: hover)").matches;
+      setHoverable(hoverable);
+    };
+    checkHoverSupport();
+    window.addEventListener("resize", checkHoverSupport);
+
+    return () => {
+      window.removeEventListener("resize", checkHoverSupport);
+    };
+  }, []);
 
   const handleMouseEnter = () => {
-    setFeaturedImage(project.image_mobile);
+    if (hoverable) {
+      setFeaturedImage(project.image_mobile);
+    }
   };
+
   const handleMouseLeave = () => {
-    setFeaturedImage(project.image_desktop);
+    if (hoverable) {
+      setFeaturedImage(project.image_desktop);
+    }
   };
+  // const handleMouseEnter = () => {
+  //   setFeaturedImage(project.image_mobile);
+  // };
+  // const handleMouseLeave = () => {
+  //   setFeaturedImage(project.image_desktop);
+  // };
 
   return (
     <div className={styles.card}>
@@ -72,7 +96,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             height={2160}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-          />{" "}
+          />
         </Link>
       </div>
       <div className={styles.titleContainer}>

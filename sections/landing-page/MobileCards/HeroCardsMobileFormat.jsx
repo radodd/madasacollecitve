@@ -43,7 +43,7 @@ const Card = ({
             animate={isFlipped ? "" : "visible"}
             exit="hidden"
             variants={variants}
-            transition={{ duration: 0.5, ease: "linear" }}
+            transition={{ duration: 0.3, ease: "linear" }}
             style={{
               scale,
               top: `${i * 200}`,
@@ -79,11 +79,11 @@ const Card = ({
               scale,
               top: `calc(-10% + ${i * 25}px)`,
             }}
-            className={`${styles.card} relative card-landing flex flex-col bg-white justify-center items-center rounded-3xl`}
+            className={`${styles.cardFlipped} relative card-landing flex flex-col bg-white justify-center items-center rounded-3xl`}
             onClick={flipCard}
           >
             <div className="">
-              <div className="">
+              <div className=" w-full">
                 <Image
                   src={back}
                   alt="card"
@@ -92,7 +92,7 @@ const Card = ({
                   sizes="412px"
                 />
               </div>
-              <p className="z-30 text-pretty text-xl text-left absolute bottom-[100px] left-[41px] bg-white rounded-3xl py-10 px-5 w-[256px]">
+              <p className="z-30 text-center text-pretty text-xl absolute top-[17%] left-[0px] bg-white rounded-3xl py-10 px-6">
                 {text}
               </p>
             </div>
