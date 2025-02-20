@@ -99,7 +99,7 @@ export default function RootLayout({
       <body className={openSans.className}>
         <Suspense fallback={<div>Loading NavProvider...</div>}>
           <LazyNavProvider>
-            <GoogleReCaptchaWrapper />
+            {/* <GoogleReCaptchaWrapper /> */}
             <Header />
             {children}
             <Toaster position="top-right" />
