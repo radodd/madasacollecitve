@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "sections/landing-page/cards/HeroCardsMobileFormat.jsx",
     "components/Header/Nav2Button/index.tsx",
-    "sections/contact-us/Form.tsx"
+    "sections/contact-us/Form.tsx",
+    "app/api/verify-recaptcha"
   ],
   "exclude": ["node_modules"]
 }

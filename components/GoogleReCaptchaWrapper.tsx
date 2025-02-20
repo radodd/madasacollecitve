@@ -15,7 +15,7 @@ export default function GoogleReCaptchaWrapper() {
     <ReCAPTCHA
       ref={recaptchaRef}
       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} // Ensure this is v2
-      size="invisible" // Change to "normal" for a checkbox reCAPTCHA
+      size="normal" // Change to "normal" for a checkbox reCAPTCHA
       onChange={handleVerify}
     />
   );
