@@ -10,6 +10,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 // import dynamic from "next/dynamic";
 import { Suspense, lazy } from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import GoogleReCaptchaWrapper from "@/components/GoogleReCaptchaWrapper";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://madasacolletive.com"),
@@ -97,6 +99,7 @@ export default function RootLayout({
       <body className={openSans.className}>
         <Suspense fallback={<div>Loading NavProvider...</div>}>
           <LazyNavProvider>
+            <GoogleReCaptchaWrapper />
             <Header />
             {children}
             <Toaster position="top-right" />
@@ -108,6 +111,7 @@ export default function RootLayout({
             />
             <Analytics />
             <SpeedInsights />
+            {/* </GoogleReCaptchaWrapper> */}
           </LazyNavProvider>
         </Suspense>
       </body>

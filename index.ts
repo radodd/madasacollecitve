@@ -1,4 +1,5 @@
-import { title } from "process";
+import { ChangeEvent } from "react";
+import UseFormInputReturn from "./sections/contact-us/Form";
 
 export const navLinks = [
   {
@@ -163,4 +164,49 @@ export const developers = [
     portfolio: "",
     alt: "Danny Castillo - Software engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
   },
+];
+
+export interface UseFormInputReturn {
+  value: string;
+  onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  reset: () => void;
+}
+export const Fields = (
+  fullName: UseFormInputReturn,
+  company: UseFormInputReturn,
+  email: UseFormInputReturn,
+  phoneNumber: UseFormInputReturn
+) => [
+  {
+    label: "Full name *",
+    inputProps: fullName,
+    name: "fullName",
+    type: "text",
+    required: true,
+  },
+  {
+    label: "Company",
+    inputProps: company,
+    name: "company",
+    type: "text",
+    required: true,
+  },
+  {
+    label: "Email *",
+    inputProps: email,
+    name: "email",
+    type: "text",
+    required: true,
+  },
+  {
+    label: "Phone number",
+    inputProps: phoneNumber,
+    name: "phoneNumber",
+    type: "text",
+    required: true,
+  },
+];
+
+export const ContactFormText = [
+  "We'd love to learn about your company and discuss how we can collaborate on your next digital project. As a comprehensive digital collective, we're dedicated to creating the best product to enhance your business strategy.",
 ];
