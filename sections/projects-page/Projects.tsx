@@ -4,36 +4,14 @@ import React, { useEffect, useState } from "react";
 import styles from "../../components/scss/Projects.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-
-export const ProjectsList = [
-  {
-    title: "MRC Rock & Sand | B2B & B2C E-Commerce Platform",
-    image_mobile: "/project_mrc_mobile.png",
-    image_desktop: "/project_mrc_desktop.png",
-    href: "https://mrc-two.vercel.app",
-    tags: ["Product Design", "Branding", "Web Development"],
-  },
-  {
-    title: "Gen Fulton Consultancy | Responsive Website",
-    image_mobile: "/project_gen_desktop.png",
-    image_desktop: "/project_gen_mobile.png",
-    href: "https://genfulton.com",
-    tags: ["Web Design", "Branding", "Web Development"],
-  },
-  {
-    title: "Madasa Collective | Responsive Website",
-    image_mobile: "/project_madasa_mobile.png",
-    image_desktop: "/project_madasa_desktop.png",
-    href: "https://madasacollective.com",
-    tags: ["Web Design", "Branding", "Web Development"],
-  },
-];
+import Button from "@/components/Button";
+import { CaseStudiesDetailPage } from "@/index";
 
 const Projects = () => {
   return (
     <div className={styles.container}>
       <h1>Featured Projects</h1>
-      {ProjectsList.map((project, index) => (
+      {CaseStudiesDetailPage.map((project, index) => (
         <ProjectCard project={project} key={index} />
       ))}
     </div>
@@ -48,6 +26,7 @@ type ProjectCardProps = {
     image_mobile: string;
     image_desktop: string;
     href: string;
+    hrefTEST?: string;
     tags: string[];
   };
 };
@@ -88,7 +67,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <Link href={project.href}>
+        <Link
+          href={`projects-page/${project.href.replace("/projects-page/", "")}`}
+        >
           <Image
             src={featuredImage}
             alt={project.title}
@@ -101,6 +82,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
       <div className={styles.titleContainer}>
         <h2>{project.title}</h2>
+        <Button
+          title="Test Button"
+          type="button"
+          variant="btn-blue"
+          onClick={() => {
+            `/projects/${project.hrefTEST}`;
+          }}
+        />
       </div>
 
       <div className={styles.tagContainer}>

@@ -71,13 +71,22 @@ const Contact = () => {
           >
             Request a free discovery call.
           </p>
-          <Button
-            type="button"
-            title="Schedule a Call"
-            variant="btn-pink-fill"
-            href="https://calendly.com/madasacollective/60min"
-            target="_blank"
-          />
+          <div className="flex">
+            <Button
+              type="button"
+              title="Schedule a Call"
+              variant="btn-pink-fill"
+              href="https://calendly.com/madasacollective/60min"
+              target="_blank"
+            />
+            <Button
+              type="button"
+              title="Learn more!"
+              variant="btn-blue-fill"
+              href="https://www.canva.com/design/DAF-mBhPfaA/i8H6H6r_sPlcZJUq6ZRH8g/view?utm_content=DAF-mBhPfaA&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+              target="_blank"
+            />
+          </div>
         </div>
         <div className={styles["image-container"]}>
           <Image
