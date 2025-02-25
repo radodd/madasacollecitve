@@ -14,7 +14,7 @@ export const Testimonials = [
 export const CaseStudiesLandingPage = [
   {
     image: {
-      src: "/case_study_hero_mrc.png",
+      src: "/case_study_mrc_hero.png",
       alt: "GenFulton.com case study",
     },
     title: "Our Work",
