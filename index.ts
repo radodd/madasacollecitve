@@ -280,7 +280,7 @@ export const CaseStudiesDetailPage = [
       ],
       images: [
         {
-          src: "/case_study_mrc_approach_swatch.png",
+          src: "/case_study_mrc_swatch.png",
           width: 1735,
           height: 1264,
         },
@@ -297,19 +297,34 @@ export const CaseStudiesDetailPage = [
       ],
       images: [
         {
-          src: "/case_study_mrc_swatch.png",
-          width: 1735,
-          height: 1264,
+          src: "/case_study_mrc_laptop1.png",
+          width: 4096,
+          height: 3072,
         },
         {
-          src: "/case_study_mrc_tshirt.png",
-          width: 848,
-          height: 590,
+          src: "/case_study_mrc_mobile1.png",
+          width: 4096,
+          height: 3072,
         },
         {
-          src: "/case_study_mrc_mobile.png",
-          width: 3840,
-          height: 2160,
+          src: "/case_study_mrc_laptop2.png",
+          width: 4096,
+          height: 2730,
+        },
+        {
+          src: "/case_study_mrc_tablet1.png",
+          width: 4096,
+          height: 2731,
+        },
+        {
+          src: "/case_study_mrc_mobile2.png",
+          width: 4096,
+          height: 3072,
+        },
+        {
+          src: "/case_study_mrc_tablet2.png",
+          width: 3072,
+          height: 4096,
         },
       ],
     },
@@ -320,9 +335,9 @@ export const CaseStudiesDetailPage = [
         "📊 Strengthened brand presence with a professional and visually appealing website.",
       ],
       image: {
-        src: "/case_study_mrc_hero.png",
-        width: 2592,
-        height: 1280,
+        src: "/case_study_mrc_desktop1.png",
+        width: 4096,
+        height: 3072,
       },
     },
     client: {

@@ -39,11 +39,8 @@ const CaseStudy = () => {
       <Carousel setApi={setApi}>
         <CarouselContent>
           {CaseStudiesLandingPage.map((item, index) => (
-            <CarouselItem>
-              <div
-                key={index}
-                className={`${isActive ? "blur" : ""} ${styles.container}`}
-              >
+            <CarouselItem key={index}>
+              <div className={`${isActive ? "blur" : ""} ${styles.container}`}>
                 <div className={styles["image-container"]}>
                   <Image
                     alt={item.image.alt}

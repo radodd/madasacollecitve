@@ -35,4 +35,8 @@ export interface Project {
       height: number;
     };
   };
+  client?: {
+    review: string;
+    reviewer: string;
+  };
 }

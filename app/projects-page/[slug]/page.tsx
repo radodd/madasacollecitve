@@ -38,46 +38,52 @@ const ProjectDetail = () => {
         imageError={imageError}
         setImageError={setImageError}
       />
-      <div className={styles.clientContainer}>
-        <h1>The Client</h1>
-        <p>{project.client?.review}</p>
-        <span>{project.client?.reviewer}</span>
-        <Button type="button" variant="btn-blue" title="View Website" />
+      <TheClient project={project} />
+
+      <div className="relative w-full max-h-[20rem]  border border-red-400">
+        <Image
+          src="/testbackground.svg"
+          alt=""
+          width={4000}
+          height={4000}
+          className="border border-green-300 min-h-[5rem]"
+        />
+
+        <div className={styles.CTAContainer}>
+          <div className={styles.textContainer}>
+            <h1>Like what you see?</h1>
+            <div>
+              <p>We would love to work with you!</p>
+              <p>Request a free discover call.</p>
+            </div>
+
+            <Button
+              title="Schedule a Call"
+              variant="btn-pink-fill"
+              type="button"
+            />
+          </div>
+          <div className={styles.imageContainer}>
+            <Image src="/group4.png" alt="" width={4096} height={2359} />
+          </div>
+        </div>
       </div>
     </>
   );
 };
 
-const TheImpact = ({
-  project,
-  imageError,
-  setImageError,
-}: {
-  project: Project;
-  imageError: boolean;
-  setImageError: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
+const TheClient = ({ project }: { project: Project }) => {
   return (
-    <div className={styles.impactContainer}>
-      <h1>The Impact</h1>
-      <ul>
-        {project.impact?.list.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-      <div className={styles.imageContainer}>
-        <Image
-          src={
-            imageError || !project.impact?.image.src
-              ? "/team/headshot_ethan.png"
-              : project.impact?.image?.src
-          }
-          alt=""
-          width={project.impact?.image.width}
-          height={project.impact?.image.height}
-          onError={() => setImageError(true)}
-        />
-      </div>
+    <div className={styles.clientContainer}>
+      <h1>The Client</h1>
+      <p>{project.client?.review}</p>
+      <span>{project.client?.reviewer}</span>
+      <Button
+        type="button"
+        variant="btn-blue"
+        title="View Website"
+        href="https//mrc-two.vercel.app"
+      />
     </div>
   );
 };
@@ -191,6 +197,40 @@ const TheSolution = ({ project }: { project: Project }) => {
             />
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+const TheImpact = ({
+  project,
+  imageError,
+  setImageError,
+}: {
+  project: Project;
+  imageError: boolean;
+  setImageError: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  return (
+    <div className={styles.impactContainer}>
+      <h1>The Impact</h1>
+      <ul>
+        {project.impact?.list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+      <div className={styles.imageContainer}>
+        <Image
+          src={
+            imageError || !project.impact?.image.src
+              ? "/team/headshot_ethan.png"
+              : project.impact?.image?.src
+          }
+          alt=""
+          width={project.impact?.image.width}
+          height={project.impact?.image.height}
+          onError={() => setImageError(true)}
+        />
       </div>
     </div>
   );
