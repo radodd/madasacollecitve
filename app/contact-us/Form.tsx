@@ -2,14 +2,11 @@
 
 import { sendEmail } from "@/actions/SendEmail";
 import Button from "@/components/Button";
-import { useNav } from "@/context/NavContext";
 import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 import styles from "./ContactForm.module.scss";
-import { ContactFormText, Fields, UseFormInputReturn } from "@/index";
+import { Fields, UseFormInputReturn } from "@/index";
 import { contactFormSchema } from "@/lib/ContactFormValidation";
-// import reCAPTCHA, { ReCAPTCHA } from "react-google-recaptcha";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const useFormInput = (initialValue: string): UseFormInputReturn => {
@@ -28,7 +25,6 @@ const useFormInput = (initialValue: string): UseFormInputReturn => {
 };
 
 export default function ContactForm() {
-  const { isActive } = useNav();
   const fullName = useFormInput("");
   const company = useFormInput("");
   const email = useFormInput("");
@@ -101,17 +97,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div
-      className={`${
-        isActive ? "blur" : ""
-      }  flex flex-col justify-center items-center bg-base overflow-hidden
-    `}
-    >
-      <div className={styles.headerContainer}>
-        <h1>Get in touch!</h1>
-      </div>
+    <>
       <div className={styles.formContainer}>
-        <p>{ContactFormText}</p>
         <form
           onSubmit={async (e) => {
             console.log("Form submitted!");
@@ -180,6 +167,6 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 }

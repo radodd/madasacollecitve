@@ -7,6 +7,7 @@ import styles from "../../../components/scss/ProjectDetail.module.scss";
 import Button from "@/components/Button";
 import { Project } from "@/types/project";
 import { useState } from "react";
+import { join } from "path";
 
 const ProjectDetail = () => {
   const [imageError, setImageError] = useState(false);
@@ -39,36 +40,41 @@ const ProjectDetail = () => {
         setImageError={setImageError}
       />
       <TheClient project={project} />
+      <CTA />
+    </>
+  );
+};
 
-      <div className="relative w-full max-h-[20rem]  border border-red-400">
-        <Image
-          src="/testbackground.svg"
-          alt=""
-          width={4000}
-          height={4000}
-          className="border border-green-300 min-h-[5rem]"
-        />
+const CTA = () => {
+  return (
+    <div className="relative w-full max-h-[20rem]">
+      <Image
+        src="/testbackground.svg"
+        alt=""
+        width={4000}
+        height={4000}
+        className="min-h-[5rem]"
+      />
 
-        <div className={styles.CTAContainer}>
-          <div className={styles.textContainer}>
-            <h1>Like what you see?</h1>
-            <div>
-              <p>We would love to work with you!</p>
-              <p>Request a free discover call.</p>
-            </div>
-
-            <Button
-              title="Schedule a Call"
-              variant="btn-pink-fill"
-              type="button"
-            />
+      <div className={styles.CTAContainer}>
+        <div className={styles.textContainer}>
+          <h1>Like what you see?</h1>
+          <div>
+            <p>We would love to work with you!</p>
+            <p>Request a free discover call.</p>
           </div>
-          <div className={styles.imageContainer}>
-            <Image src="/group4.png" alt="" width={4096} height={2359} />
-          </div>
+
+          <Button
+            title="Schedule a Call"
+            variant="btn-pink-fill"
+            type="button"
+          />
+        </div>
+        <div className={styles.imageContainer}>
+          <Image src="/group4.png" alt="" width={4096} height={2359} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import Card from "./HeroCardsMobileFormat.jsx";
 import { cards } from "@/index";
 import { useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
-import { useNav } from "@/context/NavContext";
+import { useNav } from "@/context/NavContext.jsx";
 
 import styles from "./HeroCardsMobile.module.scss";
 
