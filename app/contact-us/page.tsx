@@ -14,7 +14,7 @@ import Image from "next/image";
 //   title: "Contact Us",
 // };
 
-const page = () => {
+const Page = () => {
   const { isActive } = useNav();
   return (
     <>
@@ -42,4 +42,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
