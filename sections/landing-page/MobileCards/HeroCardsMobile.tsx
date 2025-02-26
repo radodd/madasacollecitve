@@ -9,7 +9,7 @@ import { useNav } from "@/context/NavContext.jsx";
 import styles from "./HeroCardsMobile.module.scss";
 
 export default function HeroCardsMobile() {
-  const { isActive } = useNav();
+  // const { isActive } = useNav();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -28,7 +28,8 @@ export default function HeroCardsMobile() {
   });
 
   return (
-    <main className={`${styles.main} ${isActive ? "blur" : ""}`}>
+    // <main className={`${styles.main} ${isActive ? "blur" : ""}`}>
+    <>
       {cards.map((card, index) => {
         const targetScale = 1 - (cards.length - index) * 0.05;
         return (
@@ -42,6 +43,7 @@ export default function HeroCardsMobile() {
           />
         );
       })}
-    </main>
+      {/* </main> */}
+    </>
   );
 }
