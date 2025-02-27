@@ -156,7 +156,7 @@ export const designers = [
   },
   {
     name: "Miguel Castillo",
-    role: "Senior Product Designer",
+    role: "Head of Design",
     title: "Graphic Designer",
     pic: "/team/headshot_miguel_edit.png",
     icon: "/team/icon_miguel.svg",

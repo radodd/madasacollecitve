@@ -1,17 +1,18 @@
 "use client";
+
 import Footer from "@/components/Footer";
-import CaseStudy from "@/sections/landing-page/CaseStudy";
-import Contact from "@/sections/landing-page/Contact";
-import Hero from "@/sections/landing-page/Hero";
-import Testimonial from "@/sections/landing-page/Testimonial";
+import CaseStudy from "@/app/(landing-page)/CaseStudy";
+import Contact from "@/app/(landing-page)/Contact";
+import Testimonial from "@/app/(landing-page)/Testimonial";
 import { useNav } from "@/context/NavContext";
+import Hero from "@/app/(landing-page)/Hero";
+import OurServices from "@/app/(landing-page)/OurServices";
 import dynamic from "next/dynamic";
-import Hero2 from "@/sections/landing-page/Hero2";
-import OurServices from "@/sections/landing-page/OurServices";
+
 import styles from "../components/scss/Sections.module.scss";
 
 const HeroCardsMobile = dynamic(
-  () => import("../sections/landing-page/MobileCards/HeroCardsMobile")
+  () => import("./(landing-page)/MobileCards/HeroCardsMobile")
 );
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
       <section
         className={`${isActive ? "blur" : ""} bg-no-repeat bg-cover bg-center`}
       >
-        <Hero2 />
+        <Hero />
       </section>
       <section className={`${styles["section-padding"]}  flex justify-center`}>
         <OurServices />

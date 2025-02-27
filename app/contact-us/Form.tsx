@@ -155,7 +155,6 @@ export default function ContactForm() {
 
           <div className={styles.buttonContainer}>
             <ReCAPTCHA
-              // className="border border-green-400 h-[600px] z-50"
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
               onChange={setRecaptchaToken}
             />

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import styles from "./Hero2.module.scss";
+import styles from "./Hero.module.scss";
 import {
   customHeightByIndexMadasa,
   customWidthByIndexMadasa,
@@ -19,7 +19,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const Hero2 = () => {
+const Hero = () => {
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -111,4 +111,4 @@ const Hero2 = () => {
   );
 };
 
-export default Hero2;
+export default Hero;

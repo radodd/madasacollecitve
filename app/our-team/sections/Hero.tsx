@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import { useNav } from "../../context/NavContext";
+import { useNav } from "../../../context/NavContext";
 
 const Hero = () => {
   const { isActive } = useNav();

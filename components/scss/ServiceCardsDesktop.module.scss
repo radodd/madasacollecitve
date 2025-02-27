@@ -21,10 +21,19 @@
   }
 }
 
+.cardContainer {
+  width: 368px;
+  height: 412px;
+  @include small-break {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  gap: 24;
+  gap: 24px;
   padding: 0 64px;
   height: 412px;
   width: 368px;
