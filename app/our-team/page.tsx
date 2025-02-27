@@ -14,19 +14,20 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div>
-      <Hero />
-      <OurStory />
-      <Designers />
-      <section className="">
-        <Developers />
-      </section>
-      <section className="">
-        <Contact />
-      </section>
-
+    <>
+      <div className="min-h-screen">
+        <Hero />
+        <OurStory />
+        <Designers />
+        <section className="">
+          <Developers />
+        </section>
+        <section className="">
+          <Contact />
+        </section>
+      </div>
       <Footer currentPage="team" />
-    </div>
+    </>
   );
 };
 

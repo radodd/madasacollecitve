@@ -3,11 +3,12 @@
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { CaseStudiesDetailPage } from "@/index";
-import styles from "../../../components/scss/ProjectDetail.module.scss";
 import Button from "@/components/Button";
 import { Project } from "@/types/project";
 import { useState } from "react";
 import { join } from "path";
+
+import styles from "../../../components/scss/ProjectDetail.module.scss";
 
 const ProjectDetail = () => {
   const [imageError, setImageError] = useState(false);
