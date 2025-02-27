@@ -17,9 +17,8 @@ const Testimonial = () => {
       <Carousel>
         <CarouselContent>
           {Testimonials.map((item, index) => (
-            <CarouselItem className="flex justify-center">
+            <CarouselItem key={index} className="flex justify-center">
               <div
-                key={index}
                 className={`${
                   isActive ? "blur" : ""
                 } z-10 bg-base flex justify-center items-center
