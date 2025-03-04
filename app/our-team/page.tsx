@@ -1,34 +1,34 @@
 import "../globals.css";
+
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Contact from "@/sections/our-team/Contact";
-import Designers from "@/sections/our-team/Designers";
-import Developers from "@/sections/our-team/Developers";
-import Hero from "@/sections/our-team/Hero";
-import OurStory from "@/sections/our-team/OurStory";
-import OurStory2 from "@/sections/our-team/OurStory(dev)";
+import Contact from "./sections/Contact";
+import Designers from "./sections/Designers";
+import Developers from "./sections/Developers";
+import Hero from "./sections/Hero";
+import OurStory from "./sections/OurStory";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Team",
 };
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
-      <Hero />
-      <OurStory2 />
-      <Designers />
-      <section className="">
-        <Developers />
-      </section>
-      <section className="">
-        <Contact />
-      </section>
-
+    <>
+      <div className="min-h-screen">
+        <Hero />
+        <OurStory />
+        <Designers />
+        <section className="">
+          <Developers />
+        </section>
+        <section className="">
+          <Contact />
+        </section>
+      </div>
       <Footer currentPage="team" />
-    </div>
+    </>
   );
 };
 
-export default page;
+export default Page;

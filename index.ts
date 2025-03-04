@@ -1,6 +1,48 @@
 import { ChangeEvent } from "react";
-import UseFormInputReturn from "./sections/contact-us/Form";
+import UseFormInputReturn from "./app/contact-us/Form";
 
+export const Testimonials = [
+  {
+    text: "I want to give a big shout out to my amazing website development team for designing my business cards, ensuring delivery of them before an important networking event, and for creating my website from scratch in a tight window (GenFulton.com). You guys completely blew me away with your design ideas, communication, professionalism, research,openness to feedback and delivery. Thank you for being an awesome team!!",
+    client: "Gent Fulton, Owner of Gen Fulton Consultancy",
+  },
+  {
+    text: "SOME THING AWESOME ABOUT US FROM MRC",
+    client: "MRC @ Rocks .com",
+  },
+];
+export const CaseStudiesLandingPage = [
+  {
+    image: {
+      src: "/case_study_mrc_hero.png",
+      alt: "GenFulton.com case study",
+    },
+    title: "Our Work",
+    subtitle: "Responsive Website",
+    link: "GenFulton.com",
+    text: "is a psychotherapist & mental performance coach who needed a website and a brand to encompass her multiple businesses.",
+    button: {
+      title: "View Website",
+      variant: "btn-pink",
+      href: "https://genfulton.com",
+    },
+  },
+  {
+    image: {
+      src: "/group2.jpg",
+      alt: "GenFulton.com case study",
+    },
+    title: "Our Work",
+    subtitle: "ecommerce Website",
+    link: "GenFulton.com",
+    text: "is a ecommerce website.",
+    button: {
+      title: "View MRC",
+      variant: "btn-pink",
+      href: "https://genfulton.com",
+    },
+  },
+];
 export const navLinks = [
   {
     title: "Our Team",
@@ -114,7 +156,7 @@ export const designers = [
   },
   {
     name: "Miguel Castillo",
-    role: "Senior Product Designer",
+    role: "Head of Design",
     title: "Graphic Designer",
     pic: "/team/headshot_miguel_edit.png",
     icon: "/team/icon_miguel.svg",
@@ -209,4 +251,113 @@ export const Fields = (
 
 export const ContactFormText = [
   "We'd love to learn about your company and discuss how we can collaborate on your next digital project. As a comprehensive digital collective, we're dedicated to creating the best product to enhance your business strategy.",
+];
+
+export const CaseStudiesDetailPage = [
+  {
+    title: "MRC Rock & Sand | B2B & B2C E-Commerce Platform",
+    subtitle: "B2B & B2C E-Commerce Platform",
+    image_mobile: "/project_mrc_mobile.png",
+    image_desktop: "/case_study_hero_mrc.png",
+    // href: "https://mrc-two.vercel.app",
+    href: "mrc",
+    tags: ["Product Design", "Branding", "Web Development"],
+    overview: {
+      text: "MRC Rock & Sand is a construction materials supplier providing high-quality aggregates and services to contractors and developers. They needed a modern, user-friendly website to showcase their materials, streamline customer inquiries, and establish a stronger digital presence. They partnered with Madasa Collective to revamp their site with a fresh brand identity, intuitive UX/UI design, and a fully responsive web experience.",
+    },
+    challenge: {
+      text: "MRC Rock & Sand’s previous website lacked clear navigation, engaging visuals, and a seamless way for customers to explore materials and request quotes. Additionally, the design was outdated, making it difficult for them to stand out in the competitive construction materials industry. They needed a professional, high-performing site that was both informative and easy to use.",
+    },
+
+    approach: {
+      list: [
+        "Conducted competitor analysis to identify industry standards and best practices.",
+        "Developed a streamlined site architecture to improve navigation and customer flow.",
+        "Created a modern, industry-appropriate visual identity with a professional yet rugged aesthetic.",
+        "Designed high-fidelity wireframes and interactive prototypes to refine the UX.",
+        "Built a responsive website optimized for both desktop and mobile users.",
+        "Integrated clear CTAs for customer inquiries and streamlined the quote request process.",
+      ],
+      images: [
+        {
+          src: "/case_study_mrc_swatch.png",
+          width: 1735,
+          height: 1264,
+        },
+        { src: "/case_study_mrc_tshirt.png", width: 848, height: 590 },
+        { src: "/case_study_mrc_logos.png", width: 800, height: 802 },
+        { src: "/case_study_mrc_cap.png", width: 1896, height: 1103 },
+      ],
+    },
+    solution: {
+      list: [
+        "Branding: Developed a cohesive color palette, typography, and visual style reflecting strength and reliability.",
+        "Product Design: Designed an intuitive layout with clear product categories, high-quality visuals, and easy navigation.",
+        "Web Development: Built a responsive site with fast load times, SEO optimization, and a contact/quote request system.",
+      ],
+      images: [
+        {
+          src: "/case_study_mrc_laptop1.png",
+          width: 4096,
+          height: 3072,
+        },
+        {
+          src: "/case_study_mrc_mobile1.png",
+          width: 4096,
+          height: 3072,
+        },
+        {
+          src: "/case_study_mrc_laptop2.png",
+          width: 4096,
+          height: 2730,
+        },
+        {
+          src: "/case_study_mrc_tablet1.png",
+          width: 4096,
+          height: 2731,
+        },
+        {
+          src: "/case_study_mrc_mobile2.png",
+          width: 4096,
+          height: 3072,
+        },
+        {
+          src: "/case_study_mrc_tablet2.png",
+          width: 3072,
+          height: 4096,
+        },
+      ],
+    },
+    impact: {
+      list: [
+        "📈 Improved user engagement with a clearer, more structured site layout.",
+        "📩 Increased quote requests due to an optimized inquiry process.",
+        "📊 Strengthened brand presence with a professional and visually appealing website.",
+      ],
+      image: {
+        src: "/case_study_mrc_desktop1.png",
+        width: 4096,
+        height: 3072,
+      },
+    },
+    client: {
+      review:
+        "“We were so impressed by there professionalism and creativity. We have had a butt load of customers since we launched our website. The workflows have been kept organized based on the way Serina and Ethan set everything up. We are going to be such a successful company.”",
+      reviewer: "Roko Grbic, VP of Everything",
+    },
+  },
+  {
+    title: "Gen Fulton Consultancy | Responsive Website",
+    image_mobile: "/project_gen_desktop.png",
+    image_desktop: "/project_gen_mobile.png",
+    href: "https://genfulton.com",
+    tags: ["Web Design", "Branding", "Web Development"],
+  },
+  {
+    title: "Madasa Collective | Responsive Website",
+    image_mobile: "/project_madasa_mobile.png",
+    image_desktop: "/project_madasa_desktop.png",
+    href: "https://madasacollective.com",
+    tags: ["Web Design", "Branding", "Web Development"],
+  },
 ];

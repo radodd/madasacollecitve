@@ -1,0 +1,312 @@
+@use "../../app/queries.scss";
+@import "../../app/queries.scss";
+
+.container {
+  padding: 80px 72px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  h1 {
+    color: var(--Secondary, #467ad4);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 16px;
+  }
+  span {
+    color: var(--Primary-Text, #2c2d31);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.96px;
+  }
+
+  .tagsContainer {
+    display: flex;
+    gap: 10px;
+    padding: 32px 0;
+
+    .tag {
+      padding: 16px 24px;
+      border-radius: 100px;
+      border: 2px solid var(--color-275, rgba(217, 217, 217, 0.75));
+      color: var(--Secondary, #467ad4);
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+.overviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  h1 {
+    color: var(--Primary-Text, #2c2d31);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.6px;
+  }
+  p {
+    color: var(--Secondary-Text, #5c5d6d);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.challengeContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  padding: 40px 72px;
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    color: var(--Primary-Text, #2c2d31);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    padding-bottom: 32px;
+  }
+  p {
+    color: var(--Secondary-Text, #5c5d6d);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.approachContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 40px 72px;
+  h1 {
+    color: var(--Primary-Text, #2c2d31);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.6px;
+  }
+  ul {
+    text-wrap: pretty;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  li {
+    color: var(--Secondary-Text, #5c5d6d);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    gap: 16px;
+  }
+
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 56px;
+  }
+}
+
+.solutionContainer {
+  padding: 40px 72px;
+  h1 {
+    color: var(--Primary-Text, #2c2d31);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    padding-bottom: 32px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    list-style-type: disc;
+    gap: 16px;
+    padding-bottom: 40px;
+  }
+  .imageGrid {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    // grid-template-rows: auto auto;
+    gap: 56px;
+
+    .imageContainer:nth-child(3),
+    .imageContainer:nth-child(6) {
+      grid-column: span 2;
+    }
+  }
+}
+
+.impactContainer {
+  padding: 40px 72px;
+  h1 {
+    color: var(--Primary-Text, #2c2d31);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    padding-bottom: 32px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    list-style-type: disc;
+    gap: 16px;
+  }
+  .imageContainer {
+    padding: 40px 0;
+  }
+}
+
+.clientContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 104px 72px;
+  h1 {
+    align-self: start;
+    color: var(--Primary-Text, #2c2d31);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.6px;
+  }
+  p {
+    color: var(--Secondary-Text, #5c5d6d);
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  span {
+    color: var(--Secondary-Text, #5c5d6d);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.CTAContainer {
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+  padding: 48px 32px;
+  @include mid-break {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px;
+    padding: 104px 72px;
+  }
+  @include large-break {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px;
+    padding: 104px 72px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textContainer {
+    text-wrap: pretty;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 32px;
+    gap: 32px;
+    @include mid-break {
+      padding: 56px 70px;
+      gap: 32px;
+    }
+    h1 {
+      color: var(--Primary-Text, #2c2d31);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      font-size: 32px;
+      @include mid-break {
+        font-size: 40px;
+      }
+    }
+    p {
+      color: var(--Secondary-Text, #5c5d6d);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.8px;
+      @include mid-break {
+        font-size: 24px;
+        letter-spacing: -0.96px;
+      }
+    }
+  }
+  .imageContainerTeam {
+    border-radius: 25px;
+    height: 295px;
+    overflow: hidden;
+    Image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.imageContainerLanding {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include mid-break {
+    flex-direction: row;
+    gap: 32px;
+  }
+  @include large-break {
+    flex-direction: row;
+    gap: 32px;
+  }
+}

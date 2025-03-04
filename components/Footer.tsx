@@ -8,17 +8,17 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
   const getBackgroundColor = () => {
     switch (currentPage) {
       case "landing":
-        return "bg-tertiary";
+        return "bg-[#56b7cb]";
       case "team":
-        return "bg-secondary";
+        return "bg-[#467ad4]";
       case "contact":
-        return "bg-primary";
+        return "bg-[#e3712e]";
     }
   };
   const getHeight = () => {
     switch (currentPage) {
       case "contact":
-        return "h-[600px]";
+        return "";
     }
   };
   return (

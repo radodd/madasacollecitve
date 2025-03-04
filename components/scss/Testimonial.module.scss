@@ -1,0 +1,20 @@
+@use "../../app/queries.scss";
+@import "../../app/queries.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  gap: 32px;
+  background-color: #e3712e;
+  max-width: 1184px;
+  padding: 56px 70px;
+  @include mid-break {
+    padding: 40px 32px;
+    max-width: 650px;
+  }
+  @include small-break {
+    padding: 40px 32px;
+    max-width: 650px;
+  }
+}

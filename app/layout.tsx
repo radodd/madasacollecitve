@@ -12,6 +12,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Suspense, lazy } from "react";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import GoogleReCaptchaWrapper from "@/components/GoogleReCaptchaWrapper";
+import Footer from "@/components/Footer";
+import { NavProvider } from "@/context/NavContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://madasacolletive.com"),
@@ -70,11 +72,11 @@ const openSans = Open_Sans({
 });
 
 // const NavProvider = dynamic(() => import("../context/NavContext"));
-const LazyNavProvider = lazy(() =>
-  import("../context/NavContext").then((module) => ({
-    default: module.NavProvider,
-  }))
-);
+// const LazyNavProvider = lazy(() =>
+//   import("../context/NavContext").then((module) => ({
+//     default: module.NavProvider,
+//   }))
+// );
 
 export default function RootLayout({
   children,
@@ -96,25 +98,28 @@ export default function RootLayout({
         />
         {/* Add more Open Graph meta tags as needed */}
       </head>
-      <body className={openSans.className}>
-        <Suspense fallback={<div>Loading NavProvider...</div>}>
-          <LazyNavProvider>
-            {/* <GoogleReCaptchaWrapper /> */}
-            <Header />
-            {children}
-            <Toaster position="top-right" />
-            {/* JSON-LD script */}
-            <Script
-              id="json-ld-schema"
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            <Analytics />
-            <SpeedInsights />
-            {/* </GoogleReCaptchaWrapper> */}
-          </LazyNavProvider>
-        </Suspense>
-      </body>
+      <NavProvider>
+        {/* <LazyNavProvider> */}
+        <body className={openSans.className}>
+          <div className="min-h-screen">
+            <Suspense fallback={<div>Loading NavProvider...</div>}>
+              <Header />
+              {children}
+              <Toaster position="top-right" />
+              {/* JSON-LD script */}
+              <Script
+                id="json-ld-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+              />
+              <Analytics />
+              <SpeedInsights />
+            </Suspense>
+          </div>
+          {/* <Footer currentPage="contact" /> */}
+        </body>
+        {/* </LazyNavProvider> */}
+      </NavProvider>
     </html>
   );
 }

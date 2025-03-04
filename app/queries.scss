@@ -30,6 +30,12 @@ $breakpoint-l-min-width: 1280px;
   }
 }
 
+@mixin custom-break-470 {
+  @media (max-width: 470px) {
+    @content;
+  }
+}
+
 @mixin section-padding($padding-y: 40px, $padding-x: 32px) {
   padding: $padding-y $padding-x;
   @include mid-break {
