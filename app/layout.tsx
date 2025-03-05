@@ -71,12 +71,12 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
-const NavProvider = dynamic(() => import("../context/NavContext"));
-const LazyNavProvider = lazy(() =>
-  import("../context/NavContext").then((module) => ({
-    default: module.NavProvider,
-  }))
-);
+// const NavProvider = dynamic(() => import("../context/NavContext"));
+// const LazyNavProvider = lazy(() =>
+//   import("../context/NavContext").then((module) => ({
+//     default: module.NavProvider,
+//   }))
+// );
 
 export default function RootLayout({
   children,
@@ -100,7 +100,8 @@ export default function RootLayout({
       </head>
       <body className={openSans.className}>
         <Suspense fallback={<div>Loading NavProvider...</div>}>
-          <LazyNavProvider>
+          <NavProvider>
+            {/* <LazyNavProvider> */}
             <GoogleReCaptchaWrapper />
             <Header />
             {children}
@@ -114,7 +115,8 @@ export default function RootLayout({
             <Analytics />
             <SpeedInsights />
             {/* </GoogleReCaptchaWrapper> */}
-          </LazyNavProvider>
+            {/* </LazyNavProvider> */}{" "}
+          </NavProvider>
         </Suspense>
       </body>
     </html>
