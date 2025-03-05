@@ -71,12 +71,12 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
-// const NavProvider = dynamic(() => import("../context/NavContext"));
-// const LazyNavProvider = lazy(() =>
-//   import("../context/NavContext").then((module) => ({
-//     default: module.NavProvider,
-//   }))
-// );
+const NavProvider = dynamic(() => import("../context/NavContext"));
+const LazyNavProvider = lazy(() =>
+  import("../context/NavContext").then((module) => ({
+    default: module.NavProvider,
+  }))
+);
 
 export default function RootLayout({
   children,
@@ -98,28 +98,25 @@ export default function RootLayout({
         />
         {/* Add more Open Graph meta tags as needed */}
       </head>
-      <NavProvider>
-        {/* <LazyNavProvider> */}
-        <body className={openSans.className}>
-          <div className="min-h-screen">
-            <Suspense fallback={<div>Loading NavProvider...</div>}>
-              <Header />
-              {children}
-              <Toaster position="top-right" />
-              {/* JSON-LD script */}
-              <Script
-                id="json-ld-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-              />
-              <Analytics />
-              <SpeedInsights />
-            </Suspense>
-          </div>
-          {/* <Footer currentPage="contact" /> */}
-        </body>
-        {/* </LazyNavProvider> */}
-      </NavProvider>
+      <body className={openSans.className}>
+        <Suspense fallback={<div>Loading NavProvider...</div>}>
+          <LazyNavProvider>
+            <GoogleReCaptchaWrapper />
+            <Header />
+            {children}
+            <Toaster position="top-right" />
+            {/* JSON-LD script */}
+            <Script
+              id="json-ld-schema"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <Analytics />
+            <SpeedInsights />
+            {/* </GoogleReCaptchaWrapper> */}
+          </LazyNavProvider>
+        </Suspense>
+      </body>
     </html>
   );
 }
