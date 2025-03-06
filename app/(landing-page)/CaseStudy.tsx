@@ -51,7 +51,14 @@ const CaseStudy = () => {
                 </div>
 
                 <div className={styles.content}>
-                  <h1>{item.title}</h1>
+                  <div className="flex justify-between items-center">
+                    <h1>{item.title}</h1>
+                    <div className="flex items-end gap-4">
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </div>
+                  </div>
+
                   <h2>{item.subtitle}</h2>
                   <p>
                     <Link href="https://www.genfulton.com">
@@ -71,8 +78,8 @@ const CaseStudy = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
         <CarouselIndicator
           current={current}
           total={CaseStudiesLandingPage.length}
