@@ -3,11 +3,11 @@ import UseFormInputReturn from "./app/contact-us/Form";
 
 export const Testimonials = [
   {
-    text: "I want to give a big shout out to my amazing website development team for designing my business cards, ensuring delivery of them before an important networking event, and for creating my website from scratch in a tight window (GenFulton.com). You guys completely blew me away with your design ideas, communication, professionalism, research,openness to feedback and delivery. Thank you for being an awesome team!!",
+    text: '"I want to give a big shout out to my amazing website development team for designing my business cards, ensuring delivery of them before an important networking event, and for creating my website from scratch in a tight window (GenFulton.com). You guys completely blew me away with your design ideas, communication, professionalism, research,openness to feedback and delivery. Thank you for being an awesome team!!"',
     client: "Gent Fulton, Owner of Gen Fulton Consultancy",
   },
   {
-    text: "SOME THING AWESOME ABOUT US FROM MRC",
+    text: '"SOME THING AWESOME ABOUT US FROM MRC"',
     client: "MRC @ Rocks .com",
   },
 ];
@@ -157,6 +157,7 @@ export const designers = [
   {
     name: "Miguel Castillo",
     role: "Head of Design",
+    secondaryRole: "Graphic + Product",
     title: "Graphic Designer",
     pic: "/team/headshot_miguel_edit.png",
     icon: "/team/icon_miguel.svg",

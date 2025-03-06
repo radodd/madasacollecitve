@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cards } from "@/index";
 
-import styles from "../components/scss/ServiceCardsDesktop.module.scss";
+import styles from "@/components/scss/ServiceCardsDesktop.module.scss";
 
 interface CardProps {
   icon: string;

@@ -53,7 +53,7 @@ const CaseStudy = () => {
                 <div className={styles.content}>
                   <div className="flex justify-between items-center">
                     <h1>{item.title}</h1>
-                    <div className="flex items-end gap-4">
+                    <div className="flex items-end gap-4 border border-red-200">
                       <CarouselPrevious />
                       <CarouselNext />
                     </div>

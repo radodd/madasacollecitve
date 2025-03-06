@@ -7,24 +7,22 @@ import Testimonial from "@/app/(landing-page)/Testimonial";
 import { useNav } from "@/context/NavContext";
 import Hero from "@/app/(landing-page)/Hero";
 import OurServices from "@/app/(landing-page)/OurServices";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
 import styles from "../components/scss/Sections.module.scss";
 
-const HeroCardsMobile = dynamic(
-  () => import("./(landing-page)/MobileCards/HeroCardsMobile")
-);
+// const HeroCardsMobile = dynamic(
+//   () => import("./(landing-page)/(cards-mobile)/ScrollingHeroCardsMobile")
+// );
 
 export default function Home() {
   const { isActive } = useNav();
   return (
     <>
-      <div className="min-h-screen ">
-        <section
-          className={`${
-            isActive ? "blur" : ""
-          } bg-no-repeat bg-cover bg-center`}
-        >
+      <div
+        className={`${isActive ? "blur" : ""} bg-no-repeat bg-cover bg-center`}
+      >
+        <section className={"bg-no-repeat bg-cover bg-center"}>
           <Hero />
         </section>
         <section
@@ -35,10 +33,10 @@ export default function Home() {
         <section className={styles["casestudy-padding"]}>
           <CaseStudy />
         </section>
-        <section className={styles["section-padding"]}>
-          <Testimonial />
-        </section>
-        <section className="relative border-3 border-green-400">
+        {/* <section className={styles["section-padding"]}> */}
+        <Testimonial />
+        {/* </section> */}
+        <section className="relative">
           <Contact />
         </section>
       </div>

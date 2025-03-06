@@ -8,6 +8,17 @@ import {
 import { useState } from "react";
 
 import styles from "../../../components/scss/HeroCardsMobileFormat.module.scss";
+interface CardProps {
+  i: number;
+  icon: string;
+  title: string;
+  text: string;
+  back: string;
+  alt: string;
+  progress?: any;
+  range: number[];
+  targetScale: number;
+}
 
 const Card = ({
   i,
@@ -18,7 +29,7 @@ const Card = ({
   progress = motionValue(0),
   range,
   targetScale,
-}) => {
+}: CardProps) => {
   const scale = useTransform(progress, range, [1, targetScale]);
   const variants = {
     visible: { opacity: 1, rotateY: 0 },
