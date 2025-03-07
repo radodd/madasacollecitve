@@ -7,25 +7,28 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Testimonials } from "@/index";
+import { useSyncExternalStore } from "react";
 
 const Testimonial = () => {
   return (
     <>
       <Carousel>
-        <CarouselContent className="">
+        <CarouselContent>
           {Testimonials.map((item, index) => (
             <CarouselItem
               key={index}
               className="flex justify-center items-center"
             >
               <div className={`${styles.container}`}>
-                <div className="flex justify-end gap-8 translate-y-[20px]">
-                  <CarouselPrevious />
-                  <CarouselNext />
+                <div className={styles.arrowContainer}>
+                  <CarouselPrevious color="#FFFFFF" />
+                  <CarouselNext color="#FFFFFF" />
                 </div>
-                <h1>Client Testimonials</h1>
-                <p>{item.text}</p>
-                <span>{item.client}</span>{" "}
+                <div className={styles.textContainer}>
+                  <h1>Client Testimonials</h1>
+                  <p>{item.text}</p>
+                  <span>{item.client}</span>{" "}
+                </div>
               </div>
             </CarouselItem>
           ))}

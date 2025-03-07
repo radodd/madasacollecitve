@@ -8,6 +8,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Arrow from "../Arrow";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -197,7 +198,7 @@ CarouselItem.displayName = "CarouselItem";
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>(({ className, variant = "ghost", size = "icon", color, ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
   return (
@@ -205,12 +206,13 @@ const CarouselPrevious = React.forwardRef<
       ref={ref}
       variant={variant}
       size={size}
+      color={color}
       className={cn(
-        " h-8 w-8 rounded-full",
+        " rounded-full",
         orientation === "horizontal"
           ? // ? "left-[90%] top-20 -translate-y-1/2"
             // : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-            "left-40 top-20 -translate-y-1/2"
+            "left-40 top-20 -translate-y-1/2 "
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -218,7 +220,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="h-4 w-4" />
+      <Arrow color={color} />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -228,7 +230,7 @@ CarouselPrevious.displayName = "CarouselPrevious";
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>(({ className, variant = "ghost", size = "icon", color, ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
 
   return (
@@ -236,10 +238,11 @@ const CarouselNext = React.forwardRef<
       ref={ref}
       variant={variant}
       size={size}
+      color={color}
       className={cn(
-        "flex h-8 w-8 rounded-full justify-center items-center",
+        "rounded-full ",
         orientation === "horizontal"
-          ? "right-4 top-20 -translate-y-1/2"
+          ? "right-4 top-20 -translate-y-1/2 rotate-180"
           : // ? "right-4 top-20 -translate-y-1/2"
             "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         // ? "-right-12 top-1/2 -translate-y-1/2"
@@ -250,7 +253,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="h-4 w-4" />
+      <Arrow color={color} />
       <span className="sr-only">Next slide</span>
     </Button>
   );
