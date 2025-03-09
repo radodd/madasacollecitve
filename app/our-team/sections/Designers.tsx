@@ -18,8 +18,8 @@ const TeamMembers = () => {
 
   return (
     <>
-      {TeamCards.map((team, _) => (
-        <div className={styles.container}>
+      {TeamCards.map((team, index) => (
+        <div key={index} className={styles.container}>
           <h1>{team.header}</h1>
           <div className={styles.cardsContainer}>
             {team.member.map((member, index) => (
