@@ -1,137 +1,141 @@
 "use client";
-import { designers } from "@/index";
-import Image from "next/image";
+
+import { TeamCards } from "@/index";
 import { useMediaQuery } from "@react-hook/media-query";
-import { useNav } from "@/context/NavContext";
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { TeamCard } from "@/types/team";
 
-const Designers = () => {
-  const { isActive } = useNav();
+import styles from "@/components/scss/Designers.module.scss";
+
+const TeamMembers = () => {
   const isTablet = useMediaQuery("(max-width: 768px)");
-
   const [flippedIndex, setFlippedIndex] = useState(-1);
-  const flipCard = (index: number) => {
+
+  const toggleFlip = (index: number) =>
     setFlippedIndex(index === flippedIndex ? -1 : index);
-  };
 
   return (
-    <div
-      className={`${
-        isActive ? "blur" : ""
-      } px-70 py-24 flex flex-col gap-10 bg-base
-    max-tablet:px-8
-    max-tablet:py-8
-    `}
-    >
-      <h1
-        className="text-5xl font-bold
-      max-tablet:text-4xl"
-      >
-        Design
-      </h1>
-      <div className="container flex gap-10 flex-wrap justify-start max-smallplus:justify-center">
-        {designers.map((designer, index) => (
-          <div key={designer.name} className="sub-container">
-            <div
-              onClick={() => flipCard(index)}
-              className={`${
-                index === flippedIndex ? "flipped" : ""
-              } card-team min-w-[430px] min-h-[618px] flex flex-col shadow-bl2xl 
-            max-tablet:min-w-[329px] 
-            max-tablet:min-h-[489px]`}
-            >
-              <div className="front flex flex-col gap-6 px-10">
-                <Image
-                  src={designer.pic}
-                  alt={designer.name}
-                  width={isTablet ? 249 : 350}
-                  height={isTablet ? 285 : 400}
-                  sizes="(min-width: 840px) 350px, 249px"
-                  quality={100}
-                />
-                <div className="flex flex-col gap-4 w-full">
-                  <h1
-                    className="text-4xl font-bold
-                max-tablet:text-2xl"
-                  >
-                    {designer.name}
-                  </h1>
-                  <div>
-                    <p
-                      className="text-xl
-                  max-tablet:text-md"
-                    >
-                      {designer.role}
-                    </p>
-                    <p
-                      className="text-xl
-                  max-tablet:text-md"
-                    >
-                      {designer.title}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="back flex flex-col gap-6 p-10">
-                <Image
-                  src={designer.icon}
-                  alt={designer.icon}
-                  width={isTablet ? 249 : 350}
-                  height={isTablet ? 228 : 320}
-                  className={`${isTablet ? "max-h-[228px]" : "max-h-[320px]"}`}
-                />
-                <div className="flex flex-col gap-4 w-full">
-                  <h1
-                    className="text-4xl font-bold
-                max-tablet:text-2xl"
-                  >
-                    {designer.backTitle}
-                  </h1>
-                  <div>
-                    <p
-                      className="text-xl
-                  max-tablet:text-md"
-                    >
-                      {designer.backText}
-                    </p>
-                    <div className="flex gap-8 justify-center pt-6">
-                      <a
-                        href={designer.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          src="/linkedin.png"
-                          alt={`link to ${designer.name}'s LinkedIn profile`}
-                          width={24}
-                          height={25}
-                          className=""
-                        />
-                      </a>
-                      <a
-                        href={designer.portfolio}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          src="/portfolio.png"
-                          alt={`link to ${designer.name}'s portfolio site`}
-                          width={24}
-                          height={25}
-                          className=""
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <>
+      {TeamCards.map((team, _) => (
+        <div className={styles.container}>
+          <h1>{team.header}</h1>
+          <div className={styles.cardsContainer}>
+            {team.member.map((member, index) => (
+              <TeamMemberCard
+                key={index}
+                member={member}
+                index={index}
+                flippedIndex={flippedIndex}
+                toggleFlip={toggleFlip}
+                isTablet={isTablet}
+              />
+            ))}
           </div>
-        ))}
+        </div>
+      ))}
+    </>
+  );
+};
+const TeamMemberCard = ({
+  member,
+  index,
+  flippedIndex,
+  toggleFlip,
+  isTablet,
+}: {
+  member: TeamCard["member"][0];
+  index: number;
+  flippedIndex: number;
+  toggleFlip: (index: number) => void;
+  isTablet: boolean;
+}) => {
+  const isFlipped = index === flippedIndex;
+
+  return (
+    <div key={index} className="sub-container">
+      <div
+        onClick={() => toggleFlip(index)}
+        className={`card-team ${styles.cardWrapper}  
+          ${isFlipped ? "flipped" : ""}`}
+      >
+        <CardFront member={member} />
+        <CardBack member={member} isTablet={isTablet} />
       </div>
     </div>
   );
 };
 
-export default Designers;
+const CardFront = ({ member }: { member: TeamCard["member"][0] }) => (
+  <div className={`front ${styles.cardFront}`}>
+    <div className={styles.imageContainer}>
+      <Image
+        src={member.cardFront.src}
+        alt={member.cardFront.name}
+        width={3034}
+        height={3468}
+        sizes="(min-width: 840px) 350px, 249px"
+      />
+    </div>
+    <div className={styles.textContainer}>
+      <h2>{member.cardFront.name}</h2>
+      <div>
+        <p>{member.cardFront.role}</p>
+        <p>{member.cardFront.title}</p>
+      </div>
+    </div>
+  </div>
+);
+
+const CardBack = ({
+  member,
+  isTablet,
+}: {
+  member: TeamCard["member"][0];
+  isTablet: boolean;
+}) => (
+  <div className={`back ${styles.cardBack}`}>
+    <Image
+      src={member.cardBack.src}
+      alt={member.cardBack.src}
+      width={isTablet ? 249 : 350}
+      height={isTablet ? 228 : 320}
+      className={`${isTablet ? "max-h-[228px]" : "max-h-[320px]"}`}
+    />
+    <div className={styles.textContainer}>
+      <p>
+        <span>{member.cardFront.title}</span>
+        {member.cardBack.text}
+      </p>
+      <div>
+        <Link
+          href={member.cardBack.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/linkedin.svg"
+            alt={`LinkedIn - ${member.cardFront.name}`}
+            width={24}
+            height={25}
+          />
+        </Link>
+        <a
+          href={member.cardBack.portfolio}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/portfolio.svg"
+            alt={`Portfolio - ${member.cardFront.name}`}
+            width={24}
+            height={25}
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+);
+
+export default TeamMembers;

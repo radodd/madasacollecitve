@@ -140,72 +140,93 @@ export const cards = [
   },
 ];
 
-export const designers = [
+export const TeamCards = [
   {
-    name: "Serina Zepeda",
-    role: "Product Designer",
-    title: "Founder",
-    pic: "/team/headshot_serina_edit.png",
-    icon: "/team/icon_serina.svg",
-    backTitle: "I like",
-    backText:
-      "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, and painting.",
-    linkedin: "https://www.linkedin.com/in/serina-zepeda/",
-    portfolio: "http://serinazepeda.com/",
-    alt: "Serina Zepeda - Product Designer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
+    header: "Design",
+    member: [
+      {
+        cardFront: {
+          src: "/team/headshot_serina_edit.png",
+          name: "Serina Zepeda",
+          role: "Product Designer",
+          title: "Founder",
+        },
+        cardBack: {
+          src: "/team/icon_serina.svg",
+          title: "I like",
+          text: "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, and painting.",
+          linkedin: "https://www.linkedin.com/in/serina-zepeda/",
+          portfolio: "http://serinazepeda.com/",
+        },
+        alt: "Serina Zepeda - Product Designer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+      {
+        cardFront: {
+          src: "/team/headshot_miguel_edit.png",
+          name: "Miguel Castillo",
+          role: "Head of Designer",
+          title: "Graphic + Product",
+        },
+        cardBack: {
+          src: "/team/icon_miguel.svg",
+          title: "I like",
+          text: "sparkling water, gardening, salsa dancing, traveling and staying active.",
+          linkedin: "https://www.linkedin.com/in/miguelcasdesign/",
+          portfolio: "http://miguelcastillodesgin.com/",
+        },
+        alt: "Miguel Castillo - Senior Product Designer and member Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+    ],
   },
   {
-    name: "Miguel Castillo",
-    role: "Head of Design",
-    secondaryRole: "Graphic + Product",
-    title: "Graphic Designer",
-    pic: "/team/headshot_miguel_edit.png",
-    icon: "/team/icon_miguel.svg",
-    backTitle: "I like",
-    backText:
-      "sparkling water, gardening, salsa dancing, traveling and staying active.",
-    linkedin: "https://www.linkedin.com/in/miguelcasdesign/",
-    portfolio: "https://miguelcastillodesign.com/",
-    alt: "Miguel Castillo - Senior Product Designer and member Madasa Collective a tech company based in Santa Barbara, California.",
-  },
-];
-
-export const developers = [
-  {
-    name: "Ethan Flores",
-    role: "Software Developer",
-    title: "Founder",
-    pic: "/team/headshot_ethan_edit.png",
-    icon: "/team/icon_ethan.svg",
-    backTitle: "I like",
-    backText:
-      "my cats, hot tropical sun, the beach, surfing, CrossFit, Okinawa, and Guam.",
-    linkedin: "https://www.linkedin.com/in/ethanf-flores/",
-    portfolio: "https://ethanflores.vercel.app/",
-    alt: "Ethan Flores - Lead software engineer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
-  },
-  {
-    name: "Jose Roman",
-    role: "Senior Software Developer",
-    title: "",
-    pic: "/team/headshot_jose.png",
-    icon: "/team/icon_jose.svg",
-    backTitle: "I like",
-    backText: "my video games, soccer, and my wife. <3",
-    linkedin: "https://www.linkedin.com/in/jose-roman-lujano-a3055966/",
-    portfolio: "",
-    alt: "Jose Roman - Senior engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
-  },
-  {
-    name: "Daniel Castillo",
-    title: "Software Developer",
-    pic: "/team/headshot_danny_edit.png",
-    icon: "/team/icon_danny.svg",
-    backTitle: "I like",
-    backText: "my kids, cycling, movies, food, video games, and Oaxaca, ",
-    linkedin: "https://www.linkedin.com/in/daniel-castillo-software-developer/",
-    portfolio: "",
-    alt: "Danny Castillo - Software engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
+    header: "Developers",
+    member: [
+      {
+        cardFront: {
+          src: "/team/headshot_ethan_edit.png",
+          name: "Ethan Flores",
+          role: "Founder",
+          title: "Software Engineer",
+        },
+        cardBack: {
+          src: "/team/icon_ethan.svg",
+          title: "I like",
+          text: "my cats, hot tropical sun, the beach, surfing, CrossFit, Okinawa, and Guam.",
+          linkedin: "https://www.linkedin.com/in/ethan-flores/",
+          portfolio: "http://ethanflores.vercel.app/",
+        },
+        alt: "Ethan Flores - Lead software engineer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+      {
+        cardFront: {
+          src: "/team/headshot_jose.png",
+          name: "Jose Roman",
+          role: "Senior Software Engineer",
+        },
+        cardBack: {
+          src: "/team/icon_jose.svg",
+          title: "I like",
+          text: "my video games, soccer, and my wife. <3",
+          linkedin: "https://www.linkedin.com/in/jose-roman-lujano-a3055966/",
+        },
+        alt: "Jose Roman - Senior engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+      {
+        cardFront: {
+          src: "/team/headshot_danny_edit.png",
+          name: "Daniel Castillo",
+          role: "Software Engineer",
+        },
+        cardBack: {
+          src: "/team/icon_danny.svg",
+          title: "I like",
+          text: "my kids, cycling, movies, food, video games, and Oaxaca.",
+          linkedin:
+            "https://www.linkedin.com/in/aniel-castillo-software-developer/",
+        },
+        alt: "Danny Castillo - Software engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+    ],
   },
 ];
 
