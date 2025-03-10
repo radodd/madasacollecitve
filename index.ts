@@ -7,8 +7,8 @@ export const Testimonials = [
     client: "Gent Fulton, Owner of Gen Fulton Consultancy",
   },
   {
-    text: '"SOME THING AWESOME ABOUT US FROM MRC"',
-    client: "MRC @ Rocks .com",
+    text: '"We’ve had an amazing experience working with Madasa Collective (Serina and Ethan). They were incredibly professional, creative, and attentive to our vision. Throughout the process, they were patient and thorough in answering our complex technical questions, making sure all our needs were met. We’re beyond excited to see how the website they’ve created helps us grow and connect with our customers!"',
+    client: "stonesuppliers.net",
   },
 ];
 export const CaseStudiesLandingPage = [
@@ -279,8 +279,8 @@ export const CaseStudiesDetailPage = [
   {
     title: "MRC Rock & Sand | B2B & B2C E-Commerce Platform",
     subtitle: "B2B & B2C E-Commerce Platform",
-    image_mobile: "/project_mrc_mobile.png",
-    image_desktop: "/case_study_hero_mrc.png",
+    image_mobile: "/case_study_mrc_mobile.png",
+    image_desktop: "/case_study_mrc_hero.png",
     // href: "https://mrc-two.vercel.app",
     href: "mrc",
     tags: ["Product Design", "Branding", "Web Development"],

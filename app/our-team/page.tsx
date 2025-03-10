@@ -2,12 +2,12 @@ import "../globals.css";
 
 import Footer from "@/components/Footer";
 import Contact from "./sections/Contact";
-import Designers from "./sections/Designers";
+import Designers from "./sections/TeamMembers";
 // import Developers from "./sections/Developers";
 import Hero from "./sections/Hero";
 import OurStory from "./sections/OurStory";
 import { Metadata } from "next";
-import TeamMembers from "./sections/Designers";
+import TeamMembers from "./sections/TeamMembers";
 
 export const metadata: Metadata = {
   title: "Team",

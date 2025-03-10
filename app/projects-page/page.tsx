@@ -1,42 +1,11 @@
-// "use client";
-// import Footer from "@/components/Footer";
-// import "../globals.css";
-
-// import { Metadata } from "next";
-// import Contact from "@/sections/landing-page/Contact";
-// import Projects from "@/sections/projects-page/Projects";
-
-// import styles from "../../components/scss/Sections.module.scss";
-
-// // export const metadata: Metadata = {
-// //   title: "Projects",
-// // };
-
-// const page = () => {
-//   return (
-//     <div>
-//       <section>
-//         <Projects />
-//       </section>
-//       {/* <section className="">
-//         <Contact />
-//       </section> */}
-
-//       <Footer currentPage="team" />
-//     </div>
-//   );
-// };
-
-// export default page;
-
 "use client";
 import React, { useEffect, useState } from "react";
-
-import styles from "../../components/scss/Projects.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import { CaseStudiesDetailPage } from "@/index";
+
+import styles from "../../components/scss/Projects.module.scss";
 
 const Projects = () => {
   return (
@@ -88,12 +57,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       setFeaturedImage(project.image_desktop);
     }
   };
-  // const handleMouseEnter = () => {
-  //   setFeaturedImage(project.image_mobile);
-  // };
-  // const handleMouseLeave = () => {
-  //   setFeaturedImage(project.image_desktop);
-  // };
 
   return (
     <div className={styles.card}>
@@ -113,14 +76,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
       <div className={styles.titleContainer}>
         <h2>{project.title}</h2>
-        <Button
-          title="Test Button"
-          type="button"
-          variant="btn-blue"
-          onClick={() => {
-            `/projects/${project.hrefTEST}`;
-          }}
-        />
       </div>
 
       <div className={styles.tagContainer}>
