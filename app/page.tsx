@@ -1,27 +1,20 @@
 "use client";
 
+import { useNav } from "@/context/NavContext";
 import Footer from "@/components/Footer";
 import CaseStudy from "@/app/(landing-page)/CaseStudy";
-import Contact from "@/app/(landing-page)/CallToAction";
 import Testimonial from "@/app/(landing-page)/Testimonial";
-import { useNav } from "@/context/NavContext";
 import Hero from "@/app/(landing-page)/Hero";
 import OurServices from "@/app/(landing-page)/OurServices";
-// import dynamic from "next/dynamic";
+import CallToAction from "@/app/(landing-page)/CallToAction";
 
 import styles from "../components/scss/Sections.module.scss";
-
-// const HeroCardsMobile = dynamic(
-//   () => import("./(landing-page)/(cards-mobile)/ScrollingHeroCardsMobile")
-// );
 
 export default function Home() {
   const { isActive } = useNav();
   return (
     <>
-      <div
-        className={`${isActive ? "blur" : ""} bg-no-repeat bg-cover bg-center`}
-      >
+      <div className={`${isActive ? "blur" : ""} min-h-screen`}>
         <section className={"bg-no-repeat bg-cover bg-center"}>
           <Hero />
         </section>
@@ -37,7 +30,7 @@ export default function Home() {
         <Testimonial />
         {/* </section> */}
         <section className="relative">
-          <Contact />
+          <CallToAction />
         </section>
       </div>
       <Footer currentPage="landing" />

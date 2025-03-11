@@ -3,22 +3,21 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import { useNav } from "@/context/NavContext";
 
-import styles from "../../../components/scss/ProjectDetail.module.scss";
+// import styles from "../../../components/scss/ProjectDetail.module.scss";
+import CTABackground from "@/components/CTABackground";
+
+import styles from "@/components/scss/CallToAction.module.scss";
 
 const Contact = () => {
-  const { isActive } = useNav();
   return (
-    <div className="relative w-full ">
-      <Image
-        src="/testbackground_our_team.svg"
-        alt=""
-        width={4000}
-        height={4000}
-        className="min-h-[5rem]"
-      />
+    <div className={styles.container}>
+      <CTABackground color="#467ad4" />
 
-      <div className={styles.CTAContainer}>
-        <div className={styles.textContainer}>
+      <div className={styles.CTAContainerTeam}>
+        <div className={styles.imageContainerTeam}>
+          <Image src="/group3.jpg" alt="" width={4096} height={2359} />
+        </div>
+        <div className={styles.textContainerTeam}>
           <h1>Have a project in mind?</h1>
           <p>
             Let&apos;s team up to create a tailored digital solution that aligns
@@ -30,9 +29,6 @@ const Contact = () => {
             variant="btn-pink-fill"
             type="button"
           />
-        </div>
-        <div className={styles.imageContainerTeam}>
-          <Image src="/group3.jpg" alt="" width={4096} height={2359} />
         </div>
       </div>
     </div>

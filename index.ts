@@ -8,13 +8,13 @@ export const Testimonials = [
   },
   {
     text: '"We’ve had an amazing experience working with Madasa Collective (Serina and Ethan). They were incredibly professional, creative, and attentive to our vision. Throughout the process, they were patient and thorough in answering our complex technical questions, making sure all our needs were met. We’re beyond excited to see how the website they’ve created helps us grow and connect with our customers!"',
-    client: "stonesuppliers.net",
+    client: "Nikol Grbic, CFO of Santa Paula materials - stonesuppliers.net",
   },
 ];
 export const CaseStudiesLandingPage = [
   {
     image: {
-      src: "/case_study_mrc_hero.png",
+      src: "/case_study_gen_mobile.png",
       alt: "GenFulton.com case study",
     },
     title: "Our Work",
@@ -56,59 +56,6 @@ export const navLinks = [
   {
     title: "Schedule a Call",
     href: "https://calendly.com/madasacollective/60min",
-  },
-];
-
-export const madasaLetters = [
-  {
-    image: "/logo/letters/M.png",
-  },
-  {
-    image: "/logo/letters/A.png",
-  },
-  {
-    image: "/logo/letters/D.png",
-  },
-  {
-    image: "/logo/letters/A.png",
-  },
-  {
-    image: "/logo/letters/S.png",
-  },
-  {
-    image: "/logo/letters/A.png",
-  },
-];
-export const collectiveLetters = [
-  {
-    image: "/logo/letters/C.png",
-  },
-  {
-    image: "/logo/letters/O.png",
-  },
-  {
-    image: "/logo/letters/L.png",
-  },
-  {
-    image: "/logo/letters/L.png",
-  },
-  {
-    image: "/logo/letters/E.png",
-  },
-  {
-    image: "/logo/letters/C.png",
-  },
-  {
-    image: "/logo/letters/T.png",
-  },
-  {
-    image: "/logo/letters/I.png",
-  },
-  {
-    image: "/logo/letters/V.png",
-  },
-  {
-    image: "/logo/letters/E.png",
   },
 ];
 
@@ -281,8 +228,8 @@ export const CaseStudiesDetailPage = [
     subtitle: "B2B & B2C E-Commerce Platform",
     image_mobile: "/case_study_mrc_mobile.png",
     image_desktop: "/case_study_mrc_hero.png",
-    // href: "https://mrc-two.vercel.app",
-    href: "mrc",
+    href: "https://stonesuppliers.net",
+    // href: "mrc",
     tags: ["Product Design", "Branding", "Web Development"],
     overview: {
       text: "MRC Rock & Sand is a construction materials supplier providing high-quality aggregates and services to contractors and developers. They needed a modern, user-friendly website to showcase their materials, streamline customer inquiries, and establish a stronger digital presence. They partnered with Madasa Collective to revamp their site with a fresh brand identity, intuitive UX/UI design, and a fully responsive web experience.",
@@ -370,7 +317,7 @@ export const CaseStudiesDetailPage = [
   },
   {
     title: "Gen Fulton Consultancy | Responsive Website",
-    image_mobile: "/project_gen_desktop.png",
+    image_mobile: "/case_study_gen_desktop.png",
     image_desktop: "/project_gen_mobile.png",
     href: "https://genfulton.com",
     tags: ["Web Design", "Branding", "Web Development"],
@@ -381,5 +328,58 @@ export const CaseStudiesDetailPage = [
     image_desktop: "/project_madasa_desktop.png",
     href: "https://madasacollective.com",
     tags: ["Web Design", "Branding", "Web Development"],
+  },
+];
+
+export const madasaLetters = [
+  {
+    image: "/logo/letters/M.png",
+  },
+  {
+    image: "/logo/letters/A.png",
+  },
+  {
+    image: "/logo/letters/D.png",
+  },
+  {
+    image: "/logo/letters/A.png",
+  },
+  {
+    image: "/logo/letters/S.png",
+  },
+  {
+    image: "/logo/letters/A.png",
+  },
+];
+export const collectiveLetters = [
+  {
+    image: "/logo/letters/C.png",
+  },
+  {
+    image: "/logo/letters/O.png",
+  },
+  {
+    image: "/logo/letters/L.png",
+  },
+  {
+    image: "/logo/letters/L.png",
+  },
+  {
+    image: "/logo/letters/E.png",
+  },
+  {
+    image: "/logo/letters/C.png",
+  },
+  {
+    image: "/logo/letters/T.png",
+  },
+  {
+    image: "/logo/letters/I.png",
+  },
+  {
+    image: "/logo/letters/V.png",
+  },
+  {
+    image: "/logo/letters/E.png",
   },
 ];

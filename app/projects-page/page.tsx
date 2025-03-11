@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import { CaseStudiesDetailPage } from "@/index";
+import { motion } from "framer-motion";
 
 import styles from "../../components/scss/Projects.module.scss";
 
@@ -33,6 +34,13 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [featuredImage, setFeaturedImage] = useState(project.image_desktop);
   const [hoverable, setHoverable] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 744);
+  }, []);
+
   useEffect(() => {
     const checkHoverSupport = () => {
       const hoverable = window.matchMedia("(hover: hover)").matches;
@@ -48,13 +56,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   const handleMouseEnter = () => {
     if (hoverable) {
-      setFeaturedImage(project.image_mobile);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setFeaturedImage(project.image_mobile);
+      }, 150);
+
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 300);
     }
   };
 
   const handleMouseLeave = () => {
     if (hoverable) {
-      setFeaturedImage(project.image_desktop);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setFeaturedImage(project.image_desktop);
+      }, 150);
+
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 300);
     }
   };
 
@@ -62,16 +84,40 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div className={styles.card}>
       <div className={styles.imageContainer}>
         <Link
-          href={`projects-page/${project.href.replace("/projects-page/", "")}`}
+          // href={`projects-page/${project.href.replace("/projects-page/", "")}`}
+          href={project.href}
         >
-          <Image
-            src={featuredImage}
-            alt={project.title}
-            width={3840}
-            height={2160}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          />
+          {isMobile ? (
+            <Image
+              src={featuredImage}
+              alt={project.title}
+              width={3840}
+              height={2160}
+            />
+          ) : (
+            <>
+              <motion.img
+                src={featuredImage}
+                alt={project.title}
+                width={3840}
+                height={2160}
+                // onMouseEnter={handleMouseEnter}
+                // onMouseLeave={handleMouseLeave}
+                className={`${isTransitioning ? "transitioning" : ""}`}
+                animate={{
+                  filter: isTransitioning ? "blur(10px)" : "blur(0px)",
+                }}
+                // transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1]  }}
+                // transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                // transition={{ type: "spring", stiffness: 120, damping: 15 }}
+              />
+              <div
+                className={styles.hoverZone}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
+            </>
+          )}
         </Link>
       </div>
       <div className={styles.titleContainer}>
