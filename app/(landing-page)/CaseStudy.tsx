@@ -21,6 +21,7 @@ const CaseStudy = () => {
   const { isActive } = useNav();
   const [current, setCurrent] = useState(-1);
   const [api, setApi] = useState<CarouselApi | null>(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false); // Track screen size
 
   useEffect(() => {
     if (!api) return;
@@ -34,6 +35,13 @@ const CaseStudy = () => {
     });
   }, [api]);
 
+  useEffect(() => {
+    const checkScreenSize = () => setIsSmallScreen(window.innerWidth < 1280);
+    checkScreenSize(); // Run once on mount
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <>
       <Carousel setApi={setApi}>
@@ -45,15 +53,22 @@ const CaseStudy = () => {
                   <Image
                     alt={item.image.alt}
                     src={item.image.src}
-                    width={654}
-                    height={409}
+                    // src={
+                    //   (isSmallScreen ? item.image.src2 : item.image.src) ??
+                    //   "/Gen Fulton-no shadow 1.png"
+                    // } // ✅ Use ternary operator
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    // fill
+                    className="w-full object-cover"
                   />
                 </div>
 
                 <div className={styles.content}>
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center justify-between">
                     <h1>{item.title}</h1>
-                    <div className="flex items-end gap-4 border border-red-200">
+                    <div className={styles.arrowContainer}>
                       <CarouselPrevious />
                       <CarouselNext />
                     </div>

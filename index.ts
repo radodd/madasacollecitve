@@ -14,13 +14,15 @@ export const Testimonials = [
 export const CaseStudiesLandingPage = [
   {
     image: {
-      src: "/case_study_mrc_hero.png",
+      src: "/Gen Fulton - no shadow 1 big width.png",
+      // src: "/Gen Fulton-no shadow 1.png",delete this one ???
+      // src: "/case_study_mrc_hero.png" do i delete this img from the folder,
       alt: "GenFulton.com case study",
     },
     title: "Our Work",
     subtitle: "Responsive Website",
     link: "GenFulton.com",
-    text: "is a psychotherapist & mental performance coach who needed a website and a brand to encompass her multiple businesses.",
+    text: " is a psychotherapist & mental performance coach who needed a website and a brand to encompass her multiple businesses.",
     button: {
       title: "View Website",
       variant: "btn-pink",
@@ -29,15 +31,16 @@ export const CaseStudiesLandingPage = [
   },
   {
     image: {
-      src: "/group2.jpg",
+      src: "/Gen Fulton - no shadow 1.png",
+      // src: "/group2.jpg",
       alt: "GenFulton.com case study",
     },
     title: "Our Work",
-    subtitle: "ecommerce Website",
-    link: "GenFulton.com",
-    text: "is a ecommerce website.",
+    subtitle: "B2B & B2C E-Commerce Platform",
+    // link: "GenFulton.com",
+    text: `A family-owned group of construction material companies needed a modernized website. We redesigned their site, adding a materials catalog and a "Request a Quote" feature.`,
     button: {
-      title: "View MRC",
+      title: "View Website",
       variant: "btn-pink",
       href: "https://genfulton.com",
     },
