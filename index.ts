@@ -7,8 +7,8 @@ export const Testimonials = [
     client: "Gent Fulton, Owner of Gen Fulton Consultancy",
   },
   {
-    text: '"SOME THING AWESOME ABOUT US FROM MRC"',
-    client: "MRC @ Rocks .com",
+    text: '"We’ve had an amazing experience working with Madasa Collective (Serina and Ethan). They were incredibly professional, creative, and attentive to our vision. Throughout the process, they were patient and thorough in answering our complex technical questions, making sure all our needs were met. We’re beyond excited to see how the website they’ve created helps us grow and connect with our customers!"',
+    client: "Nikol Grbic, CFO of Santa Paula materials - stonesuppliers.net",
   },
 ];
 export const CaseStudiesLandingPage = [
@@ -62,59 +62,6 @@ export const navLinks = [
   },
 ];
 
-export const madasaLetters = [
-  {
-    image: "/logo/letters/M.png",
-  },
-  {
-    image: "/logo/letters/A.png",
-  },
-  {
-    image: "/logo/letters/D.png",
-  },
-  {
-    image: "/logo/letters/A.png",
-  },
-  {
-    image: "/logo/letters/S.png",
-  },
-  {
-    image: "/logo/letters/A.png",
-  },
-];
-export const collectiveLetters = [
-  {
-    image: "/logo/letters/C.png",
-  },
-  {
-    image: "/logo/letters/O.png",
-  },
-  {
-    image: "/logo/letters/L.png",
-  },
-  {
-    image: "/logo/letters/L.png",
-  },
-  {
-    image: "/logo/letters/E.png",
-  },
-  {
-    image: "/logo/letters/C.png",
-  },
-  {
-    image: "/logo/letters/T.png",
-  },
-  {
-    image: "/logo/letters/I.png",
-  },
-  {
-    image: "/logo/letters/V.png",
-  },
-  {
-    image: "/logo/letters/E.png",
-  },
-];
-
 export const whoWeAre = [
   "We create digital products that launch businesses to their full potential.",
 ];
@@ -143,72 +90,93 @@ export const cards = [
   },
 ];
 
-export const designers = [
+export const TeamCards = [
   {
-    name: "Serina Zepeda",
-    role: "Product Designer",
-    title: "Founder",
-    pic: "/team/headshot_serina_edit.png",
-    icon: "/team/icon_serina.svg",
-    backTitle: "I like",
-    backText:
-      "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, and painting.",
-    linkedin: "https://www.linkedin.com/in/serina-zepeda/",
-    portfolio: "http://serinazepeda.com/",
-    alt: "Serina Zepeda - Product Designer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
+    header: "Design",
+    member: [
+      {
+        cardFront: {
+          src: "/team/headshot_serina_edit.png",
+          name: "Serina Zepeda",
+          role: "Product Designer",
+          title: "Founder",
+        },
+        cardBack: {
+          src: "/team/icon_serina.svg",
+          title: "I like",
+          text: "traveling, my puppy, snowboarding, beach volleyball, board games, food, working out, and painting.",
+          linkedin: "https://www.linkedin.com/in/serina-zepeda/",
+          portfolio: "http://serinazepeda.com/",
+        },
+        alt: "Serina Zepeda - Product Designer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+      {
+        cardFront: {
+          src: "/team/headshot_miguel_edit.png",
+          name: "Miguel Castillo",
+          role: "Head of Designer",
+          title: "Graphic + Product",
+        },
+        cardBack: {
+          src: "/team/icon_miguel.svg",
+          title: "I like",
+          text: "sparkling water, gardening, salsa dancing, traveling and staying active.",
+          linkedin: "https://www.linkedin.com/in/miguelcasdesign/",
+          portfolio: "http://miguelcastillodesgin.com/",
+        },
+        alt: "Miguel Castillo - Senior Product Designer and member Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+    ],
   },
   {
-    name: "Miguel Castillo",
-    role: "Head of Design",
-    secondaryRole: "Graphic + Product",
-    title: "Graphic Designer",
-    pic: "/team/headshot_miguel_edit.png",
-    icon: "/team/icon_miguel.svg",
-    backTitle: "I like",
-    backText:
-      "sparkling water, gardening, salsa dancing, traveling and staying active.",
-    linkedin: "https://www.linkedin.com/in/miguelcasdesign/",
-    portfolio: "https://miguelcastillodesign.com/",
-    alt: "Miguel Castillo - Senior Product Designer and member Madasa Collective a tech company based in Santa Barbara, California.",
-  },
-];
-
-export const developers = [
-  {
-    name: "Ethan Flores",
-    role: "Software Developer",
-    title: "Founder",
-    pic: "/team/headshot_ethan_edit.png",
-    icon: "/team/icon_ethan.svg",
-    backTitle: "I like",
-    backText:
-      "my cats, hot tropical sun, the beach, surfing, CrossFit, Okinawa, and Guam.",
-    linkedin: "https://www.linkedin.com/in/ethanf-flores/",
-    portfolio: "https://ethanflores.vercel.app/",
-    alt: "Ethan Flores - Lead software engineer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
-  },
-  {
-    name: "Jose Roman",
-    role: "Senior Software Developer",
-    title: "",
-    pic: "/team/headshot_jose.png",
-    icon: "/team/icon_jose.svg",
-    backTitle: "I like",
-    backText: "my video games, soccer, and my wife. <3",
-    linkedin: "https://www.linkedin.com/in/jose-roman-lujano-a3055966/",
-    portfolio: "",
-    alt: "Jose Roman - Senior engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
-  },
-  {
-    name: "Daniel Castillo",
-    title: "Software Developer",
-    pic: "/team/headshot_danny_edit.png",
-    icon: "/team/icon_danny.svg",
-    backTitle: "I like",
-    backText: "my kids, cycling, movies, food, video games, and Oaxaca, ",
-    linkedin: "https://www.linkedin.com/in/daniel-castillo-software-developer/",
-    portfolio: "",
-    alt: "Danny Castillo - Software engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
+    header: "Developers",
+    member: [
+      {
+        cardFront: {
+          src: "/team/headshot_ethan_edit.png",
+          name: "Ethan Flores",
+          role: "Founder",
+          title: "Software Engineer",
+        },
+        cardBack: {
+          src: "/team/icon_ethan.svg",
+          title: "I like",
+          text: "my cats, hot tropical sun, the beach, surfing, CrossFit, Okinawa, and Guam.",
+          linkedin: "https://www.linkedin.com/in/ethan-flores/",
+          portfolio: "http://ethanflores.vercel.app/",
+        },
+        alt: "Ethan Flores - Lead software engineer and Founder of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+      {
+        cardFront: {
+          src: "/team/headshot_jose.png",
+          name: "Jose Roman",
+          role: "Senior Software Engineer",
+        },
+        cardBack: {
+          src: "/team/icon_jose.svg",
+          title: "I like",
+          text: "my video games, soccer, and my wife. <3",
+          linkedin: "https://www.linkedin.com/in/jose-roman-lujano-a3055966/",
+        },
+        alt: "Jose Roman - Senior engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+      {
+        cardFront: {
+          src: "/team/headshot_danny_edit.png",
+          name: "Daniel Castillo",
+          role: "Software Engineer",
+        },
+        cardBack: {
+          src: "/team/icon_danny.svg",
+          title: "I like",
+          text: "my kids, cycling, movies, food, video games, and Oaxaca.",
+          linkedin:
+            "https://www.linkedin.com/in/aniel-castillo-software-developer/",
+        },
+        alt: "Danny Castillo - Software engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
+      },
+    ],
   },
 ];
 
@@ -261,10 +229,10 @@ export const CaseStudiesDetailPage = [
   {
     title: "MRC Rock & Sand | B2B & B2C E-Commerce Platform",
     subtitle: "B2B & B2C E-Commerce Platform",
-    image_mobile: "/project_mrc_mobile.png",
-    image_desktop: "/case_study_hero_mrc.png",
-    // href: "https://mrc-two.vercel.app",
-    href: "mrc",
+    image_mobile: "/case_study_mrc_mobile.png",
+    image_desktop: "/case_study_mrc_hero.png",
+    href: "https://stonesuppliers.net",
+    // href: "mrc",
     tags: ["Product Design", "Branding", "Web Development"],
     overview: {
       text: "MRC Rock & Sand is a construction materials supplier providing high-quality aggregates and services to contractors and developers. They needed a modern, user-friendly website to showcase their materials, streamline customer inquiries, and establish a stronger digital presence. They partnered with Madasa Collective to revamp their site with a fresh brand identity, intuitive UX/UI design, and a fully responsive web experience.",
@@ -352,7 +320,7 @@ export const CaseStudiesDetailPage = [
   },
   {
     title: "Gen Fulton Consultancy | Responsive Website",
-    image_mobile: "/project_gen_desktop.png",
+    image_mobile: "/case_study_gen_desktop.png",
     image_desktop: "/project_gen_mobile.png",
     href: "https://genfulton.com",
     tags: ["Web Design", "Branding", "Web Development"],
@@ -363,5 +331,58 @@ export const CaseStudiesDetailPage = [
     image_desktop: "/project_madasa_desktop.png",
     href: "https://madasacollective.com",
     tags: ["Web Design", "Branding", "Web Development"],
+  },
+];
+
+export const madasaLetters = [
+  {
+    image: "/logo/letters/M.png",
+  },
+  {
+    image: "/logo/letters/A.png",
+  },
+  {
+    image: "/logo/letters/D.png",
+  },
+  {
+    image: "/logo/letters/A.png",
+  },
+  {
+    image: "/logo/letters/S.png",
+  },
+  {
+    image: "/logo/letters/A.png",
+  },
+];
+export const collectiveLetters = [
+  {
+    image: "/logo/letters/C.png",
+  },
+  {
+    image: "/logo/letters/O.png",
+  },
+  {
+    image: "/logo/letters/L.png",
+  },
+  {
+    image: "/logo/letters/L.png",
+  },
+  {
+    image: "/logo/letters/E.png",
+  },
+  {
+    image: "/logo/letters/C.png",
+  },
+  {
+    image: "/logo/letters/T.png",
+  },
+  {
+    image: "/logo/letters/I.png",
+  },
+  {
+    image: "/logo/letters/V.png",
+  },
+  {
+    image: "/logo/letters/E.png",
   },
 ];

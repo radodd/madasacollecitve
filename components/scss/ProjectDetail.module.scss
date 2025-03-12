@@ -2,7 +2,12 @@
 @import "../../app/queries.scss";
 
 .container {
-  padding: 80px 72px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  @include mid-break {
+    height: 700px;
+  }
 }
 
 .image {

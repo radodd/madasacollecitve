@@ -51,6 +51,7 @@
 .imageContainer {
   height: 240px;
   width: 100%;
+  position: relative;
   @include mid-break {
     height: 480px;
   }
@@ -95,3 +96,61 @@
   border-radius: 100px;
   border: 2px solid var(--color-275, rgba(217, 217, 217, 0.75));
 }
+
+.hoverZone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0);
+  // background-color: rgba(255, 192, 203, 0.5);
+  cursor: pointer;
+}
+
+// .card .imageContainer img {
+//   transition: transform 0.3s ease, opacity 0.3s ease;
+//   filter: blur(0px);
+// }
+
+// .card .imageContainer img.transitioning {
+//   filter: blur(10px);
+//   opacity: 0.7;
+// }
+
+// SIMPLE ZOOM
+// .card .imageContainer img {
+//   transition: transform 0.3s ease, opacity 0.3s ease;
+
+// }
+
+// .card .imageContainer img:hover {
+//   transform: scale(1.05);
+//   opacity: 0.9;
+// }
+
+// 3D TILT
+// .card {
+//   position: relative;
+//   perspective: 1000px;
+// }
+
+// .card .imageContainer img {
+//   transition: transform 0.3s ease;
+// }
+
+// .card:hover .imageContainer img {
+//   transform: rotateY(10deg) rotateX(10deg);
+// }
+
+// TAG APPEAR ON HOVER
+// .card .tagContainer {
+//   opacity: 0;
+//   transition: opacity 0.3s ease, transform 0.3s ease;
+// }
+
+// .card:hover .tagContainer {
+//   opacity: 1;
+//   transform: translateY(-10px); /* Slight upward movement */
+// }
