@@ -37,7 +37,7 @@ const CaseStudy = () => {
 
   useEffect(() => {
     const checkScreenSize = () => setIsSmallScreen(window.innerWidth < 1280);
-    checkScreenSize(); // Run once on mount
+    checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);

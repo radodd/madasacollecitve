@@ -31,7 +31,8 @@ export const CaseStudiesLandingPage = [
   },
   {
     image: {
-      src: "/Gen Fulton - no shadow 1.png",
+      src: "/case_study_mrc_mobile.png",
+      // src: "/Gen Fulton - no shadow 1.png",
       // src: "/group2.jpg",
       alt: "GenFulton.com case study",
     },
