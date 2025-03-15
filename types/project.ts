@@ -5,10 +5,10 @@ export interface Project {
   image_desktop: string;
   href: string;
   tags: string[];
-  overview?: {
+  overview: {
     text: string;
   };
-  challenge?: {
+  challenge: {
     text: string;
   };
   approach?: {

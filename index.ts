@@ -232,24 +232,24 @@ export const CaseStudiesDetailPage = [
     subtitle: "B2B & B2C E-Commerce Platform",
     image_mobile: "/case_study_mrc_mobile.png",
     image_desktop: "/case_study_mrc_hero.png",
-    href: "https://stonesuppliers.net",
-    // href: "mrc",
+    // href: "https://stonesuppliers.net",
+    href: "mrc",
     tags: ["Product Design", "Branding", "Web Development"],
     overview: {
-      text: "MRC Rock & Sand is a construction materials supplier providing high-quality aggregates and services to contractors and developers. They needed a modern, user-friendly website to showcase their materials, streamline customer inquiries, and establish a stronger digital presence. They partnered with Madasa Collective to revamp their site with a fresh brand identity, intuitive UX/UI design, and a fully responsive web experience.",
+      text: "MRC Rock & Sand is a construction materials supplier providing high-quality aggregates and services to contractors and developers. They needed a <strong>modern, user-friendly website</strong> to showcase their materials, streamline customer inquiries, and establish a stronger digital presence. They partnered with Madasa Collective to revamp their site with a <strong>fresh brand identity, intuitive UX/UI design, and a fully responsive web experience.</strong>",
     },
     challenge: {
-      text: "MRC Rock & Sand’s previous website lacked clear navigation, engaging visuals, and a seamless way for customers to explore materials and request quotes. Additionally, the design was outdated, making it difficult for them to stand out in the competitive construction materials industry. They needed a professional, high-performing site that was both informative and easy to use.",
+      text: "MRC Rock & Sand’s previous website <strong>lacked clear navigation, engaging visuals, and a seamless way for customers to explore materials and request quotes.</strong> Additionally, the design was outdated, making it difficult for them to stand out in the competitive construction materials industry. They needed <strong>a professional, high-performing site</strong> that was both informative and easy to use.",
     },
 
     approach: {
       list: [
-        "Conducted competitor analysis to identify industry standards and best practices.",
-        "Developed a streamlined site architecture to improve navigation and customer flow.",
-        "Created a modern, industry-appropriate visual identity with a professional yet rugged aesthetic.",
-        "Designed high-fidelity wireframes and interactive prototypes to refine the UX.",
-        "Built a responsive website optimized for both desktop and mobile users.",
-        "Integrated clear CTAs for customer inquiries and streamlined the quote request process.",
+        "Conducted <strong>competitor analysis</strong> to identify industry standards and best practices.",
+        "Developed <strong>a streamlined site architecture</strong> to improve navigation and customer flow.",
+        "Created a <strong>modern, industry-appropriate visual identity</strong> with a professional yet rugged aesthetic.",
+        "Designed <strong>high-fidelity wireframes and interactive prototypes</strong> to refine the UX.",
+        "Built a <strong>responsive website</strong> optimized for both desktop and mobile users.",
+        "Integrated <strong>clear CTAs</strong> for customer inquiries and streamlined the quote request process.",
       ],
       images: [
         {
@@ -264,9 +264,9 @@ export const CaseStudiesDetailPage = [
     },
     solution: {
       list: [
-        "Branding: Developed a cohesive color palette, typography, and visual style reflecting strength and reliability.",
-        "Product Design: Designed an intuitive layout with clear product categories, high-quality visuals, and easy navigation.",
-        "Web Development: Built a responsive site with fast load times, SEO optimization, and a contact/quote request system.",
+        "<strong>Branding:</strong> Developed a cohesive color palette, typography, and visual style reflecting strength and reliability.",
+        "<strong>Product Design:</strong> Designed an intuitive layout with clear product categories, high-quality visuals, and easy navigation.",
+        "<strong>Web Development:</strong> Built a responsive site with fast load times, SEO optimization, and a contact/quote request system.",
       ],
       images: [
         {
@@ -303,9 +303,9 @@ export const CaseStudiesDetailPage = [
     },
     impact: {
       list: [
-        "📈 Improved user engagement with a clearer, more structured site layout.",
-        "📩 Increased quote requests due to an optimized inquiry process.",
-        "📊 Strengthened brand presence with a professional and visually appealing website.",
+        "📈 Improved <strong>user engagement</strong> with a clearer, more structured site layout.",
+        "📩 Increased <strong>quote requests</strong> due to an optimized inquiry process.",
+        "📊 Strengthened <strong>brand presence</strong> with a professional and visually appealing website.",
       ],
       image: {
         src: "/case_study_mrc_desktop1.png",
@@ -316,7 +316,7 @@ export const CaseStudiesDetailPage = [
     client: {
       review:
         "“We were so impressed by there professionalism and creativity. We have had a butt load of customers since we launched our website. The workflows have been kept organized based on the way Serina and Ethan set everything up. We are going to be such a successful company.”",
-      reviewer: "Roko Grbic, VP of Everything",
+      reviewer: "Roko Grbic, Controller",
     },
   },
   {
@@ -325,6 +325,12 @@ export const CaseStudiesDetailPage = [
     image_desktop: "/project_gen_mobile.png",
     href: "https://genfulton.com",
     tags: ["Web Design", "Branding", "Web Development"],
+    overview: {
+      text: "",
+    },
+    challenge: {
+      text: "",
+    },
   },
   {
     title: "Madasa Collective | Responsive Website",
@@ -332,6 +338,12 @@ export const CaseStudiesDetailPage = [
     image_desktop: "/project_madasa_desktop.png",
     href: "https://madasacollective.com",
     tags: ["Web Design", "Branding", "Web Development"],
+    overview: {
+      text: "",
+    },
+    challenge: {
+      text: "",
+    },
   },
 ];
 

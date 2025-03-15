@@ -84,8 +84,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div className={styles.card}>
       <div className={styles.imageContainer}>
         <Link
-          // href={`projects-page/${project.href.replace("/projects-page/", "")}`}
-          href={project.href}
+          href={`projects-page/${project.href.replace("/projects-page/", "")}`}
+          // href={project.href}
         >
           {isMobile ? (
             <Image

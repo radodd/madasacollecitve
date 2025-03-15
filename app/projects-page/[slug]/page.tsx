@@ -46,55 +46,6 @@ const ProjectDetail = () => {
   );
 };
 
-const CTA = () => {
-  return (
-    <div className="relative w-full max-h-[20rem]">
-      <Image
-        src="/testbackground.svg"
-        alt=""
-        width={4000}
-        height={4000}
-        className="min-h-[5rem]"
-      />
-
-      <div className={styles.CTAContainer}>
-        <div className={styles.textContainer}>
-          <h1>Like what you see?</h1>
-          <div>
-            <p>We would love to work with you!</p>
-            <p>Request a free discover call.</p>
-          </div>
-
-          <Button
-            title="Schedule a Call"
-            variant="btn-pink-fill"
-            type="button"
-          />
-        </div>
-        <div className={styles.imageContainer}>
-          <Image src="/group4.png" alt="" width={4096} height={2359} />
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const TheClient = ({ project }: { project: Project }) => {
-  return (
-    <div className={styles.clientContainer}>
-      <h1>The Client</h1>
-      <p>{project.client?.review}</p>
-      <span>{project.client?.reviewer}</span>
-      <Button
-        type="button"
-        variant="btn-blue"
-        title="View Website"
-        href="https//mrc-two.vercel.app"
-      />
-    </div>
-  );
-};
-
 const Hero = ({ project }: { project: Project }) => {
   return (
     <div className={styles.imageContainer}>
@@ -138,7 +89,7 @@ const Overview = ({ project }: { project: Project }) => {
   return (
     <div className={styles.overviewContainer}>
       <h1>Overview</h1>
-      <p>{project.overview?.text}</p>
+      <p dangerouslySetInnerHTML={{ __html: project.overview.text }} />
       <Button type="button" title="View Website" variant="btn-blue" />
     </div>
   );
@@ -149,12 +100,16 @@ const TheChallenge = ({ project }: { project: Project }) => {
     <div className={styles.challengeContainer}>
       <div className={styles.textContainer}>
         <h1>The Challenge</h1>
-        <p>{project.challenge?.text}</p>
+        <p dangerouslySetInnerHTML={{ __html: project.challenge.text }} />
       </div>
 
-      <div className={styles.challengeImageContainer}>
-        <Image src="/mrc_website_old.png" alt="" width={3804} height={1912} />
-      </div>
+      <Image
+        src="/mrc_website_old.png"
+        alt=""
+        width={3804}
+        height={1912}
+        className="rounded-[16px]"
+      />
     </div>
   );
 };
@@ -165,7 +120,7 @@ const TheApproach = ({ project }: { project: Project }) => {
       <h1>The Approach</h1>
       <ul>
         {project.approach?.list.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
         ))}
       </ul>
       <div className={styles.imageGrid}>
@@ -190,7 +145,7 @@ const TheSolution = ({ project }: { project: Project }) => {
       <h1>The Solution</h1>
       <ul>
         {project.solution?.list.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
         ))}
       </ul>
       <div className={styles.imageGrid}>
@@ -223,7 +178,7 @@ const TheImpact = ({
       <h1>The Impact</h1>
       <ul>
         {project.impact?.list.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
         ))}
       </ul>
       <div className={styles.imageContainer}>
@@ -242,4 +197,54 @@ const TheImpact = ({
     </div>
   );
 };
+
+const TheClient = ({ project }: { project: Project }) => {
+  return (
+    <div className={styles.clientContainer}>
+      <h1>The Client</h1>
+      <p>{project.client?.review}</p>
+      <span>{project.client?.reviewer}</span>
+      <Button
+        type="button"
+        variant="btn-blue"
+        title="View Website"
+        href="https//mrc-two.vercel.app"
+      />
+    </div>
+  );
+};
+
+const CTA = () => {
+  return (
+    <div className="relative w-full max-h-[20rem]">
+      <Image
+        src="/testbackground.svg"
+        alt=""
+        width={4000}
+        height={4000}
+        className="min-h-[5rem]"
+      />
+
+      <div className={styles.CTAContainer}>
+        <div className={styles.textContainer}>
+          <h1>Like what you see?</h1>
+          <div>
+            <p>We would love to work with you!</p>
+            <p>Request a free discover call.</p>
+          </div>
+
+          <Button
+            title="Schedule a Call"
+            variant="btn-pink-fill"
+            type="button"
+          />
+        </div>
+        <div className={styles.imageContainer}>
+          <Image src="/group4.png" alt="" width={4096} height={2359} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default ProjectDetail;
