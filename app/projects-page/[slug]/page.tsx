@@ -9,6 +9,7 @@ import { useState } from "react";
 import { join } from "path";
 
 import styles from "../../../components/scss/ProjectDetail.module.scss";
+import CTABackground from "@/components/CTABackground";
 
 const ProjectDetail = () => {
   const [imageError, setImageError] = useState(false);
@@ -102,14 +103,9 @@ const TheChallenge = ({ project }: { project: Project }) => {
         <h1>The Challenge</h1>
         <p dangerouslySetInnerHTML={{ __html: project.challenge.text }} />
       </div>
-
-      <Image
-        src="/mrc_website_old.png"
-        alt=""
-        width={3804}
-        height={1912}
-        className="rounded-[16px]"
-      />
+      <div className={styles.imageContainer}>
+        <Image src="/mrc_website_old.png" alt="" width={3804} height={1912} />
+      </div>
     </div>
   );
 };
@@ -217,13 +213,7 @@ const TheClient = ({ project }: { project: Project }) => {
 const CTA = () => {
   return (
     <div className="relative w-full max-h-[20rem]">
-      <Image
-        src="/testbackground.svg"
-        alt=""
-        width={4000}
-        height={4000}
-        className="min-h-[5rem]"
-      />
+      <CTABackground color="#E3712E" />
 
       <div className={styles.CTAContainer}>
         <div className={styles.textContainer}>
