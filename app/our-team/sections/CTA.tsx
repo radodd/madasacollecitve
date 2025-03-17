@@ -1,9 +1,7 @@
 "use client";
+
 import Button from "@/components/Button";
 import Image from "next/image";
-import { useNav } from "@/context/NavContext";
-
-// import styles from "../../../components/scss/ProjectDetail.module.scss";
 import CTABackground from "@/components/CTABackground";
 
 import styles from "@/components/scss/CallToAction.module.scss";

@@ -1,10 +1,8 @@
 "use client";
-import Image from "next/image";
+
 import React, { useEffect, useRef } from "react";
-import { useNav } from "../../../context/NavContext";
 
 const Hero = () => {
-  const { isActive } = useNav();
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -13,26 +11,14 @@ const Hero = () => {
     }
   }, []);
   return (
-    <div
-      className={`${
-        isActive ? "blur" : ""
-      } relative flex justify-center items-start bg-base`}
-    >
+    <div className=" relative flex justify-center items-start bg-base">
       <div className="flex h-full w-full justify-center">
-        {/* <Image
-          alt="out team"
-          src="/hero_team.svg"
-          layout="fill "
-          width={100}
-          height={100}
-          style={{ width: "100%", height: "100%" }}
-        /> */}
         <video
           autoPlay
           playsInline
           controls={false}
           loop
-          muted // Add controls for play, pause, etc.
+          muted
           width="100%"
           height="100%"
           ref={videoRef}
