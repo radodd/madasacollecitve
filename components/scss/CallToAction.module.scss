@@ -30,10 +30,14 @@
   align-self: center;
   flex-direction: column-reverse;
   position: absolute;
-  gap: 64px;
+  gap: 40px;
 
   padding: 64px 32px;
+  @include mid-break {
+    gap: 64px;
+  }
   @include large-break {
+    gap: 64px;
     flex-direction: row;
   }
 }
