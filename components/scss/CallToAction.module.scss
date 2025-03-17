@@ -100,6 +100,7 @@
   }
 }
 
+// TEAMS PAGE
 .CTAContainerTeam {
   position: absolute;
   display: flex;
@@ -109,6 +110,8 @@
   flex-direction: column-reverse;
   padding: 48px 32px;
   gap: 32px;
+  @include mid-break {
+  }
   @include large-break {
     flex-direction: row-reverse;
     padding: 104px 72px;
@@ -121,7 +124,8 @@
   height: 295px;
   overflow: hidden;
   @include mid-break {
-    height: 434px;
+    flex: 1;
+    // height: 400px;
   }
   @include large-break {
     height: 465px;
@@ -132,6 +136,10 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: right;
+    @include small-break {
+      object-position: right;
+    }
   }
 }
 
@@ -142,18 +150,24 @@
   background-color: white;
   text-wrap: pretty;
   border-radius: 1.5rem;
-  width: 100%;
-  gap: 32px;
-  padding: 32px;
+  max-width: 442px;
+  gap: 16px;
+  padding: 20px 32px;
+  @include mid-break {
+    flex: 1;
+    gap: 32px;
+  }
   @include large-break {
+    gap: 32px;
     padding: 70px;
     max-width: calc(50%);
+    min-height: 465px;
   }
   h1 {
     color: var(--Primary-Text, #2c2d31);
     font-weight: 400;
     line-height: normal;
-    font-size: 32px;
+    font-size: 30px;
     @include large-break {
       font-size: 40px;
     }

@@ -1,13 +1,11 @@
 import "../globals.css";
 
 import Footer from "@/components/Footer";
-import Contact from "./sections/Contact";
-import Designers from "./sections/TeamMembers";
-// import Developers from "./sections/Developers";
 import Hero from "./sections/Hero";
 import OurStory from "./sections/OurStory";
 import { Metadata } from "next";
 import TeamMembers from "./sections/TeamMembers";
+import CTA from "./sections/CTA";
 
 export const metadata: Metadata = {
   title: "Team",
@@ -21,12 +19,9 @@ const Page = () => {
       <div className={`${isActive ? "blur" : ""} min-h-screen`}>
         <Hero />
         <OurStory />
-        {/* <Designers />
-         */}
         <TeamMembers />
-        <section className="">{/* <Developers /> */}</section>
-        <section className="max-[340px]:hidden">
-          <Contact />
+        <section>
+          <CTA />
         </section>
       </div>
       <Footer currentPage="team" />
