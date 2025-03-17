@@ -18,6 +18,12 @@ $breakpoint-l-min-width: 1280px;
   }
 }
 
+@mixin mid-break-arrow {
+  @media (max-width: #{$breakpoint-m-width}) {
+    @content;
+  }
+}
+
 @mixin mid-break {
   @media (max-width: #{$breakpoint-m-width}) and (min-width: #{$breakpoint-m-min-width}) {
     @content;

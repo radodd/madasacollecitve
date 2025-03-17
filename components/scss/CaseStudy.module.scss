@@ -10,7 +10,7 @@
   @include large-break {
     flex-direction: row;
     gap: 4rem;
-    justify-content: baseline;
+    justify-content: flex-start;
   }
 
   .image-container {
@@ -113,5 +113,21 @@
     justify-content: end;
     transform: translateY(20px);
     gap: 32px;
+  }
+  .arrowWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    @include mid-break-arrow {
+      flex-direction: column-reverse;
+      align-items: stretch;
+      gap: 16px;
+    }
+
+    @include extra-small-break {
+      gap: 24px;
+    }
   }
 }

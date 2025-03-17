@@ -14,9 +14,7 @@ export const Testimonials = [
 export const CaseStudiesLandingPage = [
   {
     image: {
-      src: "/Gen Fulton - no shadow 1 big width.png",
-      // src: "/Gen Fulton-no shadow 1.png",delete this one ???
-      // src: "/case_study_mrc_hero.png" do i delete this img from the folder,
+      src: "/case_study_gen_noShadow.png",
       alt: "GenFulton.com case study",
     },
     title: "Our Work",
@@ -32,8 +30,6 @@ export const CaseStudiesLandingPage = [
   {
     image: {
       src: "/case_study_mrc_mobile.png",
-      // src: "/Gen Fulton - no shadow 1.png",
-      // src: "/group2.jpg",
       alt: "GenFulton.com case study",
     },
     title: "Our Work",

@@ -53,10 +53,6 @@ const CaseStudy = () => {
                   <Image
                     alt={item.image.alt}
                     src={item.image.src}
-                    // src={
-                    //   (isSmallScreen ? item.image.src2 : item.image.src) ??
-                    //   "/Gen Fulton-no shadow 1.png"
-                    // } // ✅ Use ternary operator
                     width={0}
                     height={0}
                     sizes="100vw"
@@ -66,7 +62,7 @@ const CaseStudy = () => {
                 </div>
 
                 <div className={styles.content}>
-                  <div className="flex items-center justify-between">
+                  <div className={styles.arrowWrapper}>
                     <h1>{item.title}</h1>
                     <div className={styles.arrowContainer}>
                       <CarouselPrevious />
