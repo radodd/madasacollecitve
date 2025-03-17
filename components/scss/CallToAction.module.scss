@@ -31,7 +31,6 @@
   flex-direction: column-reverse;
   position: absolute;
   gap: 40px;
-
   padding: 64px 32px;
   @include mid-break {
     gap: 64px;
@@ -50,14 +49,14 @@
   text-wrap: pretty;
   border-radius: 1.5rem;
   width: 100%;
-  gap: 32px;
-  padding: 32px;
+  gap: 16px;
+  padding: 20px 32px;
 
   h1 {
     color: var(--Primary-Text, #2c2d31);
     font-weight: 400;
     line-height: normal;
-    font-size: 32px;
+    font-size: 30px;
     @include large-break {
       font-size: 40px;
     }
@@ -77,8 +76,16 @@
 
 .icon {
   z-index: 10;
-  width: 256px;
-  height: 266px;
+  width: 210px;
+  height: 220px;
+  @include mid-break {
+    width: 256px;
+    height: 266px;
+  }
+  @include mid-break {
+    width: 256px;
+    height: 266px;
+  }
 }
 
 .buttonContainer {
