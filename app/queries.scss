@@ -1,5 +1,5 @@
 $breakpoint-xs-width: 742px;
-$breakpoint-xs-width: 743px;
+$breakpoint-xs-width: 468px;
 $breakpoint-s-min-width: 320px;
 $breakpoint-s-width: 743px;
 $breakpoint-m-min-width: 744px;
@@ -14,6 +14,12 @@ $breakpoint-l-min-width: 1280px;
 
 @mixin small-break {
   @media (max-width: #{$breakpoint-s-width}) {
+    @content;
+  }
+}
+
+@mixin mid-break-arrow {
+  @media (max-width: #{$breakpoint-m-width}) {
     @content;
   }
 }

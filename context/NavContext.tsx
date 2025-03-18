@@ -25,6 +25,7 @@ export const NavProvider = ({ children }: { children: React.ReactNode }) => {
 
 export const useNav = () => {
   const context = useContext(NavContext);
+  console.log("CONTEXT:", context);
   if (!context) {
     throw new Error("useNav must be used within a NavProvider");
   }

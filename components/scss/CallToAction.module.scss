@@ -1,40 +1,42 @@
 @use "../../app/queries.scss";
 @import "../../app/queries.scss";
 
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 729px;
+  @include mid-break {
+    height: 700px;
+  }
+}
+.imageContainer {
+  min-height: 970px;
+  max-height: 900px;
+  @include mid-break {
+    max-height: 700px;
+  }
+}
+.image {
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .CTAContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-  // transform: translateY(100px);
-}
-.imageContainer {
-  width: 100%;
-  // -height: 840px;
-  // transform: translateY(100px);
-  img {
-    object-fit: cover;
-    width: 100%;
-    min-height: 840px;
-  }
-}
-
-.contentContainer {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  align-self: center;
   flex-direction: column-reverse;
-  gap: 64px;
+  position: absolute;
+  gap: 40px;
   padding: 64px 32px;
-
   @include mid-break {
-    width: 912px;
-  }
-  @media (max-width: 950px) {
-    width: 100%;
+    gap: 64px;
   }
   @include large-break {
+    gap: 64px;
     flex-direction: row;
   }
 }
@@ -47,14 +49,14 @@
   text-wrap: pretty;
   border-radius: 1.5rem;
   width: 100%;
-  gap: 32px;
-  padding: 32px;
+  gap: 16px;
+  padding: 20px 32px;
 
   h1 {
     color: var(--Primary-Text, #2c2d31);
     font-weight: 400;
     line-height: normal;
-    font-size: 32px;
+    font-size: 30px;
     @include large-break {
       font-size: 40px;
     }
@@ -72,29 +74,114 @@
   }
 }
 
-.image-container {
-  width: 100%;
+.icon {
   z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 382px) {
+  width: 210px;
+  height: 220px;
+  @include mid-break {
+    width: 256px;
+    height: 266px;
   }
-  img {
-    max-width: 233px;
-    width: 100%;
+  @include mid-break {
+    width: 256px;
+    height: 266px;
   }
 }
 
 .buttonContainer {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   @include mid-break {
     flex-direction: row;
   }
   @include large-break {
     flex-direction: row;
+  }
+}
+
+// TEAMS PAGE
+.CTAContainerTeam {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-direction: column-reverse;
+  padding: 48px 32px;
+  gap: 32px;
+  @include mid-break {
+  }
+  @include large-break {
+    flex-direction: row-reverse;
+    padding: 104px 72px;
+    gap: 52px;
+  }
+}
+
+.imageContainerTeam {
+  border-radius: 25px;
+  height: 295px;
+  overflow: hidden;
+  @include mid-break {
+    flex: 1;
+    // height: 400px;
+  }
+  @include large-break {
+    height: 465px;
+    max-width: calc(50%);
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    @include small-break {
+      object-position: right;
+    }
+  }
+}
+
+.textContainerTeam {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-wrap: pretty;
+  border-radius: 1.5rem;
+  max-width: 442px;
+  gap: 16px;
+  padding: 20px 32px;
+  @include mid-break {
+    flex: 1;
+    gap: 32px;
+  }
+  @include large-break {
+    gap: 32px;
+    padding: 70px;
+    max-width: calc(50%);
+    min-height: 465px;
+  }
+  h1 {
+    color: var(--Primary-Text, #2c2d31);
+    font-weight: 400;
+    line-height: normal;
+    font-size: 30px;
+    @include large-break {
+      font-size: 40px;
+    }
+  }
+  p {
+    text-wrap: pretty;
+    color: var(--Secondary-Text, #5c5d6d);
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    font-size: 20px;
+    @include large-break {
+      font-size: 24px;
+      letter-spacing: -0.96px;
+    }
   }
 }

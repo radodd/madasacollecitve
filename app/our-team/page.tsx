@@ -1,29 +1,23 @@
-import "../globals.css";
+"use client";
 
+import { useNav } from "@/context/NavContext";
 import Footer from "@/components/Footer";
-import Contact from "./sections/Contact";
-import Designers from "./sections/Designers";
-import Developers from "./sections/Developers";
 import Hero from "./sections/Hero";
 import OurStory from "./sections/OurStory";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Team",
-};
+import CTA from "./sections/CTA";
+import TeamMembers from "./sections/TeamMembers";
 
 const Page = () => {
+  const { isActive } = useNav();
+
   return (
     <>
-      <div className="min-h-screen">
+      <div className={`${isActive ? "blur" : ""} min-h-screen`}>
         <Hero />
         <OurStory />
-        <Designers />
-        <section className="">
-          <Developers />
-        </section>
-        <section className="">
-          <Contact />
+        <TeamMembers />
+        <section>
+          <CTA />
         </section>
       </div>
       <Footer currentPage="team" />

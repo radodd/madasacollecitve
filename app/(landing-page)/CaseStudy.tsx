@@ -21,6 +21,7 @@ const CaseStudy = () => {
   const { isActive } = useNav();
   const [current, setCurrent] = useState(-1);
   const [api, setApi] = useState<CarouselApi | null>(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false); // Track screen size
 
   useEffect(() => {
     if (!api) return;
@@ -34,6 +35,13 @@ const CaseStudy = () => {
     });
   }, [api]);
 
+  useEffect(() => {
+    const checkScreenSize = () => setIsSmallScreen(window.innerWidth < 1280);
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <>
       <Carousel setApi={setApi}>
@@ -45,13 +53,23 @@ const CaseStudy = () => {
                   <Image
                     alt={item.image.alt}
                     src={item.image.src}
-                    width={654}
-                    height={409}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    // fill
+                    className="w-full object-cover"
                   />
                 </div>
 
                 <div className={styles.content}>
-                  <h1>{item.title}</h1>
+                  <div className={styles.arrowWrapper}>
+                    <h1>{item.title}</h1>
+                    <div className={styles.arrowContainer}>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </div>
+                  </div>
+
                   <h2>{item.subtitle}</h2>
                   <p>
                     <Link href="https://www.genfulton.com">
@@ -71,8 +89,8 @@ const CaseStudy = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
         <CarouselIndicator
           current={current}
           total={CaseStudiesLandingPage.length}

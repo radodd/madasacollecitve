@@ -86,6 +86,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcRodwqAAAAAAaMhlzJkgCPYuatVlx4kOQRyF6z"></script> */}
+
         {/* Add Open Graph meta tags */}
         <meta property="og:image" content="/opengraph-image.png" />
         <meta

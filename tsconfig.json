@@ -17,8 +17,11 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/context/*": ["./context/*"],
+      "@/components/*": ["./components/*"]
     }
   },
   "include": [
@@ -29,7 +32,8 @@
     "sections/landing-page/cards/HeroCardsMobileFormat.jsx",
     "components/Header/Nav2Button/index.tsx",
     "app/contact-us/Form.tsx",
-    "app/api/verify-recaptcha"
+    "app/api/verify-recaptcha",
+    "app/**/*.tsx"
   ],
   "exclude": ["node_modules"]
 }
