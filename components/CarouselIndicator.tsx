@@ -6,7 +6,7 @@ const CarouselIndicator = ({
   total: number;
 }) => {
   return (
-    <div className="flex gap-3 justify-center pt-4 ">
+    <div className="flex gap-3 justify-center pt-4">
       {Array.from({ length: total }).map((_, index) => (
         <div key={index}>
           <svg

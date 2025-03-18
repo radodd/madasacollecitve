@@ -1,18 +1,12 @@
 "use client";
 
-import "../globals.css";
-import Footer from "@/components/Footer";
 import { useNav } from "@/context/NavContext";
-import ContactForm from "@/app/contact-us/Form";
-import { Metadata } from "next";
-
-import styles from "./ContactForm.module.scss";
 import { ContactFormText } from "@/index";
+import Footer from "@/components/Footer";
+import ContactForm from "@/app/contact-us/Form";
 import Image from "next/image";
 
-// export const metadata: Metadata = {
-//   title: "Contact Us",
-// };
+import styles from "./ContactForm.module.scss";
 
 const Page = () => {
   const { isActive } = useNav();

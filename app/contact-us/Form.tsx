@@ -1,13 +1,14 @@
 "use client";
 
-import { sendEmail } from "@/actions/SendEmail";
-import Button from "@/components/Button";
 import { ChangeEvent, useState } from "react";
-import toast from "react-hot-toast";
-import styles from "./ContactForm.module.scss";
+import { sendEmail } from "@/actions/SendEmail";
 import { Fields, UseFormInputReturn } from "@/index";
 import { contactFormSchema } from "@/lib/ContactFormValidation";
+import Button from "@/components/Button";
+import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
+
+import styles from "./ContactForm.module.scss";
 
 const useFormInput = (initialValue: string): UseFormInputReturn => {
   const [value, setValue] = useState(initialValue);

@@ -1,11 +1,6 @@
 "use client";
-import Button from "@/components/Button";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import { useNav } from "@/context/NavContext";
 
-import styles from "../../components/scss/CaseStudy.module.scss";
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselApi,
@@ -15,22 +10,26 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { CaseStudiesLandingPage } from "@/index";
+import Button from "@/components/Button";
+import Image from "next/image";
+import Link from "next/link";
 import CarouselIndicator from "@/components/CarouselIndicator";
 
+import styles from "../../components/scss/CaseStudy.module.scss";
+
 const CaseStudy = () => {
-  const { isActive } = useNav();
   const [current, setCurrent] = useState(-1);
   const [api, setApi] = useState<CarouselApi | null>(null);
-  const [isSmallScreen, setIsSmallScreen] = useState(false); // Track screen size
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     if (!api) return;
 
-    console.log("Initial snap:", api.selectedScrollSnap()); // Debugging
+    console.log("Initial snap:", api.selectedScrollSnap());
 
     setCurrent(api.selectedScrollSnap());
     api.on("select", () => {
-      console.log("Updated snap:", api.selectedScrollSnap()); // Debugging
+      console.log("Updated snap:", api.selectedScrollSnap());
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
@@ -47,8 +46,8 @@ const CaseStudy = () => {
       <Carousel setApi={setApi}>
         <CarouselContent>
           {CaseStudiesLandingPage.map((item, index) => (
-            <CarouselItem key={index}>
-              <div className={`${isActive ? "blur" : ""} ${styles.container}`}>
+            <CarouselItem key={index} className="min-[1285px]:h-[490px]">
+              <div className={styles.container}>
                 <div className={styles["image-container"]}>
                   <Image
                     alt={item.image.alt}
@@ -56,7 +55,6 @@ const CaseStudy = () => {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    // fill
                     className="w-full object-cover"
                   />
                 </div>
@@ -89,8 +87,6 @@ const CaseStudy = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
         <CarouselIndicator
           current={current}
           total={CaseStudiesLandingPage.length}
