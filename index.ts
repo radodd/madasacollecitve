@@ -14,7 +14,7 @@ export const Testimonials = [
 export const CaseStudiesLandingPage = [
   {
     image: {
-      src: "/case_study_gen_noShadow.png",
+      src: "/case_study_gen_mobile.png",
       alt: "GenFulton.com case study",
     },
     title: "Our Work",
@@ -318,7 +318,7 @@ export const CaseStudiesDetailPage = [
   {
     title: "Gen Fulton Consultancy | Responsive Website",
     image_mobile: "/case_study_gen_desktop.png",
-    image_desktop: "/project_gen_mobile.png",
+    image_desktop: "/case_study_gen_mobile.png",
     href: "https://genfulton.com",
     tags: ["Web Design", "Branding", "Web Development"],
     overview: {
