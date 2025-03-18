@@ -104,7 +104,7 @@ export default function RootLayout({
         <Suspense fallback={<div>Loading NavProvider...</div>}>
           <NavProvider>
             {/* <LazyNavProvider> */}
-            <GoogleReCaptchaWrapper />
+            {/* <GoogleReCaptchaWrapper /> */}
             <Header />
             {children}
             <Toaster position="top-right" />
