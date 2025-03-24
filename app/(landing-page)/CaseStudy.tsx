@@ -87,10 +87,10 @@ const CaseStudy = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselIndicator
+        {/* <CarouselIndicator
           current={current}
           total={CaseStudiesLandingPage.length}
-        />
+        /> */}
       </Carousel>
     </>
   );
