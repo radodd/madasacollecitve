@@ -21,12 +21,20 @@ const CTA = () => {
             Let&apos;s team up to create a tailored digital solution that aligns
             with your needs and business goals.
           </p>
-
-          <Button
-            title="Schedule a Call"
-            variant="btn-pink-fill"
-            type="button"
-          />
+          <div className={styles.buttonContainer}>
+            <Button
+              title="Schedule a Call"
+              variant="btn-pink-fill"
+              type="button"
+            />
+            <Button
+              type="button"
+              title="Learn more"
+              variant="btn-blue"
+              href="https://www.canva.com/design/DAF-mBhPfaA/i8H6H6r_sPlcZJUq6ZRH8g/view?utm_content=DAF-mBhPfaA&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+              target="_blank"
+            />
+          </div>
         </div>
       </div>
     </div>

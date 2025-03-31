@@ -111,7 +111,7 @@ export const TeamCards = [
         cardFront: {
           src: "/team/headshot_miguel_edit.png",
           name: "Miguel Castillo",
-          role: "Head of Designer",
+          role: "Head of Design",
           title: "Graphic + Product",
         },
         cardBack: {

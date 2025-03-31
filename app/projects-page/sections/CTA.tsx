@@ -16,17 +16,22 @@ const CTA = () => {
           <Image src="/group4.png" alt="" width={4096} height={2359} />
         </div>
         <div className={styles.textContainerTeam}>
-          <h1>Have a project in mind?</h1>
-          <p>
-            Let&apos;s team up to create a tailored digital solution that aligns
-            with your needs and business goals.
-          </p>
-
-          <Button
-            title="Schedule a Call"
-            variant="btn-pink-fill"
-            type="button"
-          />
+          <h1>Like what you see?</h1>
+          <p>We would love to work with you!</p>
+          <div className={styles.buttonContainer}>
+            <Button
+              title="Schedule a Call"
+              variant="btn-pink-fill"
+              type="button"
+            />
+            <Button
+              type="button"
+              title="Learn more"
+              variant="btn-blue"
+              href="https://www.canva.com/design/DAF-mBhPfaA/i8H6H6r_sPlcZJUq6ZRH8g/view?utm_content=DAF-mBhPfaA&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+              target="_blank"
+            />
+          </div>
         </div>
       </div>
     </div>
