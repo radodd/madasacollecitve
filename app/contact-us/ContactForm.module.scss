@@ -159,7 +159,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  // height: 125vh;
+  height: 75rem;
+  @include large-break {
+    height: 65rem;
+  }
 }
 
 .buttonContainer {
