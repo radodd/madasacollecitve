@@ -228,8 +228,8 @@ export const CaseStudiesDetailPage = [
     subtitle: "B2B & B2C E-Commerce Platform",
     image_mobile: "/case_study_mrc_mobile.png",
     image_desktop: "/case_study_mrc_hero.png",
-    // href: "https://stonesuppliers.net",
-    href: "mrc",
+    href: "https://stonesuppliers.net",
+    // href: "mrc",
     tags: ["Product Design", "Branding", "Web Development"],
     overview: {
       text: "MRC Rock & Sand is a construction materials supplier providing high-quality aggregates and services to contractors and developers. They needed a <strong>modern, user-friendly website</strong> to showcase their materials, streamline customer inquiries, and establish a stronger digital presence. They partnered with Madasa Collective to revamp their site with a <strong>fresh brand identity, intuitive UX/UI design, and a fully responsive web experience.</strong>",

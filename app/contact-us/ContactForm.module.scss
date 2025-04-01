@@ -157,12 +157,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  // height: 125vh;
-  height: 75rem;
+
+  height: 60rem;
+  @include mid-break {
+    height: 50rem;
+  }
   @include large-break {
-    height: 65rem;
+    height: 45rem;
   }
 }
 

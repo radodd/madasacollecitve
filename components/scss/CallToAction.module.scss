@@ -62,6 +62,7 @@
   }
 
   h1 {
+    text-wrap: pretty;
     color: var(--Primary-Text, #2c2d31);
     font-weight: 400;
     line-height: normal;
@@ -155,11 +156,11 @@
 
 .textContainerTeam {
   z-index: 10;
+  text-wrap: pretty;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  text-wrap: pretty;
   border-radius: 1.5rem;
   max-width: 442px;
   gap: 16px;
@@ -176,6 +177,7 @@
     min-height: 465px;
   }
   h1 {
+    text-wrap: pretty;
     color: var(--Primary-Text, #2c2d31);
     font-weight: 400;
     line-height: normal;
