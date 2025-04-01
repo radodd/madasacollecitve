@@ -23,7 +23,7 @@ body {
     @apply bg-transparent border-[3px] border-[#467ad4] font-semibold text-[#467ad4] text-md text-center px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
   }
   .btn-blue-fill {
-    @apply bg-[#467ad4] border-[3px] border-secondary font-semibold text-white text-md text-center px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
+    @apply bg-[#467ad4] border-[3px] border-[#467ad4] font-semibold text-white text-md text-center px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
   }
   .btn-blue-white {
     @apply bg-transparent border-[3px] border-white font-semibold text-white text-md text-center px-8 py-4 rounded-full cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-white transition-all duration-300 min-w-[192px] hover:-translate-y-[2px] hover:shadow-lg active:translate-y-[-1px] active:shadow-md;
