@@ -17,7 +17,7 @@ const TeamMembers = () => {
     setFlippedIndex(index === flippedIndex ? -1 : index);
 
   return (
-    <>
+    <div className={styles.sectionContainer}>
       {TeamCards.map((team, index) => (
         <div key={index} className={styles.container}>
           <h1>{team.header}</h1>
@@ -35,7 +35,7 @@ const TeamMembers = () => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 const TeamMemberCard = ({

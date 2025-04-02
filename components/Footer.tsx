@@ -40,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         />
       </div>
       <div className={styles.contentContainer}>
-        <div className="flex gap-2">
+        <div className={styles.linkedinContainer}>
           <Link
             href="https://www.linkedin.com/company/madasa-collective/"
             target="_blank"

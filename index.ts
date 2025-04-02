@@ -89,7 +89,7 @@ export const cards = [
 
 export const TeamCards = [
   {
-    header: "Design",
+    header: "Designers",
     member: [
       {
         cardFront: {

@@ -1,11 +1,19 @@
 @use "../../app/queries.scss";
 @import "../../app/queries.scss";
 
+.sectionContainer {
+  justify-self: center;
+  width: fit-content;
+}
 .container {
   display: flex;
+  // justify-content: start;
+  // justify-self: center;
+
   flex-direction: column;
   gap: 40px;
   padding: 32px;
+  width: fit-content;
   @include mid-break {
   }
   h1 {

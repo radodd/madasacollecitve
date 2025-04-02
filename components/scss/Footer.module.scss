@@ -13,7 +13,9 @@
   }
   @include large-break {
     justify-content: space-between;
-    // padding: 64px 70px;
+    flex-direction: row;
+
+    padding: 64px 70px;
     width: 100%;
     gap: 24px;
   }
@@ -32,7 +34,17 @@
   font-weight: 400;
   line-height: normal;
   gap: 8px;
+  @include large-break {
+    justify-content: right;
+    align-items: end;
+  }
 }
+
+.linkedinContainer {
+  display: flex;
+  gap: 8px;
+}
+
 .linkedin {
   color: white;
 }
