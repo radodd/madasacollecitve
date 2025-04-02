@@ -34,12 +34,12 @@ export const CaseStudiesLandingPage = [
     },
     title: "Our Work",
     subtitle: "B2B & B2C E-Commerce Platform",
-    // link: "GenFulton.com",
-    text: `A family-owned group of construction material companies needed a modernized website. We redesigned their site, adding a materials catalog and a "Request a Quote" feature.`,
+    link: "StoneSuppliers.net",
+    text: ` is a family-owned group of construction material companies needed a modernized website. We redesigned their site, adding a materials catalog and a "Request a Quote" feature.`,
     button: {
       title: "View Website",
       variant: "btn-pink",
-      href: "https://genfulton.com",
+      href: "https://stonesuppliers.net",
     },
   },
 ];

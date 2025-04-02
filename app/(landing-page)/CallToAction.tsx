@@ -21,6 +21,8 @@ const CallToAction = () => {
               title="Schedule a Call"
               variant="btn-pink-fill"
               type="button"
+              href="https://calendly.com/madasacollective/60min?month=2025-04"
+              target="_blank"
             />
             <Button
               type="button"

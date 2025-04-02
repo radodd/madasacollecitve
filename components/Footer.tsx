@@ -62,15 +62,18 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
         </div>
 
         <p>contact@madasacollective.com</p>
-        <div className="flex gap-1 text-xs">
-          <Image
-            alt="copyright"
-            src="/copyright.png"
-            width={19}
-            height={19}
-            sizes="15"
-          />
-          <p>2024 Madasa Collective All Rights Reserved.</p>
+        <div className="flex flex-col text-xs">
+          <p className="flex flex-row">
+            <Image
+              alt="copyright"
+              src="/copyright.png"
+              width={19}
+              height={19}
+              className="object-contain pr-1"
+            />
+            2024 Madasa Collective
+          </p>
+          <span className=""> All Rights Reserved.</span>
         </div>
       </div>
     </div>

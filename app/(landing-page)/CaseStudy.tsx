@@ -70,7 +70,7 @@ const CaseStudy = () => {
 
                   <h2>{item.subtitle}</h2>
                   <p>
-                    <Link href="https://www.genfulton.com">
+                    <Link href={item.button.href} target="_blank">
                       <span className="underline">{item.link}</span>
                     </Link>
                     {item.text}

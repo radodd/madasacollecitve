@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <>
       <div
-        className={`${isActive ? "blur" : ""} min-h-screen relative
+        className={`${isActive ? "blur" : ""} min-h-[80vh] relative
     `}
       >
         <div className="absolute z-10 top-[9rem]">
@@ -27,7 +27,7 @@ const Page = () => {
         </div>
         <div className={styles.contactFormTextContainer}>
           <h1>Get in touch!</h1>
-          <p>{ContactFormText}</p>
+          <p className="bg-[#e3712e] rounded-t-full">{ContactFormText}</p>
         </div>
         <ContactForm />
       </div>
