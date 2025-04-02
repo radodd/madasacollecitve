@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   height: 729px;
+  overflow: hidden;
   @include mid-break {
     height: 700px;
   }
@@ -113,6 +114,7 @@
 // TEAMS PAGE
 .CTAContainerTeam {
   position: absolute;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

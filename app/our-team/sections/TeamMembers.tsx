@@ -105,7 +105,7 @@ const CardBack = ({
     />
     <div className={styles.textContainer}>
       <p>
-        <span>{member.cardFront.title}</span>
+        <span>{member.cardBack.title}</span>
         {member.cardBack.text}
       </p>
       <div>

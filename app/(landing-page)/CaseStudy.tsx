@@ -55,7 +55,6 @@ const CaseStudy = () => {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    className="w-full object-cover"
                   />
                 </div>
 
