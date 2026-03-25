@@ -169,7 +169,7 @@ export const TeamCards = [
           title: "I like",
           text: "my kids, cycling, movies, food, video games, and Oaxaca.",
           linkedin:
-            "https://www.linkedin.com/in/aniel-castillo-software-developer/",
+            "https://www.linkedin.com/in/daniel-castillo-software-developer/",
         },
         alt: "Danny Castillo - Software engineer and member of Madasa Collective a tech company based in Santa Barbara, California.",
       },
@@ -200,13 +200,13 @@ export const Fields = (
     inputProps: company,
     name: "company",
     type: "text",
-    required: true,
+    required: false,
   },
   {
     label: "Email *",
     inputProps: email,
     name: "email",
-    type: "text",
+    type: "email",
     required: true,
   },
   {
@@ -214,7 +214,7 @@ export const Fields = (
     inputProps: phoneNumber,
     name: "phoneNumber",
     type: "text",
-    required: true,
+    required: false,
   },
 ];
 
