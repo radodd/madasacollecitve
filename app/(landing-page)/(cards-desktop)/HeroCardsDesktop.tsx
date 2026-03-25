@@ -15,9 +15,9 @@ const ServiceCardsDesktop = () => {
   return (
     <div className={styles.container}>
       {cards.map((card, index) => (
-        <div key={index} className={" sub-container w-[368px] h-[412px]"}>
+        <div key={index} className={" sub-container w-[368px] h-[412px]"} style={{ perspective: "700px" }}>
           <div
-            className={`${styles.card} card-team shadow-b2xl transition-all duration-[800ms] ease-in-out`}
+            className={`${styles.card} card-team shadow-b2xl`}
           >
             <CardFront card={card} />
             <CardBack card={card} />

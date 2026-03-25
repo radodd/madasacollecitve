@@ -15,7 +15,12 @@ const fadeInAnimationVariants = {
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.05 * index },
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 18,
+      delay: 0.05 * index,
+    },
   }),
 };
 
@@ -76,7 +81,7 @@ const Hero = () => {
         <Image
           src="/hero2_bg.svg"
           alt="Background Image"
-          layout="fill"
+          fill
           className={styles.bgImage}
         />
       </div>
@@ -84,7 +89,6 @@ const Hero = () => {
         <Image
           src="/hero2_circle.svg"
           alt="Circle Graphic"
-          layout="intrinsic"
           width={800}
           height={800}
           className={styles.image}

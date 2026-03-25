@@ -6,6 +6,7 @@
 }
 
 .bgContainer {
+  position: relative;
   width: 100%;
   min-height: 896px;
   @include mid-break {
