@@ -2,16 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "..";
 import "@/app/globals.css";
-import Navbar2Button from "./Header/Nav2Button/index";
-import Header from "./Header";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false);
 
   const DropdownMenu = () => (
     <motion.ul
@@ -41,8 +38,8 @@ const Navbar = () => {
   );
   return (
     <nav
-      className="relative flex h-[300px] justify-between items-center px-[90px] py-6 gap-4 bg-base
-        max-tablet:flex-row 
+      className="relative flex h-[96px] justify-between items-center px-[90px] py-6 gap-4 bg-base
+        max-tablet:flex-row
         max-tablet:pl-8
         max-tablet:pr-7
         "
@@ -69,25 +66,18 @@ const Navbar = () => {
 
       {/* Hamburger menu for small screens */}
       <div id="dropdown" className="z-10">
-        <div
-          className="inline-block cursor-pointer mx-8 max-tablet:mx-0"
-          onClick={() => {
-            setDropdownOpen(!dropdownOpen);
-          }}
+        <button
+          className={`hamburger hamburger--collapse mx-8 max-tablet:mx-0 ${
+            dropdownOpen ? "is-active" : ""
+          }`}
+          type="button"
+          aria-label="Toggle navigation menu"
+          onClick={() => setDropdownOpen(!dropdownOpen)}
         >
-          {/* Hamburger Icon */}
-          {/* <button
-            className={`hamburger hamburger--collapse ${
-              dropdownOpen ? "is-active" : ""
-            } `}
-            type="button"
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
-          </button> */}
-          {/* <Navbar2Button isActive={isActive} setIsActive={setIsActive} /> */}
-        </div>
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
 
       {/* Conditionally render Dropdown menu for small screens */}

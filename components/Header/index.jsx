@@ -26,7 +26,7 @@ const variants = {
   },
 };
 const Navbar2 = () => {
-  const { isActive, setIsActive } = useNav(false);
+  const { isActive, setIsActive } = useNav();
 
   return (
     <>
@@ -41,7 +41,7 @@ const Navbar2 = () => {
           <Link href="/">
             <Image
               alt="Logo"
-              src="/logo/short.png"
+              src="/logo/short.svg"
               width={54}
               height={54}
               className="my-[20px]"

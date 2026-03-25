@@ -1,6 +1,5 @@
 "use client";
 import React, {
-  SetStateAction,
   createContext,
   useContext,
   useState,
@@ -10,7 +9,6 @@ interface NavContextType {
   isActive: boolean;
   setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
-// const NavContext = createContext();
 const NavContext = createContext<NavContextType | undefined>(undefined);
 
 export const NavProvider = ({ children }: { children: React.ReactNode }) => {
@@ -25,7 +23,6 @@ export const NavProvider = ({ children }: { children: React.ReactNode }) => {
 
 export const useNav = () => {
   const context = useContext(NavContext);
-  console.log("CONTEXT:", context);
   if (!context) {
     throw new Error("useNav must be used within a NavProvider");
   }
