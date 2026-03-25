@@ -22,6 +22,8 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
     switch (currentPage) {
       case "contact":
         return "";
+      default:
+        return "h-auto";
     }
   };
   return (
