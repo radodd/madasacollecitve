@@ -12,14 +12,11 @@ export const validateString = (
 export const validateNumber = (
   value: unknown,
   maxLength: number
-): value is number => {
-  if (typeof value !== "number") {
-    return true;
-  }
-  const stringValue = value.toString();
-  if (stringValue.length > maxLength) {
-    return true;
-  }
+): boolean => {
+  if (typeof value !== "string") return false;
+  if (value.trim() === "") return true; // optional field — empty is valid
+  if (!/^\+?[\d\s\-().]{7,}$/.test(value)) return false;
+  if (value.replace(/\D/g, "").length > maxLength) return false;
   return true;
 };
 
