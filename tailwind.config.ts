@@ -129,6 +129,13 @@ module.exports = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		zIndex: {
+  			nav: '30',
+  			dropdown: '20',
+  			overlay: '40',
+  			modal: '50',
+  			toast: '60',
   		}
   	}
   },
