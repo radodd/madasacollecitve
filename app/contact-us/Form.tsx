@@ -35,7 +35,6 @@ export default function ContactForm() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const handleSubmit = async (formData: FormData) => {
-    console.log("Submit Handler accessed");
 
     if (!recaptchaToken) {
       alert("Please complete reCAPTCHA verification.");
@@ -51,10 +50,7 @@ export default function ContactForm() {
       message: message.value,
     };
     const validation = contactFormSchema.safeParse(data);
-    console.log(validation);
     if (!validation.success) {
-      console.log(validation.error.issues);
-
       const fieldErrors = validation.error.flatten().fieldErrors;
       const formattedErrors: Record<string, string> = {};
 
@@ -63,8 +59,6 @@ export default function ContactForm() {
       });
 
       setErrors(formattedErrors);
-      console.log("formattedErrors", formattedErrors);
-      console.log("Errors", errors);
       toast.error("Please correct the highlighted fields.");
       return;
     }
@@ -102,7 +96,6 @@ export default function ContactForm() {
       <div className={styles.formContainer}>
         <form
           onSubmit={async (e) => {
-            console.log("Form submitted!");
             e.preventDefault();
             const formData = new FormData(e.currentTarget);
             await handleSubmit(formData);
@@ -117,6 +110,7 @@ export default function ContactForm() {
                 className={`${styles.animateLabel} flex flex-col`}
               >
                 <input
+                  id={name}
                   type={type}
                   name={name}
                   value={inputProps.value}
@@ -125,10 +119,9 @@ export default function ContactForm() {
                     errors[name] ? "border-red-500" : ""
                   } `}
                   autoComplete="off"
-                  aria-label={label}
                   required={required}
                 />
-                <label>{label}</label>
+                <label htmlFor={name}>{label}</label>
                 {errors[name] && (
                   <span className="absolute bottom-[-25px] text-red-500 text-sm">
                     {errors[name]}
@@ -140,25 +133,27 @@ export default function ContactForm() {
 
           <div className={`${styles.animateLabelMessage} col-span-2`}>
             <textarea
+              id="message"
               name="message"
               value={message.value}
               onChange={message.onChange}
               className={`${styles.input}  px-4 rounded-md`}
               autoComplete="off"
-              aria-label="Message"
               required
             />
-            <label>Message *</label>
+            <label htmlFor="message">Message *</label>
             {errors.message && (
               <span className="text-red-500 text-sm">{errors.message}</span>
             )}
           </div>
 
           <div className={styles.buttonContainer}>
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-              onChange={setRecaptchaToken}
-            />
+            {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={setRecaptchaToken}
+              />
+            )}
             <Button
               type="submit"
               variant="btn-blue-fill"

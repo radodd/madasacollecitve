@@ -16,13 +16,13 @@ const Page = () => {
         className={`${isActive ? "blur" : ""} min-h-[80vh] relative
     `}
       >
-        <div className="absolute z-10 top-[9rem]">
+        <div className="absolute inset-x-0 z-10 top-[9rem] bottom-0">
           <Image
             src="/testbackground.svg"
             alt=""
-            width={4000}
-            height={4000}
-            className=""
+            role="presentation"
+            fill
+            className="object-cover"
           />
         </div>
         <div className={styles.contactFormTextContainer}>
