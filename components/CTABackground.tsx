@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import styles from "@/components/scss/CallToAction.module.scss";
 import { useEffect, useMemo, useState } from "react";
 

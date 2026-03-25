@@ -1,9 +1,6 @@
 import Button from "@/components/Button";
-import { useNav } from "@/context/NavContext";
 import Image from "next/image";
-import React, { useEffect, useMemo, useState } from "react";
 
-// import styles from "../../components/scss/CallToAction.module.scss";
 import styles from "../../components/scss/CallToAction.module.scss";
 import CTABackground from "@/components/CTABackground";
 
